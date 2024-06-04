@@ -1,19 +1,22 @@
 import { useEffect } from 'react';
-import { handleFontSizeChange, handleContrastChange, handleColorBlindnessChange } from './library/library.js';
+import { handleFontSizeChange, handleContrastChange, handleColorBlindnessChange, readText} from './library/library.js';
 
 const App = () => {
+
   useEffect(() => {
     const cleanupFontSize = handleFontSizeChange();
     const cleanupContrast = handleContrastChange();
     const cleanupColorBlindness = handleColorBlindnessChange();
-
+    const cleanupReatText = readText() 
     // Limpia los event listeners cuando el componente se desmonte
     return () => {
       cleanupFontSize();
       cleanupContrast();
       cleanupColorBlindness();
-    };
-  }, []);
+      cleanupReatText();
+    };},[]);
+
+
 
   return (
     <>
@@ -46,6 +49,7 @@ const App = () => {
       </header>
       <main>
         <section>
+        <select id="voiceSelect"></select>
           <h2>Sección 1</h2>
           <p>Este es un ejemplo de contenido accesible.</p>
           <div className="color-sample">
