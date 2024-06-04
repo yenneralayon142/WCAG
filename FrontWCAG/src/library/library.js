@@ -63,14 +63,14 @@ export const handleColorBlindnessChange = () => {
 // Leer texto cuando se seleccione con el mouse
 export const readText = () => {
     if (typeof speechSynthesis === 'undefined')
-      return;
+        return;
 
     var voiceSelect = document.getElementById("voiceSelect");
     var voices = [];
     var textElements = document.querySelectorAll('p');
 
     function populateVoiceList() {
-      voices = speechSynthesis.getVoices();
+        voices = speechSynthesis.getVoices();
 
       for (var i = 0; i < voices.length; i++) {
         var option = document.createElement('option');
