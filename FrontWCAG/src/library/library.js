@@ -62,61 +62,63 @@ export const handleColorBlindnessChange = () => {
 
 // Leer texto cuando se seleccione con el mouse
 export const readText = () => {
+    "use strict";
+  
     if (typeof speechSynthesis === 'undefined')
-        return;
-
-    var voiceSelect = document.getElementById("voiceSelect");
-    var voices = [];
-    var textElements = document.querySelectorAll('p');
-
-    function populateVoiceList() {
-        voices = speechSynthesis.getVoices();
-
-      for (var i = 0; i < voices.length; i++) {
-        var option = document.createElement('option');
+      return;
+  
+    const voiceSelect = document.getElementById("voiceSelect");
+    let voices = [];
+    const textElements = document.querySelectorAll('p');
+  
+    const populateVoiceList = () => {
+      voices = speechSynthesis.getVoices();
+  
+      for (let i = 0; i < voices.length; i++) {
+        const option = document.createElement('option');
         option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
         option.textContent += voices[i].default ? ' -- DEFAULT' : '';
         option.setAttribute('data-lang', voices[i].lang);
         option.setAttribute('data-name', voices[i].name);
-        document.getElementById("voiceSelect").appendChild(option);
+        voiceSelect.appendChild(option);
       }
     }
-
-    function speakText(text) {
-      var utterThis = new SpeechSynthesisUtterance(text);
-      var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-
-      for (var i = 0; i < voices.length; i++) {
+  
+    const speakText = (text) => {
+      const utterThis = new SpeechSynthesisUtterance(text);
+      const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  
+      for (let i = 0; i < voices.length; i++) {
         if (voices[i].name === selectedOption) {
           utterThis.voice = voices[i];
         }
       }
-
-      utterThis.addEventListener('start', function () {
-        textElements.forEach(function (element) {
+  
+      utterThis.addEventListener('start', () => {
+        textElements.forEach((element) => {
           element.classList.remove('highlighted');
         });
       });
-
-      utterThis.addEventListener('boundary', function (event) {
-        var start = event.charIndex;
-        var end = event.charIndex + event.charLength;
-
-        textElements.forEach(function (element) {
-          var text = element.textContent;
+  
+      utterThis.addEventListener('boundary', (event) => {
+        const start = event.charIndex;
+        const end = event.charIndex + event.charLength;
+  
+        textElements.forEach((element) => {
+          const text = element.textContent;
           if (start >= 0 && end <= text.length) {
-            var highlightedText = text.substring(start, end);
-            var regex = new RegExp(highlightedText, 'gi');
+            const highlightedText = text.substring(start, end);
+            const regex = new RegExp(highlightedText, 'gi');
             element.innerHTML = text.replace(regex, '<span class="highlighted">' + highlightedText + '</span>');
           }
         });
       });
-
+  
       speechSynthesis.speak(utterThis);
     }
-
-    function getSelectionText() {
-      var text = "";
+  
+    const getSelectionText = () => {
+      let text = "";
       if (window.getSelection) {
         text = window.getSelection().toString();
       } else if (document.selection && document.selection.type !== "Control") {
@@ -124,40 +126,32 @@ export const readText = () => {
       }
       return text;
     }
-
-    function handleMouseUp() {
-      var selectedText = getSelectionText();
+  
+    const handleMouseUp = () => {
+      const selectedText = getSelectionText();
       if (selectedText.length > 0) {
         speakText(selectedText);
       }
-    }
-
-    function start() {
+    };
+  
+    const start = () => {
       populateVoiceList();
       if (speechSynthesis.onvoiceschanged !== undefined)
         speechSynthesis.onvoiceschanged = populateVoiceList;
-
-      voiceSelect.onchange = function () {
-        var selectedText = getSelectionText();
-        if (selectedText.length > 0) {
-          speakText(selectedText);
-        }
-      };
-
-      setTimeout(function () {
-        var defaultOption = voiceSelect.querySelector('[data-default="true"]');
+  
+      voiceSelect.onchange = handleMouseUp;
+  
+      setTimeout(() => {
+        const defaultOption = voiceSelect.querySelector('[data-default="true"]');
         if (defaultOption) {
           defaultOption.selected = true;
-          var selectedText = getSelectionText();
-          if (selectedText.length > 0) {
-            speakText(selectedText);
-          }
+          handleMouseUp();
         }
       }, 75);
     }
-
+  
     start();
-
+  
     // Limpia el event listener cuando el componente se desmonte
     return () => {
       document.removeEventListener('mouseup', handleMouseUp);
@@ -166,6 +160,96 @@ export const readText = () => {
       }
     };
 };
+
+// Activar el reconocimiento de voz
+export function startVoiceRecognition(onResultCallback, onErrorCallback, onEndCallback) {
+  // Verifica si el navegador soporta la API de reconocimiento de voz
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  if (!SpeechRecognition) {
+      alert('Tu navegador no soporta la API de Reconocimiento de Voz');
+      return;
+  }
+
+  // Crear una instancia de SpeechRecognition
+  const recognition = new SpeechRecognition();
+
+  // Configuración del reconocimiento de voz
+  recognition.lang = 'es-ES'; // Configurar el idioma a español (España)
+  recognition.continuous = false; // No seguir reconociendo continuamente
+  recognition.interimResults = false; // No mostrar resultados intermedios
+
+  // Manejar los eventos del reconocimiento de voz
+  recognition.onstart = () => {
+      console.log('Reconocimiento de voz iniciado');
+  };
+
+  recognition.onresult = (event) => {
+      const transcript = event.results[0][0].transcript.toLowerCase().trim();
+      console.log('Transcripción recibida:', transcript);
+
+      // Ejecutar la acción correspondiente al comando de voz
+      switch (transcript) {
+          case 'fuente grande':
+              document.body.style.fontSize = 'larger';
+              break;
+          case 'fuente muy grande':
+              document.body.style.fontSize = 'x-large';
+              break;
+          case 'alto contraste':
+              document.body.style.filter = 'contrast(150%)';
+              break;
+          case 'protanopia':
+              document.body.style.filter = 'url(#protanopia)'; // Necesitarías un filtro SVG para esto
+              break;
+          case 'deuteranopia':
+              document.body.style.filter = 'url(#deuteranopia)'; // Necesitarías un filtro SVG para esto
+              break;
+          case 'tritanopia':
+              document.body.style.filter = 'url(#tritanopia)'; // Necesitarías un filtro SVG para esto
+              break;
+          case 'por defecto':
+              document.body.style.fontSize = '';
+              document.body.style.filter = '';
+              break;
+          default:
+              console.log('Comando de voz no reconocido:', transcript);
+      }
+
+      if (onResultCallback) {
+          onResultCallback(transcript);
+      }
+  };
+
+  recognition.onerror = (event) => {
+      if (onErrorCallback) {
+          onErrorCallback(event.error);
+      }
+  };
+
+  recognition.onend = () => {
+      if (onEndCallback) {
+          onEndCallback();
+      }
+  };
+
+  // Iniciar el reconocimiento de voz
+  recognition.start();
+}
+
+// Ejemplo de uso de la función
+startVoiceRecognition(
+  (transcript) => {
+      console.log('Resultado:', transcript);
+  },
+  (error) => {
+      console.error('Error:', error);
+  },
+  () => {
+      console.log('Reconocimiento de voz finalizado');
+  }
+);
+
 
 
 
