@@ -1,3 +1,5 @@
+
+// Componente Funcional
 export const MediaContent = () => (
     <>
       <p>

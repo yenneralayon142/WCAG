@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 
-
 // Componente Funcional
 
 export const AccessibilityControls = ({ fontSizeRef, contrastRef, colorBlindnessRef, voiceSelectRef }) => (
@@ -25,15 +24,12 @@ export const AccessibilityControls = ({ fontSizeRef, contrastRef, colorBlindness
       <option value="deuteranopia">Deuteranopia</option>
       <option value="tritanopia">Tritanopia</option>
     </select>
-
-    <select id="voiceSelect" ref={voiceSelectRef}></select>
-  </div>
+    </div>
 );
 
 // En este código, se usa PropTypes.shape para definir la forma del objeto que se espera para cada ref.
 // Cada ref debe ser un objeto con una propiedad current que es una instancia de Element. 
 // Esto garantiza que los props pasados al componente tengan la forma esperada.
-
 AccessibilityControls.propTypes = {
   fontSizeRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   contrastRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),

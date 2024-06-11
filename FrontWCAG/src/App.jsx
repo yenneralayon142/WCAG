@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { handleFontSizeChange, handleContrastChange, handleColorBlindnessChange, readText } from './library/library.js';
+import { handleFontSizeChange, handleContrastChange, handleColorBlindnessChange, readText,startVoiceRecognition } from './library/library.js';
 import  {AccessibilityControls} from './components/Accesibility.jsx';
-import  {ActionButtons} from './components/ActionButtons.jsx';
 import {ColorSample} from './components/ColorSample.jsx' ;
 import {MediaContent} from './components/MediaContent.jsx';
 import {Section} from './components/Section.jsx';
@@ -10,8 +9,6 @@ const App = () => {
   const fontSizeRef = useRef(null);
   const contrastRef = useRef(null);
   const colorBlindnessRef = useRef(null);
-  const imageDescriptionButtonRef = useRef(null);
-  const voiceRecognitionButtonRef = useRef(null);
   const voiceSelectRef = useRef(null);
 
   useEffect(() => {
@@ -19,6 +16,19 @@ const App = () => {
     const cleanupContrast = handleContrastChange();
     const cleanupColorBlindness = handleColorBlindnessChange();
     const cleanupReadText = readText();
+
+    // Start voice recognition
+    startVoiceRecognition(
+      (transcript) => {
+        console.log('Resultado:', transcript);
+      },
+      (error) => {
+        console.error('Error:Sonido no detectado', error);
+      },
+      () => {
+        console.log('Reconocimiento de voz finalizado');
+      }
+    );
 
     return () => {
       cleanupFontSize();
@@ -61,14 +71,7 @@ const App = () => {
     handleColorBlindnessChange();
   }, []);
 
-  const handleImageDescription = () => {
-    // Implementación de la descripción de la imagen
-  };
-
-  const handleVoiceRecognition = () => {
-    // Implementación del reconocimiento de voz
-  };
-
+  
   return (
     <>
       <header>
@@ -91,10 +94,6 @@ const App = () => {
           <ColorSample />
         </Section>
       </main>
-      <ActionButtons 
-        onImageDescription={handleImageDescription}
-        onVoiceRecognition={handleVoiceRecognition}
-      />
     </>
   );
 };

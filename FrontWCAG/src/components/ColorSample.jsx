@@ -1,3 +1,5 @@
+
+// Componente Funcional 
 export const ColorSample = () => (
     <div className="color-sample">
       <div className="color-red"></div>
