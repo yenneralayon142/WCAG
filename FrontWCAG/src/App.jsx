@@ -1,15 +1,17 @@
 import { useEffect, useRef } from 'react';
 import { handleFontSizeChange, handleContrastChange, handleColorBlindnessChange, readText,startVoiceRecognition } from './library/library.js';
-import  {AccessibilityControls} from './components/Accesibility.jsx';
-import {ColorSample} from './components/ColorSample.jsx' ;
-import {MediaContent} from './components/MediaContent.jsx';
-import {Section} from './components/Section.jsx';
+import {Header} from './components/header.jsx'
+import {Profile} from './components/profile.jsx'
+import {Portfolio} from './components/portfolio.jsx' 
+import {Contact} from './components/contact.jsx'
+import {Footer} from './components/footer.jsx'
+import { ColorSample } from './components/colorSample.jsx';
+import {AccessibilityControls} from './components/accesibityControls.jsx'
 
 const App = () => {
   const fontSizeRef = useRef(null);
   const contrastRef = useRef(null);
   const colorBlindnessRef = useRef(null);
-  const voiceSelectRef = useRef(null);
 
   useEffect(() => {
     const cleanupFontSize = handleFontSizeChange();
@@ -74,26 +76,13 @@ const App = () => {
   
   return (
     <>
-      <header>
-        <h1>Web Accesible</h1>
-        <AccessibilityControls 
-          fontSizeRef={fontSizeRef}
-          contrastRef={contrastRef}
-          colorBlindnessRef={colorBlindnessRef}
-          voiceSelectRef={voiceSelectRef}
-        />
-      </header>
-      <main>
-        <Section title="Sección 1">
-          <p>Este es un ejemplo de contenido accesible.</p>
-          <ColorSample />
-        </Section>
-        <Section title="Sección 2">
-          <p>Este es otro ejemplo de contenido accesible.</p>
-          <MediaContent />
-          <ColorSample />
-        </Section>
-      </main>
+        <Header/>
+        <AccessibilityControls />
+        <ColorSample/>
+        <Profile />
+        <Portfolio />
+        <Contact />
+        <Footer />
     </>
   );
 };

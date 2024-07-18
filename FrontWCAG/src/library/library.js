@@ -3,7 +3,7 @@ export const handleFontSizeChange = () => {
     const fontSizeElement = document.getElementById('font-size');
     const changeFontSize = (event) => {
         const size = event.target.value;
-        document.body.classList.remove('large-font', 'x-large-afont');
+        document.body.classList.remove('large-font', 'x-large-font');
         if (size === 'large') {
         document.body.classList.add('large-font');
         } else if (size === 'x-large') {
@@ -69,7 +69,7 @@ export const readText = () => {
 
   let voices = [];
   // Seleccionar párrafos, títulos e imágenes
-  const textElements = document.querySelectorAll('p, h1, h2,label,select');
+  const textElements = document.querySelectorAll('p, h1, h2,label,select,input,button,footer,header');
 
   const populateVoiceList = () => {
     voices = speechSynthesis.getVoices();

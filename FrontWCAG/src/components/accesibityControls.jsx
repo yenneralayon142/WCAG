@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 // Componente Funcional
 
-export const AccessibilityControls = ({ fontSizeRef, contrastRef, colorBlindnessRef, voiceSelectRef }) => (
+export const AccessibilityControls = ({ fontSizeRef, contrastRef, colorBlindnessRef}) => (
   <div className="accessibility-controls">
     <label htmlFor="font-size">Tamaño de fuente:</label>
     <select id="font-size" ref={fontSizeRef}>
@@ -36,4 +36,3 @@ AccessibilityControls.propTypes = {
   colorBlindnessRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   voiceSelectRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
-
