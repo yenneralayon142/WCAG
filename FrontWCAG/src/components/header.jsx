@@ -8,7 +8,7 @@ export const Header = () => {
                 =
             </label>
             <div className="header__logo-container">
-                <img src={sena} alt="Logo" className="header__logo" />
+                <img src={sena} alt="Logo del sena color verde" className="header__logo" />
             </div>
             <nav className="header__nav">
                 <ul className="header__nav-list">
