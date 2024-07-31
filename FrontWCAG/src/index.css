@@ -291,7 +291,7 @@ h1 {
 }
 
 .portfolio__project {
-    background-image:linear-gradient(#0009,#0009) ,url("../../HTML/imagenes/yenner.jpg");
+    background-image:linear-gradient(#0009,#0009) ,url("");
     background-position: center;
     background-size: cover;
     display:grid;

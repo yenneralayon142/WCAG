@@ -19,6 +19,7 @@ export const handleFontSizeChange = () => {
         }
     };
 };
+
   // Función para cambiar el contraste
 export const handleContrastChange = () => {
     const contrastElement = document.getElementById('contrast');
