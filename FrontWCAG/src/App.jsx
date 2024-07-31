@@ -20,7 +20,7 @@ const App = () => {
     const cleanupReadText = readText();
 
     // Start voice recognition
-    startVoiceRecognition(
+    /* startVoiceRecognition(
       (transcript) => {
         console.log('Resultado:', transcript);
       },
@@ -30,7 +30,7 @@ const App = () => {
       () => {
         console.log('Reconocimiento de voz finalizado');
       }
-    );
+    ); */
 
     return () => {
       cleanupFontSize();
