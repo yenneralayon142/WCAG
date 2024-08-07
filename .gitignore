@@ -1,6 +1,3 @@
-# Created by https://www.toptal.com/developers/gitignore/api/react,visualstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=react,visualstudio
-
 ### react ###
 .DS_*
 *.log
@@ -8,7 +5,9 @@ logs
 **/*.backup.*
 **/*.back.*
 
+
 node_modules
+package-lock.json
 bower_components
 
 *.sublime*
