@@ -8,30 +8,36 @@ export default function AccessibilityControls () {
     const colorBlindnessRef = useRef(null);
 
     return(
-        <div className="container">
-            <label htmlFor="font-size">Tamaño de fuente:</label>
-            <select id="font-size" ref={fontSizeRef}>
-                <option value="default">Por defecto (Mediano)</option>
-                <option value="small">Pequeño</option>
-                <option value="default">Mediano</option>
-                <option value="large">Grande</option>
-                <option value="x-large">Muy grande</option>
-                <option value="xx-large">Extra grande</option>
-            </select>
+        <div className="container accesibility-controls">
+            <div className="accesibility-controls__item">                
+                <label htmlFor="font-size">Tamaño de fuente:</label>
+                <select id="font-size" ref={fontSizeRef}>
+                    <option value="default">Por defecto (Mediano)</option>
+                    <option value="small">Pequeño</option>
+                    <option value="default">Mediano</option>
+                    <option value="large">Grande</option>
+                    <option value="x-large">Muy grande</option>
+                    <option value="xx-large">Extra grande</option>
+                </select>    
+            </div>
+
+            <div className="accesibility-controls__item">
+                <label htmlFor="contrast">Contraste:</label>
+                <select id="contrast" ref={contrastRef}>
+                    <option value="default">Por defecto</option>
+                    <option value="high-contrast">Alto contraste</option>
+                </select>
+            </div>
     
-            <label htmlFor="contrast">Contraste:</label>
-            <select id="contrast" ref={contrastRef}>
-                <option value="default">Por defecto</option>
-                <option value="high-contrast">Alto contraste</option>
-            </select>
-    
-            <label htmlFor="color-blindness">Filtros para daltonismo:</label>
-            <select id="color-blindness" ref={colorBlindnessRef}>
-                <option value="default">Por defecto</option>
-                <option value="protanopia">Protanopia</option>
-                <option value="deuteranopia">Deuteranopia</option>
-                <option value="tritanopia">Tritanopia</option>
-            </select>
+            <div className="accesibility-controls__item">
+                <label htmlFor="color-blindness">Filtros para daltonismo:</label>
+                <select id="color-blindness" ref={colorBlindnessRef}>
+                    <option value="default">Por defecto</option>
+                    <option value="protanopia">Protanopia</option>
+                    <option value="deuteranopia">Deuteranopia</option>
+                    <option value="tritanopia">Tritanopia</option>
+                </select>
+            </div>
         </div>
     );
 }

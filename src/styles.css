@@ -105,9 +105,23 @@ section {
 
 /*- - - - - - HERO SECTION - - - - - -*/
 
+.accesibility-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accesibility-controls__item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 .color-sample {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
 }
@@ -115,7 +129,16 @@ section {
 .color-sample div {
     flex-grow: 1;
     height: 50px;
+    min-width: 100px;
     border-radius: 5px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .profile__data {
@@ -129,6 +152,19 @@ section {
     box-shadow: 0 0 40px #0002;
     height: fit-content;
 }
+
+/*- - - - - - HERO SECTION QUERIES  - - - - - -*/
+
+@media screen and (min-width: 900px) {
+    .profile {
+        flex-direction: row;
+    }
+
+    .accesibility-controls {
+        flex-direction: row;
+    }
+}
+
 
 /*- - - - - - FOOTER SECTION - - - - - -*/
 

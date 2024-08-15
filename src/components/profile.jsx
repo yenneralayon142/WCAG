@@ -1,7 +1,7 @@
 export default function Profile(){
     return(
-        <div className="container" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px'}}>
-            <div style={{height: '400px', width: '500px', flex: 'none'}}>
+        <div className="container profile">
+            <div style={{height: '400px', width: '100%', maxWidth: '500px', flex: 'none'}}>
                 <img src="/accesibilidad.png" alt="Imagen Accesibilidad Web WCAG" className="image" title='Imagen WCAG' aria-label='Imagen Accesibilidad Web WCAG'/>
             </div>
             <div className="profile__data">
