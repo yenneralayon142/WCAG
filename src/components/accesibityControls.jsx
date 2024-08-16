@@ -1,10 +1,14 @@
+import {useContrastChange} from '../Hooks/useContrastChange'
+
 export default function AccessibilityControls () {
   return(
       <aside className="sidebar">
         <form action="" className="sidebar__form">
             <input type="checkbox" id="open-menu"/>
             <label htmlFor="open-menu" className="material-symbols-outlined close-button">close</label>
-            <label htmlFor="open-menu" className="material-symbols-outlined open-button">double_arrow</label>
+            <label htmlFor="open-menu" className="material-symbols-outlined open-button">
+              double_arrow
+              </label>
         </form>
         <h1 className="sidebar__tittle">
           Menú de Accesibilidad 
@@ -18,7 +22,7 @@ export default function AccessibilityControls () {
                         Tamaño texto
                         </a>
                     </li>
-                    <li className="sidebar__item">
+                    <li className="sidebar__item" onClick={useContrastChange}>
                           <a href="">
                               <span className="material-symbols-outlined">contrast</span>
                               Contraste
@@ -44,7 +48,7 @@ export default function AccessibilityControls () {
         <div className="sidebar_profile">
                   <ul>
                      <li className="sidebar__item  button-end">
-                          <span class="material-symbols-outlined">restart_alt</span>
+                          <span className="material-symbols-outlined">restart_alt</span>
                           <a href="#">Restablecer configuraciones</a>
                      </li>
                   </ul>
