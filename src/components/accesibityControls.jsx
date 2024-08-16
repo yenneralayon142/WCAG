@@ -1,4 +1,4 @@
-export const AccessibilityControls = () => {
+export default function AccessibilityControls () {
   return(
       <aside className="sidebar">
         <form action="" className="sidebar__form">
