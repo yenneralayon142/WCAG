@@ -1,14 +1,17 @@
 export default function AccessibilityControls () {
   return(
-      <aside className="sidebar">
+      <div className="sidebar">
         <form action="" className="sidebar__form">
             <input type="checkbox" id="open-menu"/>
             <label htmlFor="open-menu" className="material-symbols-outlined close-button">close</label>
-            <label htmlFor="open-menu" className="material-symbols-outlined open-button">double_arrow</label>
+            <label htmlFor="open-menu" className="material-symbols-outlined open-button">group_add</label>
         </form>
         <h1 className="sidebar__tittle">
           Menú de Accesibilidad 
         </h1>
+        <h2 className='sidebar__tittle'>
+          Aumentar tamaño Widgets
+        </h2>
         <nav className="sidebar__nav">
             <ul>
               <div className="sidebar__container">
@@ -44,12 +47,12 @@ export default function AccessibilityControls () {
         <div className="sidebar_profile">
                   <ul>
                      <li className="sidebar__item  button-end">
-                          <span class="material-symbols-outlined">restart_alt</span>
+                          <span className="material-symbols-outlined">restart_alt</span>
                           <a href="#">Restablecer configuraciones</a>
                      </li>
                   </ul>
         </div>
-    </aside>
+    </div>
   )
 }
 

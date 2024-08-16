@@ -200,14 +200,24 @@ footer {
 .tritanopia .color-blue { background-color: #0000A3; }
 .tritanopia .color-yellow { background-color: #FFA3A3; }
 
-/*Declaration Sidebars*/
 
-body {
+
+/*SIDEBAR STYLES*/
+
+.sidebar {
     --bg-color-sidebar: #e2eaff;
     --sidebar-color: #fff;
     --dark-color: #000;
     --text-color:#444;
-    background-color: var(--bg-color-sidebar);
+    background-color: var(--sidebar-color);
+    position: fixed;
+    width: clamp(300px,50vw,300px);
+    font-size: clamp(1rem, 2.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 30px 6px;
+    z-index: 1;
 }
 
 .sidebar__tittle {
@@ -216,21 +226,6 @@ body {
     justify-content: center;
     padding: 10px 0 10px 0;
     color: #000;
-}
-
-/*SIDEBAR STYLES*/
-
-.sidebar {
-    background-color: var(--sidebar-color);
-    position: fixed;
-    height: 90dvh;
-    width: clamp(300px,50vw,300px);
-    font-size: clamp(1rem, 2.2vw, 3rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px 0 30px 6px;
-    z-index: 1;
 }
 
 .sidebar__container {
@@ -265,12 +260,6 @@ body {
     cursor: pointer;
 }
 
-button {
-    margin:10px;
-    border: none;
-    border-radius: 10px;
-}
-
 .button-end {
     display: flex;
 }
@@ -292,22 +281,6 @@ button {
 }
 
 
-
-/*SIDEBAR PICTURE STYLES*/
-
-.sidebar__picture {
-    margin-left: 1.5rem;
-    position: relative;
-    z-index: 10;
-}
-
-.sidebar__picture img {
-    width: clamp( 4rem,75%,20rem);
-    margin: auto;
-    opacity: .82;
-    filter: hue-rotate(-22deg);
-}
-
 .sidebar__item span {
     padding: 12px;
     font-size: 2rem;
@@ -321,32 +294,6 @@ button {
 
 /*SIDEBAR PROFILE MENU STYLES*/
 
-.sidebar__profile img {
-    border-radius: 50%;
-    width: 2rem;
-}
-
-.item--profile  .profile-option {
-    font-size: .8rem;
-    padding: 0 12px 0 9px;
-    color: inherit;
-}
-
-.item--profile {
-    margin: 12px;
-    width:fit-content;
-    color: var(--text-color);
-}
-
-.item--profile:hover img{
-    opacity: .7;
-    border-radius: 25px;
-    color: var(--sidebar-color);
-}
-
-.item--profile::before, .item--profile::after {
-    display: none;
-}
 
 input[type="checkbox"] {
     display: none;
@@ -362,6 +309,7 @@ input[type="checkbox"] {
     display: none;
 }
 
+/*Configuración label*/
 .sidebar label {
     position: relative;
     background-color: var(--bg-color-sidebar);
@@ -440,6 +388,6 @@ input[type="checkbox"]:checked ~ label::before{
 }
 
 .sidebar:has(input[type="checkbox"]:checked) :is(.sidebar__item a, 
-.profile-option) {
+.profile-option,.button-end,.sidebar__tittle) {
     display: none;
 }
