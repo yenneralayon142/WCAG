@@ -1,8 +1,66 @@
-# React + Vite
+# Estandares WCAG
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto tiene como objetivo proporcionar una guía clara y concisa para que los desarrolladores puedan crear páginas web accesibles, cumpliendo con los estándares de la **Web Content Accessibility Guidelines (WCAG)**.
 
-Currently, two official plugins are available:
+## Requisitos Previos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
+
+- [React](https://nodejs.org/) (versión 16.8.x o mayor)
+- [Node.js](https://nodejs.org/) (versión 14 o mayor)
+
+## Instalación
+
+Para instalar el proyecto localmente:
+
+1. Clona este repositorio:
+    ```bash
+    git clone https://github.com/yenneralayon142/WCAG.git
+    ```
+
+2. Navega al directorio del proyecto:
+    ```bash
+    cd WCAG
+    ```
+
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+
+4. Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
+
+## Estructura de Carpetas
+
+La estructura del proyecto es la siguiente:
+
+```
+WCAG/
+├── public/
+│ └── (Archivos estáticos: imágenes, fuentes, etc.)
+├── src/
+│   ├── assets/
+│   │   └── (Archivos de imágenes, estilos, etc.)
+│   ├── components/
+│   │   └── (Componentes reutilizables)
+│   ├── hooks/
+│   │   └── (Funcionalidades)
+│   ├── layouts/
+│   │   └── (Plantillas reutilizables, header, footer.)
+│   ├── pages/
+│   │   └── (Vistas/páginas)
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json (manejar dependencias)
+```
+
+## Páginas
+El sistema de información tendrá las siguientes páginas:
+
+- **Inicio:** Página principal del sistema que ofrece una visión general y una introducción a los estándares WCAG.
+- **Enfermedades y WCAG:** Página dedicada a listar y describir diversas enfermedades, proporcionando información accesible y relevante en el contexto de las pautas WCAG.
+- **Documentación para Desarrolladores:** Página que incluye documentación detallada para ayudar a los desarrolladores a crear páginas accesibles conforme a los estándares WCAG.
+- **Documentación para Diseñadores:** Página que proporciona directrices y recursos para los diseñadores, asegurando que cumplan con los estándares WCAG en el diseño de interfaces.
