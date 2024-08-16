@@ -1,0 +1,201 @@
+/* - - - - - - GENERAL - - - - - - */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #e2eaff;
+}
+
+.image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.text--blue {
+    color: #48e;
+}
+
+.text-sm {
+    font-size: 12px;
+}
+
+.text-md {
+    font-size: 16px;
+}
+
+.text-lg {
+    font-size: 20px;
+}
+
+.text-xl {
+    font-size: 24px;
+}
+
+.text-2xl {
+    font-size: 32px;
+}
+
+.text-3xl {
+    font-size: 48px;
+}
+
+.text-4xl {
+    font-size: 64px;
+}
+
+/*- - - - - -HEADER SECTION- - - - - -*/
+
+.header__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__logo {
+    width: 60px;
+    height: 60px;
+    padding: 5px 0px;
+}
+
+#header__desktop {
+    display: none;
+}
+
+/*- - - - - -HEADER QUERIES- - - - - -*/
+@media screen and (min-width: 600px) {
+
+    #header__desktop {
+        display: block;
+    }
+
+    #header__mobile {
+        display: none;
+    }
+}
+
+/*- - - - - - HERO SECTION - - - - - -*/
+
+.accesibility-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accesibility-controls__item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.color-sample {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.color-sample div {
+    flex-grow: 1;
+    height: 50px;
+    min-width: 100px;
+    border-radius: 5px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile__data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 40px #0002;
+    height: fit-content;
+}
+
+/*- - - - - - HERO SECTION QUERIES  - - - - - -*/
+
+@media screen and (min-width: 900px) {
+    .profile {
+        flex-direction: row;
+    }
+
+    .accesibility-controls {
+        flex-direction: row;
+    }
+}
+
+
+/*- - - - - - FOOTER SECTION - - - - - -*/
+
+footer {
+    background-color: #18233f;
+    color: #fffd;
+    padding: 20px 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/*- - - - - - DALTONISMO - - - - - -*/
+
+.color-red { background-color: #FF0000; }
+.color-green { background-color: #00FF00; }
+.color-blue { background-color: #0000FF; }
+.color-yellow { background-color: #FFFF00; }
+
+.protanopia .color-red { background-color: #8B0000; }
+.protanopia .color-green { background-color: #8A8A00; }
+.protanopia .color-blue { background-color: #0000FF; }
+.protanopia .color-yellow { background-color: #8A8A00; }
+
+.deuteranopia .color-red { background-color: #A40000; }
+.deuteranopia .color-green { background-color: #A4A400; }
+.deuteranopia .color-blue { background-color: #0000FF; }
+.deuteranopia .color-yellow { background-color: #A4A400; }
+
+.tritanopia .color-red { background-color: #FF0000; }
+.tritanopia .color-green { background-color: #00FFFF; }
+.tritanopia .color-blue { background-color: #0000A3; }
+.tritanopia .color-yellow { background-color: #FFA3A3; }
