@@ -4,7 +4,7 @@ import Footer from "./footer";
 
 export default function AppLayout() {
     return (
-        <div>
+        <div id="app__container">
             <Header />
             <Outlet />
             <Footer />

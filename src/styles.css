@@ -12,6 +12,12 @@ body {
     background-color: #e2eaff;
 }
 
+#app__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .image {
     object-fit: contain;
     width: 100%;
@@ -175,6 +181,7 @@ footer {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+    margin-top: auto;
 }
 
 
