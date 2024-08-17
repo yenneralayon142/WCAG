@@ -18,7 +18,7 @@ export default function App() {
     useFontSizeChange();
     useContrastChange();
     useColorBlindnessChange();
-    useReadText();
+    //useReadText();
 
     return (
         <BrowserRouter>
