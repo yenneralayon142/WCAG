@@ -7,5 +7,6 @@ export default function Wcag() {
                 </div>
             </section>
         </main>
+        
     );
 }

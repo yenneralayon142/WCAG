@@ -4,7 +4,7 @@ import * as icons from "@progress/kendo-svg-icons";
 export default function AccessibilityControls() {
     return (
         <form>
-            <input type="checkbox" id="open-menu" className="hidden"/>
+            <input type="checkbox" id="open-menu" className="hidden" aria-label="Abrir menú de accesibilidad web"/>
             
             <label htmlFor="open-menu" className="open-button">
                 <Button
@@ -64,7 +64,7 @@ export default function AccessibilityControls() {
                 </div>
                 
                 <div className="sidebar__buttons">
-                    <label htmlFor="open-menu" className="close-button">
+                    <label htmlFor="open-menu" className="close-button" aria-label="Cerrar menú de accesibilidad web">
                         <Button
                             rounded="full"
                             fillMode="flat"
