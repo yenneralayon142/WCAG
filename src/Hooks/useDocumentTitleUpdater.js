@@ -13,6 +13,9 @@ export default function UseDocumentTitleUpdater() {
             case '/wcag':
                 document.title = 'Enfermedades y WCAG | Web Accesible';
                 break;
+            case '/searchUrl':
+                document.title = 'Busqueda Url | Web Accesible'
+                break;
             case '/docs':
                 document.title = 'Documentación | Web Accesible';
                 break;

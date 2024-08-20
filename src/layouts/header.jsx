@@ -17,6 +17,10 @@ export default function Header() {
             route: "/wcag",
         },
         {
+            text: "Busqueda Url",
+            route:"/searchUrl",
+        },
+        {
             text: "Documentos",
             route: "/docs",
             items: [

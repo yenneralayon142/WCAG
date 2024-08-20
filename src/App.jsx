@@ -11,6 +11,7 @@ import Docs from './pages/docs';
 import Developer from './pages/developer';
 import Designer from './pages/designer';
 import AppLayout from './layouts/app';
+import SearchUrl from './pages/searchUrl';
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
                     <Route index element={<Home />} />
                     <Route path="/wcag" element={<Wcag />} />
                     <Route path="/docs" element={<Docs />} />
+                    <Route path="/searchUrl" element={<SearchUrl />} />
                     <Route path="/docs/developer" element={<Developer />} />
                     <Route path="/docs/designer" element={<Designer />} />
                 </Route>
