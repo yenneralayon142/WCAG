@@ -91,7 +91,6 @@ export default function AccessibilityControls() {
                 {/* Encabezado */}
                 <div className="sidebar__tittle">
                     <h1 className="text-2xl">Menú de Accesibilidad</h1>
-                    <h2 className="text-lg">Aumentar tamaño Widgets</h2>
                     <hr />
                 </div>
 
