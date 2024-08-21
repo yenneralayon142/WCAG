@@ -52,13 +52,29 @@ export default function SearchUrl() {
                     />
                   </fieldset>
                 </form>
-                <button>
+                <button className="component-container button-submit">
                     Buscar
                 </button>
               </div>
               <div className="skeleton-container top">
                 <div className="k-skeleton skeleton-box-small" />
                 <div className="k-skeleton skeleton-box-large" />
+              </div>
+              <div className="skeleton-container bottom">
+                <div className="k-skeleton skeleton-box-small" />
+                <div className="k-skeleton skeleton-box-large-double" />
+              </div>
+              <div className="skeleton-container bottom">
+                <div className="k-skeleton skeleton-box-small" />
+                <div className="k-skeleton skeleton-box-large-double" />
+              </div>
+              <div className="skeleton-container bottom">
+                <div className="k-skeleton skeleton-box-small" />
+                <div className="k-skeleton skeleton-box-large-double" />
+              </div>
+              <div className="skeleton-container bottom">
+                <div className="k-skeleton skeleton-box-small" />
+                <div className="k-skeleton skeleton-box-large-double" />
               </div>
               <div className="skeleton-container bottom">
                 <div className="k-skeleton skeleton-box-small" />
