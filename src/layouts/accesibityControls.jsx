@@ -4,6 +4,7 @@ import * as icons from "@progress/kendo-svg-icons";
 import { useAccessibilityContext } from "../contexts/accesibilityContext";
 import { useFontSizeChange } from "../Hooks/useFontsizeChange";
 import { useSidebarSizeChange } from "../Hooks/useSidebarSizeChange";
+import { useReadText } from "../Hooks/useReadText";
 import SidebarItem from "../components/sidebarItem";
 
 export default function AccessibilityControls() {
@@ -53,6 +54,7 @@ export default function AccessibilityControls() {
 
     useFontSizeChange();
     useSidebarSizeChange();
+    useReadText();
 
     const handleMoveSidebar = () => {
         if (settings.sidebarPosition == 'left') {

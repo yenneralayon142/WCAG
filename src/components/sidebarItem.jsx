@@ -12,10 +12,9 @@ export default function SidebarItem(props) {
     return (
         <BadgeContainer>
             <article className={`sidebar__item ${ settings[optionName] != defaultSettings[optionName] && 'sidebar__item--active'}`} id={id} >
-                {settings[optionName] != defaultSettings[optionName] || !hasIndex && settings[optionName] == true && (
-                    <Badge themeColor="secondary" size="small" >
-                        <SvgIcon icon={icons.checkIcon}  />
-                        77
+                {(settings[optionName] != defaultSettings[optionName] || settings[optionName] == true) && (
+                    <Badge themeColor="secondary" size="small">
+                        <SvgIcon icon={icons.checkIcon} />
                     </Badge>
                 )}
                 <span className="sidebar__item__icon material-symbols-outlined">{icon}</span>

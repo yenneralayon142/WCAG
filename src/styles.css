@@ -6,6 +6,7 @@
     padding: 0;
     color: #000;
     word-break: break-all;
+    scrollbar-gutter: auto;
 }
 
 body {
@@ -230,7 +231,6 @@ footer {
   height: 100dvh;
   overflow-y: auto;
   
-  font-size: clamp(1rem, 2.2vw, 3rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -287,8 +287,8 @@ footer {
 
 .sidebar__container {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 }
 
 .sidebar__item {
