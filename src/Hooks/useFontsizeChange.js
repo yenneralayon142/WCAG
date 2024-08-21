@@ -1,44 +1,41 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import { useAccessibilityContext } from "../contexts/accesibilityContext";
 
 export function useFontSizeChange() {
-  useEffect(() => {
-    const fontSizeElement = document.getElementById('font-size');
+    const { settings, updateSettings } = useAccessibilityContext();
 
-    const changeFontSize = (event) => {
-        const size = event.target.value;
+    const options = ["text-sm", "text-md", "text-lg", "text-xl", "text-2xl", "text-3xl"];
+    
+    useEffect(() => {
+        const fontSizeElement = document.getElementById("font-size");
+        const currentIndex = options.findIndex(size => size === settings.textSize);
 
-        document.body.classList.remove('text-sm', 'text-md', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl');
-
-        switch (size) {
-            case 'small':
-                document.body.classList.add('text-sm');
-                break;
-            case 'default':
-                document.body.classList.add('text-md');
-                break;
-            case 'large':
-                document.body.classList.add('text-lg');
-                break;
-            case 'x-large':
-                document.body.classList.add('text-xl');
-                break;
-            case 'xx-large':
-                document.body.classList.add('text-2xl');
-                break;
-            default:
-                document.body.classList.add('text-md'); // Valor por defecto
-                break;
+        const ChangeFontSize = () => {
+            const nextIndex = currentIndex < options.length - 1 ? currentIndex + 1 : 0;
+            updateSettings({ textSize: options[nextIndex] });
         }
-    };
 
-    if (fontSizeElement) {
-        fontSizeElement.addEventListener('change', changeFontSize);
-    }
+        const applyFontSize = () => {
+            const elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, label, span, a, li");
+    
+            elements.forEach((element) => {
+                element.classList.remove(...["text-sm", "text-md", "text-lg", "text-xl", "text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"]);
+                element.classList.add(settings.textSize);
+            })
+        }
 
-    return () => {
-      if (fontSizeElement) {
-        fontSizeElement.removeEventListener('change', changeFontSize);
-      }
-    };
-  }, []);
+        if(fontSizeElement) {
+            applyFontSize();
+            fontSizeElement.addEventListener("click", ChangeFontSize);
+        }
+
+        return () => {
+            if(fontSizeElement) {
+                fontSizeElement.removeEventListener("click", ChangeFontSize);
+            }
+        }
+
+    }, [settings]);
+
+    return null;
 }
