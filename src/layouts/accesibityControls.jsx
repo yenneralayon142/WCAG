@@ -36,10 +36,19 @@ export default function AccessibilityControls() {
             optionName: "screenReader",
         },
         {
-            text: 'Cursor',
+            text: 'Tamaño cursor',
             icon: 'web_traffic',
             id: 'cursor',
-            hasIndex: false,
+            hasIndex: true,
+            options: ["normal", "large", "extra-large"],
+            optionName: "cursorSize",
+        },
+        {
+            text: 'Color cursor',
+            icon: 'web_traffic',
+            id: 'cursor',
+            hasIndex: true,
+            options: ["white", "black"],
             optionName: "cursorColor",
         },
         {

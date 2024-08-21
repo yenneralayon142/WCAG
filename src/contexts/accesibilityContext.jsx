@@ -21,6 +21,7 @@ export default function AccessibilityProvider ({ children }) {
         
         // Navigation settings
         cursorColor: 'white', // black, white
+        cursorSize:  'normal', // normal, large, extra-large
         resaltedLinks: false,
 
         // Text settings
