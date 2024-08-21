@@ -5,7 +5,9 @@ import { useAccessibilityContext } from "../contexts/accesibilityContext";
 import { useFontSizeChange } from "../Hooks/useFontsizeChange";
 import { useSidebarSizeChange } from "../Hooks/useSidebarSizeChange";
 import { useReadText } from "../Hooks/useReadText";
+import { useCursorColorChange } from "../Hooks/useCursorColorChange";
 import SidebarItem from "../components/sidebarItem";
+import { useHighLightLinks } from "../Hooks/useHighlightLinks";
 
 export default function AccessibilityControls() {
     
@@ -36,25 +38,43 @@ export default function AccessibilityControls() {
             optionName: "screenReader",
         },
         {
-            text: 'Cursor',
+            text: 'Tamaño cursor',
             icon: 'web_traffic',
-            id: 'cursor',
-            hasIndex: false,
+            id: 'cursor-size',
+            hasIndex: true,
+            options: ["normal", "large", "extra-large"],
+            optionName: "cursorSize",
+        },
+        {
+            text: 'Color cursor',
+            icon: 'web_traffic',
+            id: 'cursor-color',
+            hasIndex: true,
+            options: ["white", "black"],
             optionName: "cursorColor",
         },
         {
-            text: 'Tamaño menú',
+            text: 'Tamaño widget',
             icon: 'accessibility',
             id: 'sidebar-size',
             hasIndex: true,
             options: ["small", "medium", "large"],
             optionName: "sidebarSize",
+        },
+        {
+            text: 'Resaltar Links',
+            icon: 'link',
+            id: 'highlight-links',
+            hasIndex: false,
+            optionName: "highlightedLinks",
         }
     ]
 
     useFontSizeChange();
     useSidebarSizeChange();
     useReadText();
+    useCursorColorChange();
+    useHighLightLinks();
 
     const handleMoveSidebar = () => {
         if (settings.sidebarPosition == 'left') {
@@ -91,7 +111,6 @@ export default function AccessibilityControls() {
                 {/* Encabezado */}
                 <div className="sidebar__tittle">
                     <h1 className="text-2xl">Menú de Accesibilidad</h1>
-                    <h2 className="text-lg">Aumentar tamaño Widgets</h2>
                     <hr />
                 </div>
 

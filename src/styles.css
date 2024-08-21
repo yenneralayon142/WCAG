@@ -30,6 +30,13 @@ a {
     text-decoration: none;
 }
 
+.link--highlighted {
+    background: hsla(195, 100%, 51%, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: underline;
+}
+
 section {
     width: 100%;
     padding: 0px 10px;
@@ -221,6 +228,7 @@ footer {
   --dark-color: #000;
   --text-color: #444;
   background-color: var(--sidebar-color);
+  scrollbar-gutter: auto;
 
   position: fixed;
   top: 0;
@@ -263,7 +271,6 @@ footer {
   opacity: 0;
   z-index: -1;
   transition: 300ms ease-in-out;
-  cursor: pointer;
 }
 
 .open-button {
@@ -288,7 +295,7 @@ footer {
 .sidebar__container {
   display: grid;
   gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
 }
 
 .sidebar__item {
