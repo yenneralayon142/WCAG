@@ -264,7 +264,6 @@ footer {
   opacity: 0;
   z-index: -1;
   transition: 300ms ease-in-out;
-  cursor: pointer;
 }
 
 .open-button {

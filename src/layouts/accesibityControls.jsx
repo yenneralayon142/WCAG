@@ -5,6 +5,7 @@ import { useAccessibilityContext } from "../contexts/accesibilityContext";
 import { useFontSizeChange } from "../Hooks/useFontsizeChange";
 import { useSidebarSizeChange } from "../Hooks/useSidebarSizeChange";
 import { useReadText } from "../Hooks/useReadText";
+import { useCursorColorChange } from "../Hooks/useCursorColorChange";
 import SidebarItem from "../components/sidebarItem";
 
 export default function AccessibilityControls() {
@@ -38,7 +39,7 @@ export default function AccessibilityControls() {
         {
             text: 'Tamaño cursor',
             icon: 'web_traffic',
-            id: 'cursor',
+            id: 'cursor-size',
             hasIndex: true,
             options: ["normal", "large", "extra-large"],
             optionName: "cursorSize",
@@ -46,13 +47,13 @@ export default function AccessibilityControls() {
         {
             text: 'Color cursor',
             icon: 'web_traffic',
-            id: 'cursor',
+            id: 'cursor-color',
             hasIndex: true,
             options: ["white", "black"],
             optionName: "cursorColor",
         },
         {
-            text: 'Tamaño menú',
+            text: 'Tamaño widget',
             icon: 'accessibility',
             id: 'sidebar-size',
             hasIndex: true,
@@ -64,6 +65,7 @@ export default function AccessibilityControls() {
     useFontSizeChange();
     useSidebarSizeChange();
     useReadText();
+    useCursorColorChange();
 
     const handleMoveSidebar = () => {
         if (settings.sidebarPosition == 'left') {
