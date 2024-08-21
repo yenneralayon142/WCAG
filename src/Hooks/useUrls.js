@@ -1,8 +1,8 @@
 import { useMemo, useRef, useState, useCallback} from 'react'
 
 
-export function useMovies ({ search, sort }) {
-  const [movies, setMovies] = useState([])
+export function useUrls ({ search, sort }) {
+  const [urls, setUrls] = useState([])
   const [loading, setLoading] = useState(false)
 
   // el error no se usa pero puedes implementarlo
@@ -10,7 +10,7 @@ export function useMovies ({ search, sort }) {
   const [, setError] = useState(null)
   const previousSearch = useRef(search)
 
-  const getMovies = useCallback(async ({ search }) => {
+  const getUrls = useCallback(async ({ search }) => {
     if (search === previousSearch.current) return
     // search es ''
 
@@ -18,8 +18,8 @@ export function useMovies ({ search, sort }) {
       setLoading(true)
       setError(null)
       previousSearch.current = search
-      const newMovies = await searchMovies({ search })
-      setMovies(newMovies)
+      const newUrls = await searchUrls({ search })
+      setUrls(newUrls)
     } catch (e) {
       setError(e.message)
     } finally {
@@ -28,12 +28,12 @@ export function useMovies ({ search, sort }) {
     }
   }, [])
 
-  const sortedMovies = useMemo(() => {
-        if (!movies) return;
+  const sortedUrls = useMemo(() => {
+        if (!urls) return;
     return sort
-      ? [...movies].sort((a, b) => a.title.localeCompare(b.title))
-      : movies
-  }, [sort, movies])
+      ? [...urls].sort((a, b) => a.title.localeCompare(b.title))
+      : urls
+  }, [sort, urls])
 
-  return { movies: sortedMovies, getMovies, loading }
+  return { urls: sortedUrls, getUrls, loading }
 }

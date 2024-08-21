@@ -24,7 +24,7 @@ function NoUrlsResults () {
 }
 
 
-export function Movies ({ urls }) {
+export function Urls ({ urls }) {
     const hasMovies = urls?.length > 0
     return (
         hasMovies
