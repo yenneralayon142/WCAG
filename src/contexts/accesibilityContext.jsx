@@ -22,7 +22,7 @@ export default function AccessibilityProvider ({ children }) {
         // Navigation settings
         cursorColor: 'white', // black, white
         cursorSize:  'normal', // normal, large, extra-large
-        resaltedLinks: false,
+        highlightedLinks: false,
 
         // Text settings
         textSize: 'text-md', // text-sm, text-md, text-lg, text-xl, text-2xl, text-3xl

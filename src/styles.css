@@ -30,6 +30,13 @@ a {
     text-decoration: none;
 }
 
+.link--highlighted {
+    background: hsla(195, 100%, 51%, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: underline;
+}
+
 section {
     width: 100%;
     padding: 0px 10px;

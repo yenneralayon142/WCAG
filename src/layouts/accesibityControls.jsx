@@ -7,6 +7,7 @@ import { useSidebarSizeChange } from "../Hooks/useSidebarSizeChange";
 import { useReadText } from "../Hooks/useReadText";
 import { useCursorColorChange } from "../Hooks/useCursorColorChange";
 import SidebarItem from "../components/sidebarItem";
+import { useHighLightLinks } from "../Hooks/useHighlightLinks";
 
 export default function AccessibilityControls() {
     
@@ -59,6 +60,13 @@ export default function AccessibilityControls() {
             hasIndex: true,
             options: ["small", "medium", "large"],
             optionName: "sidebarSize",
+        },
+        {
+            text: 'Resaltar Links',
+            icon: 'link',
+            id: 'highlight-links',
+            hasIndex: false,
+            optionName: "highlightedLinks",
         }
     ]
 
@@ -66,6 +74,7 @@ export default function AccessibilityControls() {
     useSidebarSizeChange();
     useReadText();
     useCursorColorChange();
+    useHighLightLinks();
 
     const handleMoveSidebar = () => {
         if (settings.sidebarPosition == 'left') {
