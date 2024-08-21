@@ -5,11 +5,14 @@ import * as icons from "@progress/kendo-svg-icons";
 
 export default function AccessibilityControls() {
 
-    const { settings, setSettings } = useAccessibilityContext();
+    const { settings, updateSettings, defaultSettings } = useAccessibilityContext();
 
     const handleMoveWidget = () => {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('sidebar-right');
+        if (settings.sidebarPosition == 'left') {
+            updateSettings({ sidebarPosition: 'right' });
+        } else {
+            updateSettings({ sidebarPosition: 'left' });
+        }
     };
 
     return (
@@ -28,7 +31,10 @@ export default function AccessibilityControls() {
             </label>
 
             <div className="overlay" onClick={() => document.getElementById('open-menu').click()}></div>
-            <div className="sidebar">
+            <div className={`sidebar 
+                ${settings.sidebarPosition == 'left' ? '' : 'sidebar--right'} 
+                ${settings.sidebarSize == 'medium' ? '' : settings.sidebarSize == 'large' ? 'sidebar--large' : 'sidebar--small'}
+                `}>
                 <div className="sidebar__tittle">
                     <h1 className="text-2xl">Menú de Accesibilidad</h1>
                     <h2 className="text-lg">Aumentar tamaño Widgets</h2>

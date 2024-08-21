@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 export const AccessibilityContext = createContext();
 
@@ -8,7 +8,7 @@ export function useAccessibilityContext () {
 
 export default function AccessibilityProvider ({ children }) {
     
-    const [settings, setSettings] = useState({
+    const defaultSettings = {
         // Sidebar settings
         sidebarSize: 'medium',
         sidebarPosition: 'left',
@@ -33,11 +33,25 @@ export default function AccessibilityProvider ({ children }) {
         // Color settings
         colorSaturation: 'normal',
         colorContrast: 'normal',
-        hideImages: false
-    });
+        hideImages: false,
+    };
+
+    const [settings, setSettings] = useState(defaultSettings);
+
+    const updateSettings = (newSettings) => {
+        setSettings({ ...settings, ...newSettings });
+        localStorage.setItem('settings', JSON.stringify({ ...settings, ...newSettings }));
+    };
+
+    useEffect(() => {
+        const storedSettings = JSON.parse(localStorage.getItem('settings'));
+        if (storedSettings) {
+            setSettings(storedSettings);
+        }
+    }, []);
 
     return (
-        <AccessibilityContext.Provider value={{settings, setSettings}}>
+        <AccessibilityContext.Provider value={{ settings, updateSettings, defaultSettings }}>
             {children}
         </AccessibilityContext.Provider>
     )
