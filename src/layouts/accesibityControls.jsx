@@ -1,14 +1,17 @@
-
+import React from "react";
+import { useAccessibilityContext } from "../contexts/accesibilityContext";
 import { Button } from "@progress/kendo-react-buttons";
 import * as icons from "@progress/kendo-svg-icons";
 
 export default function AccessibilityControls() {
+
+    const { settings, setSettings } = useAccessibilityContext();
+
     const handleMoveWidget = () => {
         const sidebar = document.querySelector('.sidebar');
         sidebar.classList.toggle('sidebar-right');
     };
 
-    
     return (
         <form>
             <input type="checkbox" id="open-menu" className="hidden" aria-label="Abrir menú de accesibilidad web"/>
@@ -31,30 +34,21 @@ export default function AccessibilityControls() {
                     <h2 className="text-lg">Aumentar tamaño Widgets</h2>
                 </div>
                 <div className="sidebar__container">
-                    <article className="sidebar__item">
-                        <a href="">
-                            <span className="material-symbols-outlined">text_fields</span>
-                            <br />
-                            Tamaño texto
-                        </a>
+                    <article className="sidebar__item" id="font-size">
+                        <span className="material-symbols-outlined">text_fields</span>
+                        <p>Tamaño texto</p>
                     </article>
                     <article className="sidebar__item">
-                        <a href="">
-                            <span className="material-symbols-outlined">contrast</span>
-                            Contraste
-                        </a>
+                        <span className="material-symbols-outlined">contrast</span>
+                        <p>Contraste</p>
                     </article>
                     <article className="sidebar__item">
-                        <a href="">
                             <span className="material-symbols-outlined">text_to_speech</span>
-                            Lector Pantalla
-                        </a>
+                            <p>Lector pantalla</p>
                     </article>
                     <article className="sidebar__item">
-                        <a href="">
-                            <span className="material-symbols-outlined">web_traffic</span>
-                            Cursor
-                        </a>
+                        <span className="material-symbols-outlined">web_traffic</span>
+                        <p>Cursor</p>
                     </article>
                 </div>
                 <div className="sidebar__buttons">

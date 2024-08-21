@@ -5,8 +5,6 @@
     margin: 0;
     padding: 0;
     color: #000;
-    
-    overflow-wrap: break-word;
 }
 
 body {
@@ -227,7 +225,9 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
+  height: 100dvh;
+  overflow-y: auto;
   
   font-size: clamp(1rem, 2.2vw, 3rem);
   display: flex;
@@ -288,8 +288,9 @@ footer {
   text-align: center;
   gap: 5px;
   font-size: 20px;
-  padding: 7px;
+  padding: 15px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .sidebar__item:hover {
@@ -302,11 +303,6 @@ footer {
   font-size: 2rem;
 }
 
-.sidebar__item a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* Mostrar u ocultar la barra lateral si el checkbox está marcado */
 form:has(#open-menu:checked) .sidebar {
