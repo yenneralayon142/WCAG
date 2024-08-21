@@ -362,10 +362,11 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
   .profile-demo .custom-card {
     padding: 32px;
     width: 712px;
-    height: 400px;
+    height: 100dvh;
     gap: 32px;
     border-radius: 4px 4px 0 0;
     box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
   }
 
   .profile-demo .card-row {
@@ -384,7 +385,7 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
   .profile-demo .sidebar-container {
     padding: 30px 20px;
     width: 180px;
-    height: 318px;
+    height: 400px;
     gap: 50px;
   }
 
@@ -446,6 +447,10 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
     gap: 12px;
   }
 
+  .button-submit {
+    margin-top: 20px;
+  }
+
   .profile-demo .avatar-title-container .skeleton-avatar {
     width: 48px;
     height: 48px;
@@ -471,9 +476,6 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
       display: none !important;
     }
 
-    .profile-demo .avatar-title-container .skeleton-avatar {
-      display: block;
-    }
 
     .profile-demo .custom-card {
       width: 360px;
