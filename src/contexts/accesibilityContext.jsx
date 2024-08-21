@@ -10,29 +10,29 @@ export default function AccessibilityProvider ({ children }) {
     
     const defaultSettings = {
         // Sidebar settings
-        sidebarSize: 'medium',
-        sidebarPosition: 'left',
+        sidebarSize: 'medium', // small, medium, large
+        sidebarPosition: 'left', // left, right
 
         // Sidebar profiles
-        accesibilityProfile: 'none',
+        accesibilityProfile: 'none', // none, protanopia, deuteranopia, tritanopia
 
         // screen reader
         screenReader: false,
         
         // Navigation settings
-        cursorColor: 'white',
+        cursorColor: 'white', // black, white
         resaltedLinks: false,
 
         // Text settings
-        textSize: 'text-md',
-        textFont: 'font-sans',
-        lineHeight: 'normal',
-        textSpacing: 'normal',
-        textAlign: 'left',
+        textSize: 'text-md', // text-sm, text-md, text-lg, text-xl, text-2xl, text-3xl
+        textFont: 'font-sans', // font-sans, font-serif, font-mono
+        lineHeight: 'normal', // normal, loose, xloose
+        textSpacing: 'normal', // normal, loose, xloose
+        textAlign: 'left', // left, center, right, justify
 
         // Color settings
-        colorSaturation: 'normal',
-        colorContrast: 'normal',
+        colorSaturation: 'normal', // normal, light, dark
+        colorContrast: 'normal', // normal, low, high
         hideImages: false,
     };
 
