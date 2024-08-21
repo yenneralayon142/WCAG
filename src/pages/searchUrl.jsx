@@ -6,11 +6,15 @@ import {
 } from "@progress/kendo-react-inputs";
 import { SvgIcon } from "@progress/kendo-react-common";
 import { cancelIcon } from "@progress/kendo-svg-icons";
-import { Button } from "@progress/kendo-react-buttons";
+import { useSearch } from './Hooks/useSearch' 
+
 
 const EMPTY_VALUE = "";
 
 export default function SearchUrl() {
+    const [sort,setSort] = useState(false)
+    const { search , updateSearch, error} = useSearch()
+    const { movies, loading , getMovies} = useMovies({ search,sort })
     const [value, setValue] = React.useState(EMPTY_VALUE);
     const handleChange = React.useCallback((event) => {
       setValue(event.target.value);
