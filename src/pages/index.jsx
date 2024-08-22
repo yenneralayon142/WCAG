@@ -1,10 +1,10 @@
-import Profile from "../components/profile";
+import Index from "../components/profile";
 
 export default function Home() {
     return (
         <main>
             <section>
-                <Profile />
+                <Index />
             </section>
         </main>
     )
