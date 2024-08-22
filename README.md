@@ -62,5 +62,4 @@ El sistema de información tendrá las siguientes páginas:
 
 - **Inicio:** Página principal del sistema que ofrece una visión general y una introducción a los estándares WCAG.
 - **Enfermedades y WCAG:** Página dedicada a listar y describir diversas enfermedades, proporcionando información accesible y relevante en el contexto de las pautas WCAG.
-- **Documentación para Desarrolladores:** Página que incluye documentación detallada para ayudar a los desarrolladores a crear páginas accesibles conforme a los estándares WCAG.
-- **Documentación para Diseñadores:** Página que proporciona directrices y recursos para los diseñadores, asegurando que cumplan con los estándares WCAG en el diseño de interfaces.
+- **Documentación:** Página que incluye documentación detallada para ayudar a los desarrolladores a crear páginas accesibles conforme a los estándares WCAG.
