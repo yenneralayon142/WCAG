@@ -47,19 +47,10 @@ export function useCursorChange() {
 
         const createReadGuide = () => {
             let readGuide = document.getElementById('read-guide');
-
+            document.querySelector('body').style = "cursor: default;";
             if (!readGuide) {
                 readGuide = document.createElement('div');
                 readGuide.id = 'read-guide';
-                readGuide.style = `
-                    position: fixed !important;
-                    z-index: 2147483647 !important;
-                    width: 300px !important;
-                    height: 4px !important;
-                    background: rgba(0, 44, 176, 0.8);
-                    pointer-events: none;
-                    transform: translateY(-50%);
-                `;
                 document.body.appendChild(readGuide);
             }
 
@@ -72,7 +63,7 @@ export function useCursorChange() {
 
             if (readGuide) {
                 readGuide.style.top = `${mouseY - 5}px`;
-                readGuide.style.left = `${e.clientX - 150}px`;
+                readGuide.style.left = `${e.clientX - 250}px`;
             }
         };
 
@@ -83,38 +74,18 @@ export function useCursorChange() {
         };
 
         const createMask = () => {
-            let maskTop = document.getElementById('mask-top');
-            let maskBottom = document.getElementById('mask-bottom');
+            let maskTop = document.getElementById('mask--top');
+            let maskBottom = document.getElementById('mask--bottom');
 
             if (!maskTop) {
                 maskTop = document.createElement('div');
-                maskTop.id = 'mask-top';
-                maskTop.style = `
-                    position: fixed !important;
-                    z-index: 2147483647 !important;
-                    width: 100% !important;
-                    background: rgba(0, 0, 0, 0.5) !important;
-                    top: 0px;
-                    height: 50%;
-                    pointer-events: none;
-                    border-bottom: solid 2px black;
-                `;
+                maskTop.id = 'mask--top';
                 document.body.appendChild(maskTop);
             }
 
             if (!maskBottom) {
                 maskBottom = document.createElement('div');
-                maskBottom.id = 'mask-bottom';
-                maskBottom.style = `
-                    position: fixed !important;
-                    z-index: 2147483647 !important;
-                    width: 100% !important;
-                    background: rgba(0, 0, 0, 0.5) !important;
-                    bottom: 0px;
-                    height: 50%;
-                    pointer-events: none;
-                    border-top: solid 2px black;
-                `;
+                maskBottom.id = 'mask--bottom';
                 document.body.appendChild(maskBottom);
             }
 
@@ -123,8 +94,8 @@ export function useCursorChange() {
 
         const handleMouseMoveMask = (e) => {
             const mouseY = e.clientY;
-            const maskTop = document.getElementById('mask-top');
-            const maskBottom = document.getElementById('mask-bottom');
+            const maskTop = document.getElementById('mask--top');
+            const maskBottom = document.getElementById('mask--bottom');
 
             if (maskTop && maskBottom) {
                 maskTop.style.height = `${mouseY - 70}px`;
@@ -133,8 +104,8 @@ export function useCursorChange() {
         };
 
         const removeMask = () => {
-            const maskTop = document.getElementById('mask-top');
-            const maskBottom = document.getElementById('mask-bottom');
+            const maskTop = document.getElementById('mask--top');
+            const maskBottom = document.getElementById('mask--bottom');
 
             if (maskTop) maskTop.remove();
             if (maskBottom) maskBottom.remove();
