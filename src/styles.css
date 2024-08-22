@@ -10,9 +10,24 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     background-color: #fff;
     --family-tittle: "Helvetica";
-    --family-text: "Avenir";
+    --family-text: "Lato";
+    --color-blue: #04324d;
+    --color-orange: #FBAD20;
+    --color-green: #39A900;
+    --color-dark-green: #216100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--family-tittle) !important;
+}
+
+p, ul, li, a, span, label {
+    font-family: var(--family-text) !important;
 }
 
 #app__container {
@@ -87,24 +102,43 @@ section {
 
 /*- - - - - -HEADER SECTION- - - - - -*/
 
+.header {
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid black;
+    z-index: 99;
+    box-shadow: none;
+}
+
 .header__container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 10px 0px;
     display: flex;
     justify-content: space-between;
 }
 
-.header__brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.header__logo {
+    width: 57px;
+    height: 57px;
 }
 
-.header__logo {
-    width: 60px;
-    height: 60px;
-    padding: 5px 0px;
+.k-menu-link-text {
+    font-family: sans-serif;
+    font-size: 22px !important;
+    transition: 300ms;
+    border: 0px;
+    color: var(--color-blue) !important;
+}
+
+.k-menu-item[tabindex="0"] span {
+    color: green !important;
+}
+
+.k-menu-link-text:hover {
+    color: green !important;
+    scale: 1.025;
 }
 
 #header__desktop {
