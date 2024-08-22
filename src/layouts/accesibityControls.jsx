@@ -5,7 +5,7 @@ import { useAccessibilityContext } from "../contexts/accesibilityContext";
 import { useFontSizeChange } from "../Hooks/useFontsizeChange";
 import { useSidebarSizeChange } from "../Hooks/useSidebarSizeChange";
 import { useReadText } from "../Hooks/useReadText";
-import { useCursorColorChange } from "../Hooks/useCursorColorChange";
+import { useCursorChange } from "../Hooks/useCursorChange";
 import SidebarItem from "../components/sidebarItem";
 import { useHighLightLinks } from "../Hooks/useHighlightLinks";
 
@@ -38,20 +38,12 @@ export default function AccessibilityControls() {
             optionName: "screenReader",
         },
         {
-            text: 'Tamaño cursor',
+            text: 'Cursor',
             icon: 'web_traffic',
-            id: 'cursor-size',
+            id: 'cursor',
             hasIndex: true,
-            options: ["normal", "large", "extra-large"],
-            optionName: "cursorSize",
-        },
-        {
-            text: 'Color cursor',
-            icon: 'web_traffic',
-            id: 'cursor-color',
-            hasIndex: true,
-            options: ["white", "black"],
-            optionName: "cursorColor",
+            options: ["white", "black", "large", "mask", "readGuide"],
+            optionName: "cursor",
         },
         {
             text: 'Tamaño widget',
@@ -73,7 +65,7 @@ export default function AccessibilityControls() {
     useFontSizeChange();
     useSidebarSizeChange();
     useReadText();
-    useCursorColorChange();
+    useCursorChange();
     useHighLightLinks();
 
     const handleMoveSidebar = () => {

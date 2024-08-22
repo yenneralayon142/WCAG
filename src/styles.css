@@ -335,6 +335,40 @@ footer {
   background-color: black;
 }
 
+#mask--top {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  width: 100% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  top: 0px;
+  height: 50%;
+  pointer-events: none;
+  border-bottom: solid 2px black;
+}
+
+#mask--bottom {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  width: 100% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  bottom: 0px;
+  height: 50%;
+  pointer-events: none;
+  border-top: solid 2px black;
+}
+
+#read-guide {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  width: 500px !important;
+  height: 4px !important;
+  background: green;
+  border: 3px solid black;
+  padding: 3px;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
 /* Mostrar u ocultar la barra lateral si el checkbox está marcado */
 form:has(#open-menu:checked) .sidebar {
   transform: translateX(0); /* Mostrar barra lateral */

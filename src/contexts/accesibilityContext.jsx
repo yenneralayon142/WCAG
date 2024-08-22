@@ -20,8 +20,7 @@ export default function AccessibilityProvider ({ children }) {
         screenReader: false,
         
         // Navigation settings
-        cursorColor: 'white', // black, white
-        cursorSize:  'normal', // normal, large, extra-large
+        cursor: 'white', // white, black, large, mask, readGuide
         highlightedLinks: false,
 
         // Text settings
