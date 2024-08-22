@@ -248,15 +248,17 @@ footer {
   font-size: inherit;
 }
 
+
+/*Objetive Section*/
 .objective-container {
   display: flex;
-  border: 2px solid #0d3b66; /* Color del borde */
-  border-radius: 30px 0 0 30px;
+  border: 2px solid #04324D; /* Color del borde */
+  border-radius: 30px 20px 20px 30px;
   overflow: hidden; /* Para que el contenido respete los bordes redondeados */
   max-width: 90dvh; /* Ajustar según el diseño */
   margin: 0 auto; /* Centrar en la página */
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   
 }
 
@@ -277,6 +279,8 @@ footer {
   font-size: 1.5rem; /* Ajusta el tamaño del texto */
   font-family: var(--family-tittle);
   color: #fff;
+  width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+  text-align: center; /* Alinea el texto al centro */
 }
 
 .objective-description {
@@ -288,8 +292,124 @@ footer {
   font-size: 18px; /* Tamaño del texto de la descripción */
   color: #000000; /* Color del texto de la descripción */
   font-family: var(--family-text);
+  text-wrap: wrap;
 }
 
+/*Services Section*/
+
+.services {
+  text-align: center;
+  padding: 20px;
+}
+
+.services__title {
+  font-family: var(--family-tittle);
+  font-size: 2rem;
+  color: #04324D; 
+  margin-bottom: 20px;
+}
+
+.services__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10rem;
+  margin-bottom: 20px;
+}
+
+.service {
+  max-width: 200px;
+  text-align: center;
+}
+
+.service__icon {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+.service__title {
+  font-size: 1.5rem;
+  color: #216100; 
+  margin-bottom: 10px;
+  font-family: var(--family-text);
+}
+
+.service__description {
+  font-size: 1rem;
+  color: #000; 
+  font-family: var(--family-text);
+
+}
+
+/* Media Queries para pantallas pequeñas */
+
+@media (max-width: 768px) {
+
+
+  .description__container {
+    flex-direction: column-reverse;
+  }
+
+  .description__container h1 {
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    margin: 0; /* Elimina el margen en pantallas pequeñas */
+    justify-self: start;
+  }
+
+  .description__container img {
+    max-width: 80%; /* Ajusta el ancho de la imagen en pantallas pequeñas */
+    margin: 0 0 2rem 0; /* Ajusta el margen */
+  }
+
+  .objective-container {
+    flex-direction: column; /* Cambia la dirección a columna */
+  }
+
+  .objective-title {
+    justify-self: center;
+    width: 100%; /* Ajusta el ancho al 100% */
+    border-radius: 20px 20px 0 0; /* Ajusta los bordes redondeados */
+  }
+
+  .objective-description {
+    width: 100%; /* Ajusta el ancho al 100% */
+  }
+
+  .services__container {
+    gap: 2rem; /* Reduce el espacio entre los elementos */
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center;
+
+  }
+
+  .service {
+    max-width: 100%; /* Ajusta el ancho al 100% */
+    justify-content: center;
+  }
+
+  .service__title {
+    font-size: 1.25rem; /* Ajusta el tamaño del texto */
+  }
+
+  .service__description {
+    font-size: 0.875rem; /* Ajusta el tamaño del texto */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .description__container img {
+    max-width: 100%; /* Ancho completo en pantallas muy pequeñas */
+  }
+
+  .description__container h1 {
+    font-size: 1.75rem; /* Ajusta el tamaño del texto */
+  }
+
+  .services__title {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  }
+}
 
 
 /* SIDEBAR STYLES */
