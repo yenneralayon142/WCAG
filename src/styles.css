@@ -5,17 +5,15 @@
     margin: 0;
     padding: 0;
     color: #000;
-    word-break: break-all;
     scrollbar-gutter: auto;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
     background-color: #fff;
+    font-family: 'Lato';
     --family-tittle: "Helvetica";
     --family-text: "Lato";
+    --color-light-blue: rgb(121, 221, 255);
     --color-blue: #04324d;
     --color-orange: #FBAD20;
     --color-green: #39A900;
@@ -26,31 +24,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--family-tittle) !important;
 }
 
-p, ul, li, a, span, label {
-    font-family: var(--family-text) !important;
-}
-
-#app__container {
+main {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-}
-
-.image {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-}
-
-a {
-    text-decoration: none;
-}
-
-.link--highlighted {
-    background: hsla(195, 100%, 51%, 0.4);
-    border-radius: 10px;
-    padding: 10px;
-    text-decoration: underline;
+    gap: 80px;
 }
 
 section {
@@ -61,43 +38,132 @@ section {
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 0px auto;
+}
+
+#app__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 50px;
+}
+
+footer {
+    background-color: var(--color-blue);
+    color: #fffd;
+    padding: 20px 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: auto;
+}
+
+.image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+.link--highlighted {
+    background: var(--color-light-blue);
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: underline;
 }
 
 .hidden {
     display: none;
 }
 
-.text--blue {
-    color: #48e;
+
+/* BACKGROUND-COLORS */
+
+.bg--blue {
+    background-color: var(--color-blue);
 }
 
-.text-sm {
-    font-size: 12px;
+.bg--orange {
+    background-color: var(--color-orange);
 }
 
-.text-md {
+.bg--green {
+    background-color: var(--color-green);
+}
+
+.bg--dark-green {
+    background-color: var(--color-dark-green);
+}
+
+.bg--dark-green {
+    background-color: var(--color-dark-green);
+}
+
+
+/* TYPOGRAPHY STYLES */
+
+a {
+    text-decoration: none;
+}
+
+.text--normal {
     font-size: 16px;
 }
 
-.text-lg {
+.text--large {
     font-size: 20px;
 }
 
-.text-xl {
-    font-size: 24px;
+.text--extralarge {
+    font-size: 30px;
 }
 
-.text-2xl {
-    font-size: 32px;
+.text--subtitle {
+    font-size: 40px;
 }
 
-.text-3xl {
-    font-size: 48px;
+.text--title {
+    font-size: 54px;
 }
 
-.text-4xl {
-    font-size: 64px;
+.text--blue {
+    color: var(--color-blue);
+}
+
+.text--orange {
+    color: var(--color-orange);
+}
+
+.text--green {
+    color: var(--color-green);
+}
+
+.text--dark-green {
+    color: var(--color-dark-green);
+}
+
+.text--black {
+    color: #000;
+}
+
+.text--white {
+    color: #fff;
+}
+
+.text--bold {
+    font-weight: bold;
+}
+
+.text--bolder {
+    font-weight: bolder;
+}
+
+.text--extrabold {
+    font-weight: 900;
+}
+
+.text--center {
+    text-align: center;
 }
 
 /*- - - - - -HEADER SECTION- - - - - -*/
@@ -127,7 +193,7 @@ section {
 .k-menu-link-text {
     font-family: sans-serif;
     font-size: 22px !important;
-    transition: 300ms;
+    transition: color, scale 300ms;
     border: 0px;
     color: var(--color-blue) !important;
 }
@@ -158,52 +224,23 @@ section {
 
 /*- - - - - - HERO SECTION - - - - - -*/
 
-.accesibility-controls {
+.hero {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.accesibility-controls__item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.color-sample {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 50px;
-}
-
-.color-sample div {
-    flex-grow: 1;
-    height: 50px;
-    min-width: 100px;
-    border-radius: 5px;
-}
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.profile__data {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.hero__figure {
+    width: 100%;
+    max-width: 600px;
+}
 
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 40px #0002;
-    height: fit-content;
+.hero__title {
+    font-size: 54px !important;
+    width: 100%;
+    max-width: 462px;
+    line-height: 1.5em;
 }
 
 /*- - - - - - HERO SECTION QUERIES  - - - - - -*/
@@ -218,187 +255,74 @@ section {
     }
 }
 
-/*- - - - - - FOOTER SECTION - - - - - -*/
+/* OBJECTIVE SECTION */
 
-footer {
-    background-color: #18233f;
-    color: #fffd;
-    padding: 20px 10px;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: auto;
-}
-
-/*- - - - - - DALTONISMO - - - - - -*/
-
-.color-red {
-    background-color: #ff0000;
-}
-.color-green {
-    background-color: #00ff00;
-}
-.color-blue {
-    background-color: #0000ff;
-}
-.color-yellow {
-    background-color: #ffff00;
-}
-
-.protanopia .color-red {
-    background-color: #8b0000;
-}
-.protanopia .color-green {
-    background-color: #8a8a00;
-}
-.protanopia .color-blue {
-    background-color: #0000ff;
-}
-.protanopia .color-yellow {
-    background-color: #8a8a00;
-}
-
-.deuteranopia .color-red {
-    background-color: #a40000;
-}
-.deuteranopia .color-green {
-    background-color: #a4a400;
-}
-.deuteranopia .color-blue {
-    background-color: #0000ff;
-}
-.deuteranopia .color-yellow {
-    background-color: #a4a400;
-}
-
-.tritanopia .color-red {
-    background-color: #ff0000;
-}
-.tritanopia .color-green {
-    background-color: #00ffff;
-}
-.tritanopia .color-blue {
-    background-color: #0000a3;
-}
-.tritanopia .color-yellow {
-    background-color: #ffa3a3;
-}
-
-/*INICIO STYLES*/
-
-.description__container {
+.infocard {
+    width: 100%;
+    max-width: 960px; /* Ajustar según el diseño */
+    
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
-}
-
-.description__container img {
-    max-width: 40%; /* Ajusta el ancho de la imagen según lo que necesites */
-    height: auto;
-    margin: 0 5rem 0 0;
-}
-
-.description__container h1 {
-    font-size: 3rem; /* Ajusta el tamaño del texto según sea necesario */
-    font-family: var(--family-tittle);
-    margin: 0 10rem 0 0;
-    color: #04324d;
-}
-
-.new-color {
-    color: #216100;
-    font-size: inherit;
-}
-
-/*Objetive Section*/
-.objective-container {
-    display: flex;
-    border: 2px solid #04324d; /* Color del borde */
-    border-radius: 30px 20px 20px 30px;
-    overflow: hidden; /* Para que el contenido respete los bordes redondeados */
-    max-width: 90dvh; /* Ajustar según el diseño */
-    margin: 0 auto; /* Centrar en la página */
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-}
-
-.objective-title {
-    background-color: #04324d; /* Color de fondo del título */
-    color: white; /* Color del texto */
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 23%; /* Ajusta el ancho del título */
-    text-align: center; /* Alinea el texto al centro */
+    border: 4px solid #04324d; /* Color del borde */
     border-radius: 20px;
+    margin: 0 auto;
 }
 
-.objective-title h2 {
-    margin: 0;
-    font-size: 1.5rem; /* Ajusta el tamaño del texto */
-    font-family: var(--family-tittle);
-    color: #fff;
-    width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
-    text-align: center; /* Alinea el texto al centro */
-}
-
-.objective-description {
+.infocard__title {
     padding: 20px;
-    width: 70%; /* Ajusta el ancho de la descripción */
+    border-radius: 13px;
+}
+
+.infocard__text {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 18px; /* Tamaño del texto de la descripción */
-    color: #000000; /* Color del texto de la descripción */
-    font-family: var(--family-text);
-    text-wrap: wrap;
+    padding: 20px;
 }
 
-/*Services Section*/
+/* SERVICES SECTION */
 
 .services {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
     padding: 20px;
-}
-
-.services__title {
-    font-family: var(--family-tittle);
-    font-size: 2rem;
-    color: #04324d;
-    margin-bottom: 20px;
 }
 
 .services__container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 10rem;
-    margin-bottom: 20px;
+    gap: 100px;
 }
 
 .service {
-    max-width: 200px;
+    max-width: 230px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .service__icon {
-    max-width: 80px;
-    margin-bottom: 10px;
+    height: 120px;
+    width: 100%;
+    max-width: 230px;
 }
 
-.service__title {
-    font-size: 1.5rem;
-    color: #216100;
-    margin-bottom: 10px;
-    font-family: var(--family-text);
+/* FORM SECTION */
+.form {
+    border-radius: 20px;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.service__description {
-    font-size: 1rem;
-    color: #000;
-    font-family: var(--family-text);
+.form__input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* Media Queries para pantallas pequeñas */
@@ -795,4 +719,58 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
     .profile-demo .skeleton-box-large-double {
         height: 78px;
     }
+}
+
+/*- - - - - - DALTONISMO - - - - - -*/
+
+.color-red {
+    background-color: #ff0000;
+}
+.color-green {
+    background-color: #00ff00;
+}
+.color-blue {
+    background-color: #0000ff;
+}
+.color-yellow {
+    background-color: #ffff00;
+}
+
+.protanopia .color-red {
+    background-color: #8b0000;
+}
+.protanopia .color-green {
+    background-color: #8a8a00;
+}
+.protanopia .color-blue {
+    background-color: #0000ff;
+}
+.protanopia .color-yellow {
+    background-color: #8a8a00;
+}
+
+.deuteranopia .color-red {
+    background-color: #a40000;
+}
+.deuteranopia .color-green {
+    background-color: #a4a400;
+}
+.deuteranopia .color-blue {
+    background-color: #0000ff;
+}
+.deuteranopia .color-yellow {
+    background-color: #a4a400;
+}
+
+.tritanopia .color-red {
+    background-color: #ff0000;
+}
+.tritanopia .color-green {
+    background-color: #00ffff;
+}
+.tritanopia .color-blue {
+    background-color: #0000a3;
+}
+.tritanopia .color-yellow {
+    background-color: #ffa3a3;
 }
