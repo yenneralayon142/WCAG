@@ -6,9 +6,9 @@ import AccessibilityControls from "./accesibityControls";
 export default function AppLayout() {
     return (
         <div id="app__container">
-            <AccessibilityControls />
             <Header />
             <Outlet />
+            <AccessibilityControls />
             <Footer />
         </div>
     );
