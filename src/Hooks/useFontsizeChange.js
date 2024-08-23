@@ -4,7 +4,7 @@ import { useAccessibilityContext } from "../contexts/accesibilityContext";
 export function useFontSizeChange() {
     const { settings, updateSettings } = useAccessibilityContext();
 
-    const options = ["text-sm", "text-md", "text-lg", "text-xl", "text-2xl", "text-3xl"];
+    const options = ["small", "normal", "large", "extralarge", "giant"];
     
     useEffect(() => {
         const fontSizeElement = document.getElementById("font-size");
@@ -16,18 +16,40 @@ export function useFontSizeChange() {
         }
 
         const applyFontSize = () => {
-            const tittles = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-            const elements = document.querySelectorAll("p, label, span, a, li");
+            const titles = document.querySelectorAll('.text--title');
+            const subtitles = document.querySelectorAll('.text--subtitle');
+            const extralarges = document.querySelectorAll('.text--extralarge');
+            const larges = document.querySelectorAll('.text--large');
+            const normals = document.querySelectorAll('.text--normal');
     
-            elements.forEach((element) => {
-                element.classList.remove(...["text-sm", "text-md", "text-lg", "text-xl", "text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"]);
-                element.classList.add(settings.textSize);
-            })
+            let scaleFactor = 1;
 
-            tittles.forEach((element) => {
-                element.classList.remove(...["text-sm", "text-md", "text-lg", "text-xl", "text-2xl", "text-3xl", "text-4xl", "text-5xl", "text-6xl"]);
-                element.classList.add(options[currentIndex + 2 > options.length - 1 ? options.length - 1 : currentIndex + 2]);
-            })
+            switch (options[currentIndex]) {
+                case "small":
+                    scaleFactor = 0.8;
+                    break;
+                case "normal":
+                    scaleFactor = 1;
+                    break;
+                case "large":
+                    scaleFactor = 1.2;
+                    break;
+                case "extralarge":
+                    scaleFactor = 1.4;
+                    break;
+                case "giant":
+                    scaleFactor = 1.6;
+                    break;
+                default:
+                    scaleFactor = 1;
+                    break;
+            }
+
+            titles.forEach(element => element.style.fontSize = `${3.375 * scaleFactor}rem`);
+            subtitles.forEach(element => element.style.fontSize = `${2.5 * scaleFactor}rem`);
+            extralarges.forEach(element => element.style.fontSize = `${1.75 * scaleFactor}rem`);
+            larges.forEach(element => element.style.fontSize = `${1.25 * scaleFactor}rem`);
+            normals.forEach(element => element.style.fontSize = `${1 * scaleFactor}rem`);
         }
 
         if(fontSizeElement) {

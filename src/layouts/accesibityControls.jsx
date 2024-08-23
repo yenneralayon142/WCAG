@@ -19,7 +19,7 @@ export default function AccessibilityControls() {
             icon: 'text_fields',
             id: 'font-size',
             hasIndex: true,
-            options: ["text-sm", "text-md", "text-lg", "text-xl", "text-2xl", "text-3xl"],
+            options: ["small", "normal", "large", "extralarge", "giant"],
             optionName: "textSize",
         },
         {
