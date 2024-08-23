@@ -122,7 +122,8 @@ a {
 }
 
 .text--title {
-    font-size: 54px;
+    font-size: 54px !important;
+    line-height: 1.5em;
 }
 
 .text--blue {
