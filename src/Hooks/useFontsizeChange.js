@@ -20,7 +20,7 @@ export function useFontSizeChange() {
             const subtitles = document.querySelectorAll('.text--subtitle');
             const extralarges = document.querySelectorAll('.text--extralarge');
             const larges = document.querySelectorAll('.text--large');
-            const normals = document.querySelectorAll('.text--normal');
+            const normals = document.querySelectorAll('.text--normal, label');
     
             let scaleFactor = 1;
 
@@ -45,7 +45,7 @@ export function useFontSizeChange() {
                     break;
             }
 
-            titles.forEach(element => element.style.fontSize = `${3.375 * scaleFactor}rem`);
+            titles.forEach(element => element.style.fontSize = `${1.5 * scaleFactor}em`);
             subtitles.forEach(element => element.style.fontSize = `${2.5 * scaleFactor}rem`);
             extralarges.forEach(element => element.style.fontSize = `${1.75 * scaleFactor}rem`);
             larges.forEach(element => element.style.fontSize = `${1.25 * scaleFactor}rem`);

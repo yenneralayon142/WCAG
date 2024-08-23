@@ -9,7 +9,7 @@ export default function Hero() {
                     />
                 </figure>
                 <div className="hero__title">
-                    <h1 className="text--blue"> Aprende a hacer tu página web <span className="text--dark-green"> accesible con nosotros </span> </h1>
+                    <h1 className="text--title text--blue"> Aprende a hacer tu página web <span className="text--dark-green"> accesible con nosotros </span> </h1>
                 </div>
             </div>
         </section>

@@ -8,7 +8,7 @@ export default function Service(props) {
             </figure>
             <div>
                 <h3 className="text--extralarge text--dark-green">{title}</h3>
-                <p>{text}</p>
+                <p className="text--normal">{text}</p>
             </div>
         </article>
     );    
