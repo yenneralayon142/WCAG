@@ -6,6 +6,7 @@ export default function Hero() {
                     <img
                         src="/ImagenInicio.png"
                         alt="Imagen sobre accesibilidad Web"
+                        className="image"
                     />
                 </figure>
                 <div className="hero__title">

@@ -1,7 +1,7 @@
 export default function Principle(props) {
     const { image, title } = props;
     return(
-        <article>
+        <article className="principles__card">
             <figure className="principles__card__image">
                 <img src={image} alt="Imagen principio" className="image" />
             </figure>   
