@@ -19,7 +19,7 @@ export default function AccessibilityControls() {
             icon: 'text_fields',
             id: 'font-size',
             hasIndex: true,
-            options: ["text-sm", "text-md", "text-lg", "text-xl", "text-2xl", "text-3xl"],
+            options: ["small", "normal", "large", "extralarge", "giant"],
             optionName: "textSize",
         },
         {
@@ -85,14 +85,13 @@ export default function AccessibilityControls() {
             <input type="checkbox" id="open-menu" className="hidden" aria-label="Abrir menú de accesibilidad web"/>
             
             <label htmlFor="open-menu" className="open-button">
-                <Button
-                    rounded="full"
-                    fillMode="solid"
-                    svgIcon={icons.accessibilityIcon}
-                    size="large"
+                <button
                     type="button"
+                    className="accessibility__button"
                     onClick={() => document.getElementById('open-menu').click()}
-                />
+                >
+                    <img src="/icons/accessibility.png" alt="Logo accesibilidad" />
+                </button>
             </label>
             
             <div className="overlay" onClick={() => document.getElementById('open-menu').click()}></div>

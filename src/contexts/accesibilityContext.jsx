@@ -24,7 +24,7 @@ export default function AccessibilityProvider ({ children }) {
         highlightedLinks: false,
 
         // Text settings
-        textSize: 'text-md', // text-sm, text-md, text-lg, text-xl, text-2xl, text-3xl
+        textSize: 'normal', // small, normal, large, extralarge, giant
         textFont: 'font-sans', // font-sans, font-serif, font-mono
         lineHeight: 'normal', // normal, loose, xloose
         textSpacing: 'normal', // normal, loose, xloose
