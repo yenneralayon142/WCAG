@@ -1,6 +1,6 @@
+/*STYLES USING MOBILE FIRST*/
 
-
-/*- - - - - - HERO SECTION - - - - - -*/
+/*- - - - - - HERO SECTION CEL - - - - - -*/
 
 .hero {
     display: flex;
@@ -23,7 +23,7 @@
     line-height: 1.5em;
 }
 
-/* OBJECTIVE SECTION */
+/* OBJECTIVE SECTION CEL*/
 
 .infocard {
     width: 100%;
@@ -55,7 +55,7 @@
     padding: 20px;
 }
 
-/* SERVICES SECTION */
+/* SERVICES SECTION CEL*/
 
 .services {
     display: flex;
@@ -88,7 +88,7 @@
     max-width: 230px;
 }
 
-/* FORM SECTION */
+/* FORM SECTION CEL */
 .contact {
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@
     border: 1px solid var(--color-blue);
 }
 
-/* - - - - HOME PAGE MEDIA QUERIES - - - - */
+/* - - - - HOME PAGE MEDIA QUERIES FOR COMPUTER - - - - */
 
 @media screen and (min-width: 992px) {
     .hero {
@@ -160,7 +160,7 @@
     }
 }
 
-/* HERO WCAG */
+/* HERO WCAG CEL*/
 
 .hero__wcag {
     display: flex;
@@ -193,7 +193,7 @@
     max-width: 430px;
 }
 
-/* PRINCIPLES WCAG */
+/* PRINCIPLES WCAG CEL */
 
 .principles, .criteria {
     display: flex;
@@ -227,7 +227,7 @@
     max-width: 100px;
 }
 
-/* CRITERIA WCAG */
+/* CRITERIA WCAG CEL*/
 
 .criteria__cards__container {
     display: flex;
@@ -235,6 +235,7 @@
     gap: 50px;
     padding: 20px 0px;
 }
+
 
 @media screen and (min-width: 992px) {
     .hero__wcag {
@@ -251,7 +252,7 @@
     }
 }
 
-/* SEARCH URL */
+/* SEARCH URL CEL*/
 
 .profile-demo.card-container {
     margin-top: 20px;
@@ -370,7 +371,7 @@
     opacity: 0.2;
 }
 
-/*Responsive Search URL*/
+/*Responsive Search URL for Cel*/
 @media only screen and (max-width: 559px) {
     .profile-demo .card-column.no-flex {
         display: none !important;

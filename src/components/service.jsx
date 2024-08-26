@@ -7,7 +7,7 @@ export default function Service(props) {
                 <img src={image} alt="Imagen de servicio" className="image" />
             </figure>
             <div>
-                <h3 className="text--extralarge text--dark-green">{title}</h3>
+                <h3 className="text--extralarge text--green">{title}</h3>
                 <p className="text--normal">{text}</p>
             </div>
         </article>
