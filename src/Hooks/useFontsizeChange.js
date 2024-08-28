@@ -19,8 +19,8 @@ export function useFontSizeChange() {
             const titles = document.querySelectorAll('.text--title');
             const subtitles = document.querySelectorAll('.text--subtitle');
             const extralarges = document.querySelectorAll('.text--extralarge');
-            const larges = document.querySelectorAll('.text--large');
-            const normals = document.querySelectorAll('.text--normal, label');
+            const larges = document.querySelectorAll('.text--large, .k-menu-link-text');
+            const normals = document.querySelectorAll('.text--normal, label, .sidebar__item p');
     
             let scaleFactor = 1;
 

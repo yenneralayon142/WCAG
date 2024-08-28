@@ -16,7 +16,7 @@
 }
 
 .hero__title {
-    font-size: 34px !important;
+    font-size: 34px;
     text-align: center;
     width: 100%;
     max-width: 462px;
@@ -135,7 +135,7 @@
     }
     
     .hero__title {
-        font-size: 54px !important;
+        font-size: 54px;
         text-align: start;
     }
 
@@ -171,7 +171,7 @@
 }
 
 .hero__wcag__title{
-    font-size: 30px !important;
+    font-size: 30px;
     text-align: center;
     width: 100%;
     max-width: 700px;
@@ -243,7 +243,7 @@
     }
     
     .hero__wcag__title{
-        font-size: 40px !important;
+        font-size: 40px;
         text-align: start;
     }
         
