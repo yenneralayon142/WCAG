@@ -19,7 +19,7 @@ export default function SearchUrl() {
     const { search , updateSearch, error} = useSearch()
     const { urls, loading , getUrls} = useUrls({ search,sort })
 
-    const debounceGetMovies = useCallback(
+    const debounceGetUrls = useCallback(
       debounce(search =>{
       getUrls({search})
     }, 300)
@@ -38,7 +38,7 @@ export default function SearchUrl() {
     const handleChange = (event) => {
       const newSearch = event.target.value
       updateSearch(newSearch)
-      debounceGetMovies(newSearch)
+      debounceGetUrls(newSearch)
     }
 
 
@@ -48,16 +48,16 @@ export default function SearchUrl() {
             <div className="card-column">
               <div className="avatar-title-container">
                 <div className="k-skeleton skeleton-avatar" />
-                <h4 className="k-h4">¿La pagina es accesible?</h4>
+                <h4 className="text--subtitle text--center text--blue">¿La pagina es accesible?</h4>
               </div>
             <div className="avatar-title-container">
-                <p>
+                <p className="text--normal">
                     A continuación, encontrará un campo donde podrá ingresar una URL. Esto le permitirá verificar si la página web es accesible o no. Además, recibirá un conjunto de recomendaciones para mejorar la accesibilidad de la web y aplicar mejores prácticas de desarrollo.
                 </p>
             </div>
               <div className="component-container">
                   <form className="k-form" onSubmit={handleSubmit}>
-                    <label htmlFor=""> Ingrese su url</label>
+                    <label htmlFor="" className="text--normal"> Ingrese su url</label><br />
                     <fieldset>
                       <TextBox
                         style={{
@@ -73,7 +73,7 @@ export default function SearchUrl() {
                 </div>
                 <main>
                       {
-                          loading ?<p>Cargando..</p> : <Urls movies={urls}/> 
+                          loading ?<p>Cargando..</p> : <Urls urls={urls}/> 
                       }
                 </main>
               </div>

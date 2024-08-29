@@ -1,4 +1,4 @@
-const API_KEY = '4287ad07'
+import {}
 
 export const searchingUrl = async ({ search }) => {
     if (search === '') return null
