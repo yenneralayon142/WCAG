@@ -252,156 +252,56 @@
     }
 }
 
-/* SEARCH URL CEL*/
+/*DOCS STYLES*/
 
-.profile-demo.card-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.profile-demo .custom-card {
-    padding: 32px;
-    width: 712px;
-    height: 100dvh;
-    gap: 32px;
-    border-radius: 4px 4px 0 0;
-    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.08);
+/* App.css */
+.app {
+    display: row;
+  }
+  
+  .sidebar__Documentation {
+    width: 200px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+  }
+  
+  .sidebar__Documentation h3 {
     margin-bottom: 20px;
-}
-
-.profile-demo .card-row {
-    display: flex;
-    gap: 32px;
-}
-
-.profile-demo .card-column {
-    flex: 1;
-}
-
-.profile-demo .no-flex {
-    flex: 0;
-}
-
-.profile-demo .sidebar-container {
-    padding: 30px 20px;
-    width: 180px;
-    height: 400px;
-    gap: 50px;
-}
-
-.profile-demo .k-skeleton {
-    border-radius: 4px;
-    opacity: 0.4;
-}
-
-.profile-demo .sidebar-container .k-skeleton {
-    opacity: 0.8;
-}
-
-.profile-demo .skeleton-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-}
-
-.profile-demo .skeleton-text {
-    width: 104px;
-    height: 15px;
-}
-
-.profile-demo .skeleton-small-text {
+  }
+  
+  .sidebar__Documentation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar__Documentationl li {
+    margin-bottom: 10px;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .search-bar {
     width: 100%;
-    height: 10px;
-}
-
-.profile-demo .skeleton-small-text-short {
-    width: 56px;
-    height: 10px;
-}
-
-.profile-demo .skeleton-box-small {
-    width: 124px;
-    height: 15px;
-}
-
-.profile-demo .skeleton-box-large {
-    width: 100%;
-    height: 30px;
-}
-
-.profile-demo .skeleton-box-large-double {
-    width: 100%;
-    height: 56px;
-}
-
-.profile-demo .skeleton-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.profile-demo .avatar-title-container {
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.button-submit {
-    margin-top: 20px;
-}
-
-.profile-demo .avatar-title-container .skeleton-avatar {
-    width: 48px;
-    height: 48px;
-    display: none;
-}
-
-.profile-demo .top {
+    padding: 10px;
     margin-bottom: 20px;
-}
-
-.profile-demo .component-container {
-    margin-bottom: 20px;
-}
-
-.profile-demo .k-h4 {
-    margin-bottom: 0;
-    opacity: 0.2;
-}
-
-/*Responsive Search URL for Cel*/
-@media only screen and (max-width: 559px) {
-    .profile-demo .card-column.no-flex {
-        display: none !important;
-    }
-
-    .profile-demo .custom-card {
-        width: 360px;
-        gap: 48px;
-    }
-
-    .profile-demo .skeleton-box-large-double {
-        height: 72px;
-    }
-}
-
-@media only screen and (max-width: 359px) {
-    .profile-demo .custom-card {
-        padding: 24px;
-    }
-
-    .profile-demo .k-h4 {
-        font-size: 20px;
-    }
-
-    .profile-demo .avatar-title-container .skeleton-avatar {
-        width: 32px;
-        height: 32px;
-    }
-
-    .profile-demo .skeleton-box-large-double {
-        height: 78px;
-    }
-}
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .filters h4 {
+    margin-bottom: 10px;
+  }
+  
+  .filters button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
