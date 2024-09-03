@@ -32,7 +32,7 @@ export default function AccessibilityProvider ({ children }) {
 
         // Color settings
         colorSaturation: 'normal', // normal, light, dark
-        colorContrast: 'normal', // normal, low, high
+        contrast: 'normal', // normal, invertido, oscuro, claro
         hideImages: false,
     };
 
