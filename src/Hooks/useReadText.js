@@ -9,7 +9,7 @@ export function useReadText() {
             if (typeof speechSynthesis === 'undefined') return;
         
             let voices = [];
-            const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, label, select, input, button, footer, header, .text--normal, .text--large, .text--extralarge, .text--subtitle, .text-title, .k-menu-link-text');
+            const textElements = document.querySelectorAll('p, span, a, li, td, th, h1, h2, h3, h4, h5, h6, label, select, input, button, footer, header, .text--normal, .text--large, .text--extralarge, .text--subtitle, .text-title, .k-menu-link-text');
         
             const populateVoiceList = () => {
               voices = speechSynthesis.getVoices();
