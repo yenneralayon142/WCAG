@@ -254,11 +254,11 @@
 
 /*DOCS STYLES*/
 
-/* App.css */
 .app {
-    display: row;
+    display: flex;
+    
   }
-  
+
   .sidebar__Documentation {
     width: 200px;
     padding: 20px;
@@ -272,20 +272,29 @@
   
   .sidebar__Documentation ul {
     list-style: none;
-    padding: 0;
+    padding: 0 0 0 0;
   }
   
-  .sidebar__Documentationl li {
-    margin-bottom: 10px;
+  .sidebar__Documentation ul li {
+    margin: 15px 0 0 0;
   }
   
   .content {
+    display: flex;
+    margin: 20px 0 0 0;
+    gap: 20px;
     flex-grow: 1;
     padding: 20px;
   }
-  
-  .search-bar {
+
+
+   .search-filters{
     width: 100%;
+   }
+
+  .search-bar {
+    display: block;
+    min-width: 100dvh;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -304,4 +313,3 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  

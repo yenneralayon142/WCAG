@@ -5,7 +5,6 @@ export default function Docs() {
     return (
         <div className="app">
             <div className="content">
-                <h2>Documentacion</h2>
                 <Sidebar />
                 <SearchFilters />
             </div>
