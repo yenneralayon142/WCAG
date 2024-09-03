@@ -31,8 +31,7 @@ export default function AccessibilityProvider ({ children }) {
         textAlign: 'left', // left, center, right, justify
 
         // Color settings
-        colorSaturation: 'normal', // normal, light, dark
-        contrast: 'normal', // normal, invertido, oscuro, claro
+        contrast: 'normal', // normal, medio, alto, invertido
         hideImages: false,
     };
 

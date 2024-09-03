@@ -30,7 +30,7 @@ export default function AccessibilityControls() {
             icon: 'contrast',
             id: 'contrast',
             hasIndex: true,
-            options: ["normal", "invertido", "oscuro", "claro"],
+            options: ["normal", "medio", "alto", "invertido"],
             optionName: "contrast",
         },
         {
