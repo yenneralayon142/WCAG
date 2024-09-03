@@ -1,13 +1,11 @@
 export default function SearchFilters ()  {
     return (
       <div className="search-filters">
+        <h2 className="text--bold text--subtitle text--blue">Documentacion</h2>
         <input type="text" placeholder="Búsqueda" className="search-bar"/>
         <div className="filters">
-          <h4>Filtros de búsqueda</h4>
-          <button>Discapacidad</button>
-          <button>Directrices WCAG</button>
+          <h4 className="text--bold text--subtitle text--blue">Filtros de búsqueda</h4>
           <button>Nivel</button>
-          <button>Ejemplos</button>
         </div>
       </div>
     );
