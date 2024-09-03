@@ -338,11 +338,13 @@ a {
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 100ms ease-in-out;
+    outline: 2px solid white;
+
 }
 
 .sidebar__item:hover {
-    background-color: var(--bg-color-sidebar);
-    color: var(--sidebar-color);
+    outline: 2px solid black;
 }
 
 .sidebar__item__icon {
@@ -352,7 +354,12 @@ a {
 
 .sidebar__item--active {
     /* borde que no mueva los elementos */
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    outline: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.sidebar__item--active:hover {
+    /* borde que no mueva los elementos */
+    outline: 2px solid rgba(0, 0, 0, 0.4);
 }
 
 .sidebar__item__index {
