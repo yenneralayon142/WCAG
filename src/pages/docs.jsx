@@ -1,14 +1,19 @@
-import Sidebar from "../components/docsWcag/sidebarDocumentation"
-import SearchFilters from "../components/docsWcag/searchFilters"
+import { Routes, Route } from "react-router-dom";
+
+import Sidebar from "../layouts/sidebarDocumentation"
+import SearchFilters from "../layouts/searchFilters"
 
 export default function Docs() {
     return (
-        <div className="app">
-            <div className="content">
-                <h2>Documentacion</h2>
-                <Sidebar />
+        <div className="docs">
+            <Sidebar />
+            <main className="docs__main">
                 <SearchFilters />
-            </div>
+                <Routes>
+                    <Route index element={<h1>Introducción</h1>} />
+                    <Route path="*" element={<h1>404</h1>} />
+                </Routes>
+            </main>
         </div>
     )
 }
