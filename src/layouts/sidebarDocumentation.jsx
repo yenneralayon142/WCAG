@@ -1,20 +1,16 @@
-export default function Sidebar  () {
+import { Link } from "react-router-dom";
+
+export default function Sidebar() {
     return (
-      <div className="sidebar__Documentation">
-        <h3>Menú</h3>
-        <ul>
-          <li>Introducción</li>
-          <li>Descargar</li>
-          <li>Contenido</li>
-          <li>Navegadores y dispositivos</li>
-          <li>JavaScript</li>
-          <li>Paquete web</li>
-          <li>Vite</li>
-          <li>Accesibilidad</li>
-          <li>RFS</li>
-          <li>RTL</li>
-          <li>Contribuir</li>
-        </ul>
-      </div>
+        <div className="docs__sidebar">
+            <h3 className="text--subtitle text--blue text--center">Menú</h3>
+            <div className="docs__sidebar__list">
+                <Link to="/docs">Introducción</Link>
+                <Link to="/docs/perceptible">Perceptible</Link>
+                <Link to="/docs/operable">Operable</Link>
+                <Link to="/docs/comprensible">Comprensible</Link>
+                <Link to="/docs/robusto">Robusto</Link>
+            </div>
+        </div>
     );
-  }
+}
