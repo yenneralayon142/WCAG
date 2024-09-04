@@ -166,4 +166,237 @@ export const time =
 </html>
 
 `
+export const justTime = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuste de Tiempo</title>
+    <script>
+        let tiempoRestante = 60; // 60 segundos
 
+        function actualizarTiempo() {
+            document.getElementById('tiempo').textContent = tiempoRestante;
+            if (tiempoRestante > 0) {
+                tiempoRestante--;
+            } else {
+                alert("El tiempo se ha agotado.");
+            }
+        }
+
+        function extenderTiempo() {
+            tiempoRestante += 60; // Extiende el tiempo 60 segundos más
+        }
+
+        setInterval(actualizarTiempo, 1000);
+    </script>
+</head>
+<body>
+    <h1>Formulario con límite de tiempo</h1>
+    <p>Tiempo restante: <span id="tiempo">60</span> segundos</p>
+    <button onclick="extenderTiempo()">Extender tiempo</button>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+`
+
+export const pause = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pausar Contenido en Movimiento</title>
+    <style>
+        .carousel {
+            width: 300px;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrusel de Imágenes</h1>
+    <div class="carousel">
+        <img id="carouselImg" src="imagen1.jpg" alt="Imagen 1">
+    </div>
+    <button onclick="pausarCarrusel()">Pausar</button>
+    <button onclick="reanudarCarrusel()">Reanudar</button>
+
+    <script>
+        let imagenes = ['imagen1.jpg', 'imagen2.jpg', 'imagen3.jpg'];
+        let indice = 0;
+        let intervalo;
+
+        function cambiarImagen() {
+            indice = (indice + 1) % imagenes.length;
+            document.getElementById('carouselImg').src = imagenes[indice];
+        }
+
+        function pausarCarrusel() {
+            clearInterval(intervalo);
+        }
+
+        function reanudarCarrusel() {
+            intervalo = setInterval(cambiarImagen, 2000);
+        }
+
+        // Comienza automáticamente
+        intervalo = setInterval(cambiarImagen, 2000);
+    </script>
+</body>
+</html>
+
+`
+
+export const threeFlash = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitar Destellos</title>
+    <style>
+        .flash {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: cambioSuave 5s infinite;
+        }
+
+        @keyframes cambioSuave {
+            0% { background-color: red; }
+            50% { background-color: yellow; }
+            100% { background-color: red; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Evitar Destellos</h1>
+    <div class="flash"></div>
+</body>
+</html>
+
+`
+export const noBlocks = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitar Destellos</title>
+    <style>
+        .flash {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: cambioSuave 5s infinite;
+        }
+
+        @keyframes cambioSuave {
+            0% { background-color: red; }
+            50% { background-color: yellow; }
+            100% { background-color: red; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Evitar Destellos</h1>
+    <div class="flash"></div>
+</body>
+</html>
+
+`
+
+export const pageWithTittle = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto - Empresa XYZ</title>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+    <p>Por favor, rellena el formulario a continuación para ponerte en contacto con nosotros.</p>
+</body>
+</html>
+
+`
+
+export const focusOrder = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Orden de Foco</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Bienvenido a nuestro sitio web</h1>
+            <p>Contenido introductorio.</p>
+        </section>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <p>Descripción de los servicios.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+`
+export const purposeLink = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propósito del Enlace en Contexto</title>
+</head>
+<body>
+    <h1>Recursos</h1>
+    <ul>
+        <li><a href="https://www.w3.org/WAI/">Sitio web de accesibilidad del W3C</a></li>
+        <li><a href="https://www.w3.org/WAI/WCAG21/quickref/">Guía rápida de WCAG 2.1</a></li>
+        <li><a href="https://developer.mozilla.org/">Documentación para desarrolladores de MDN</a></li>
+    </ul>
+</body>
+</html>
+
+`

@@ -1,6 +1,6 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { accesibleKeypad, outSpan } from "./exampleoperable";
+import { accesibleKeypad, focusOrder, justTime, noBlocks, outSpan, pageWithTittle, pause, purposeLink, threeFlash } from "./exampleoperable";
 
 export default function Operable() {
     return (
@@ -31,7 +31,7 @@ export default function Operable() {
                         Proveer mecanismos para ajustar los límites de tiempo en actividades 
                     </p>
                     <SyntaxHighlighter language="html" style={darcula}>
-
+                            {justTime}
                     </SyntaxHighlighter>
                 </div>
                 <div className="perceptible__section example_codeP">
@@ -40,16 +40,7 @@ export default function Operable() {
                         Proveer mecanismos para pausar, detener o ocultar contenido en movimiento, parpadeo o desplazamiento
                     </p>
                     <SyntaxHighlighter language="html" style={darcula}>
-
-                    </SyntaxHighlighter>
-                </div>
-                <div className="perceptible__section example_codeP">
-                    <p className="text--normal text--bolder">2.3.1 Tres Destellos o Inferior  </p>
-                    <p>
-                        No provocar destellos que superen el umbral de tres destellos por segundo  
-                    </p>
-                    <SyntaxHighlighter language="html" style={darcula}>
-
+                            {pause}
                     </SyntaxHighlighter>
                 </div>
                 <div className="perceptible__section example_codeP">
@@ -58,7 +49,7 @@ export default function Operable() {
                         No provocar destellos, de cualquier tipo  
                     </p>
                     <SyntaxHighlighter language="html" style={darcula}>
-
+                            {threeFlash}
                     </SyntaxHighlighter>
                 </div>
                 <div className="perceptible__section example_codeP">
@@ -67,7 +58,7 @@ export default function Operable() {
                         Proveer mecanismos para saltar bloques repetitivos de contenido 
                     </p>
                     <SyntaxHighlighter language="html" style={darcula}>
-
+                            {noBlocks}
                     </SyntaxHighlighter>
                 </div>
                 <div className="perceptible__section example_codeP">
@@ -76,14 +67,7 @@ export default function Operable() {
                         Cada página web tiene un título que describe su tema o propósito  
                     </p>
                     <SyntaxHighlighter language="html" style={darcula}>
-                    </SyntaxHighlighter>
-                </div>
-                <div className="perceptible__section example_codeP">
-                    <p className="text--normal text--bolder">2.4.2 Página con Título  </p>
-                    <p>
-                        Cada página web tiene un título que describe su tema o propósito  
-                    </p>
-                    <SyntaxHighlighter language="html" style={darcula}>
+                        {pageWithTittle}
                     </SyntaxHighlighter>
                 </div>
                 <div className="perceptible__section example_codeP">
@@ -92,6 +76,7 @@ export default function Operable() {
                         Asegurar que el orden del foco sigue una secuencia que preserve el significado y la operabilidad 
                     </p>
                     <SyntaxHighlighter language="html" style={darcula}>
+                        {focusOrder}
                     </SyntaxHighlighter>
                 </div>
                 <div className="perceptible__section example_codeP">
@@ -100,6 +85,7 @@ export default function Operable() {
                         El propósito de cada enlace puede determinarse a partir del texto del enlace solo 
                     </p>
                     <SyntaxHighlighter language="html" style={darcula}>
+                        {purposeLink}
                     </SyntaxHighlighter>
                 </div>
              </section>
