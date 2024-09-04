@@ -200,18 +200,18 @@ a {
     height: 57px;
 }
 
-.k-menu-link-text {
+.k-menu-link-text, .k-menu-expand-arrow svg {
     font-family: sans-serif;
     transition: color, scale 300ms;
     border: 0px;
     color: var(--color-blue);
 }
 
-.k-menu-item[tabindex="0"] span {
+.k-menu-item[tabindex="0"] span, .k-menu-item[tabindex="0"] svg {
     color: green;
 }
 
-.k-menu-link-text:hover {
+.k-menu-link:hover .k-menu-link-text, .k-menu-link:hover .k-menu-expand-arrow svg {
     color: green;
     scale: 1.025;
 }
