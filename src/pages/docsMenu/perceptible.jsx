@@ -19,17 +19,17 @@ export default function Perceptible(){
                     {imgExample}
                 </SyntaxHighlighter>
                 <p>1.2.2 Subtítulos (grabado) </p><br />
-                <p>Proveer texto alternativo para cualquier contenido no textual </p><br />
+                <p>Proveer subtítulos para todo el contenido de vídeo pregrabado en el contenido sincronizado</p><br />
                 <SyntaxHighlighter language="html" style={darcula}>
                     {imgExample}
                 </SyntaxHighlighter>
                 <p>1.2.3 Audio Descripción o Medio Alternativo (grabado) </p><br />
-                <p>Proveer texto alternativo para cualquier contenido no textual </p><br />
+                <p> Proveer una descripción de audio para todo el contenido de vídeo pregrabado en el contenido sincronizado  </p><br />
                 <SyntaxHighlighter language="html" style={darcula}>
                     {imgExample}
                 </SyntaxHighlighter>
                 <p>1.3.1 Información y Relaciones </p><br />
-                <p>Proveer texto alternativo para cualquier contenido no textual </p><br />
+                <p> La información, estructura y relaciones transmitidas a través de la presentación pueden ser determinadas por software  </p><br />
                 <SyntaxHighlighter language="html" style={darcula}>
                     {imgExample}
                 </SyntaxHighlighter>
