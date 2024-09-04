@@ -200,18 +200,21 @@ a {
     height: 57px;
 }
 
-.k-menu-link-text, .k-menu-expand-arrow svg {
+.k-menu-link-text,
+.k-menu-expand-arrow svg {
     font-family: sans-serif;
     transition: color, scale 300ms;
     border: 0px;
     color: var(--color-blue);
 }
 
-.k-menu-item[tabindex="0"] span, .k-menu-item[tabindex="0"] svg {
+.k-menu-item[tabindex="0"] span,
+.k-menu-item[tabindex="0"] svg {
     color: green;
 }
 
-.k-menu-link:hover .k-menu-link-text, .k-menu-link:hover .k-menu-expand-arrow svg {
+.k-menu-link:hover .k-menu-link-text,
+.k-menu-link:hover .k-menu-expand-arrow svg {
     color: green;
     scale: 1.025;
 }
@@ -279,14 +282,15 @@ a {
     padding: 30px 20px;
     z-index: 1001;
 
-    transition: transform 500ms ease-in-out; /* Smooth transition */
-    transform: translateX(-100%); /* Initially off-screen to the left */
+    opacity: 0;
+    transition: transform 500ms ease-in-out, opacity 0ms ease-in-out 500ms;
+    transform: translateX(-100%);
 }
 
 .sidebar--right {
-    transform: translateX(100%); /* Initially off-screen to the right */
     left: auto; /* Reset left */
     right: 0; /* Align to the right */
+    transform: translateX(100%);
 }
 
 .sidebar--small {
@@ -409,36 +413,21 @@ a {
 }
 
 /* Mostrar u ocultar la barra lateral si el checkbox está marcado */
-form:has(#open-menu:checked) .sidebar {
-    transform: translateX(0); /* Mostrar barra lateral */
+#root:has(#open-menu:checked) .sidebar {
+    transform: translateX(0);
+    opacity: 1;
+
+    transition: transform 500ms ease-in-out, opacity 0ms ease-in-out;
 }
 
-form:has(#open-menu:checked) .sidebar--right {
-    transform: translateX(0); /* Mostrar barra lateral en el lado derecho */
-}
-
-form:has(#open-menu:checked) .overlay {
+#root:has(#open-menu:checked) .overlay {
     z-index: 1000;
     opacity: 0.5;
-}
-
-/* Cerrar barra lateral desde la izquierda o derecha */
-form:has(#open-menu:not(:checked)) .sidebar {
-    transform: translateX(
-        -100%
-    ); /* Mover fuera de la pantalla hacia la izquierda */
-}
-
-form:has(#open-menu:not(:checked)) .sidebar--right {
-    transform: translateX(
-        100%
-    ); /* Mover fuera de la pantalla hacia la derecha */
 }
 
 /*DOCS STYLES*/
 
 /* App.css */
-
 .docs {
     width: 100%;
     height: 100%;
@@ -450,7 +439,7 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
     height: initial;
     flex-grow: 1;
     padding: 0px 30px;
-    gap: 20px
+    gap: 20px;
 }
 
 .docs__sidebar {
@@ -507,7 +496,6 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
     cursor: pointer;
 }
 
-
 /* CAROUSEL */
 .carousel__item {
     display: flex;
@@ -536,19 +524,19 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
     background-color: var(--color-blue);
 }
 
-.carousel__item__image{
+.carousel__item__image {
     height: 220px;
     width: 220px;
     margin: 0px 0px 20px;
     background-color: var(--color-green);
-    mask: url('/mask.png') center no-repeat;
+    mask: url("/mask.png") center no-repeat;
     mask-size: contain;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.carousel--green .carousel__item__image, 
+.carousel--green .carousel__item__image,
 .carousel--blue .carousel__item__image,
 .carousel--green .carousel__card,
 .carousel--blue .carousel__card {
@@ -566,7 +554,6 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
     gap: 20px;
 }
 
-
 .carousel__card button {
     background-color: var(--color-blue);
     color: #fff;
@@ -576,7 +563,8 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
     cursor: pointer;
 }
 
-.k-scrollview-next, .k-scrollview-prev {
+.k-scrollview-next,
+.k-scrollview-prev {
     padding: 0px 10px;
     transition: 300ms;
 }
@@ -588,10 +576,11 @@ form:has(#open-menu:not(:checked)) .sidebar--right {
     background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.3), transparent);
 }
 
-.k-scrollview-next svg, .k-scrollview-prev svg {
+.k-scrollview-next svg,
+.k-scrollview-prev svg {
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: #fff;
     fill: black;
-    border: 2px solid black
+    border: 2px solid black;
 }
