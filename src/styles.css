@@ -253,15 +253,20 @@
 }
 
 /* PRINCIPLES SECTION */
-.perceptible__section{
+.principio__section{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    justify-content: center;
 }
 
-.perceptible__section > div {
+.principio__section > div {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    max-width: 150dvh;
 }
-  
+
+
+
+
