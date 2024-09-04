@@ -23,7 +23,7 @@ export default function App() {
                     <Route path="/" element={<AppLayout />}>
                         <Route index element={<Home />} />
                         <Route path="/wcag" element={<Wcag />} />
-                        <Route path="/docs" element={<Docs />} />
+                        <Route path="/docs/*" element={<Docs />} />
                         <Route path="/searchUrl" element={<SearchUrl />} />
                         <Route path="/operable" element={<Operable/>} />
                         <Route path="/perceptible" element={<Perceptible/>} />

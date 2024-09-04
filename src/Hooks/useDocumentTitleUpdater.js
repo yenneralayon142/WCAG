@@ -19,21 +19,18 @@ export default function UseDocumentTitleUpdater() {
             case '/docs':
                 document.title = 'Documentación | Web Accesible';
                 break;
-            case '/docs/developer':
-                document.title = 'Documentación para Desarrolladores | Web Accesible';
+            case '/docs/perceptible':
+                document.title = 'Perceptible | Web Accesible';
                 break;
-            case '/operable':
-                document.title = 'Operable | Documentación';
+            case '/docs/operable':
+                document.title = 'Operable | Web Accesible';
                 break;
-            case '/perceptible':
-                document.title = 'Perceptible | Documentación';
+            case '/docs/comprensible':
+                document.title = 'Comprensible | Web Accesible';
                 break;
-            case '/robusto':
-                document.title = 'Robusto | Documentación';
+            case '/docs/robusto':
+                document.title = 'Robusto | Web Accesible';
                 break;
-            case '/comprensible':
-                document.title = 'Comprensible | Documentación';
-                break; 
             default:
                 document.title = 'Error | Web Accesible';
                 break;
