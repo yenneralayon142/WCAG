@@ -85,7 +85,7 @@ export default function AccessibilityControls() {
     };
 
     return (
-        <form>
+        <>
             <input type="checkbox" id="open-menu" className="hidden" aria-label="Abrir menú de accesibilidad web"/>
             
             <label htmlFor="open-menu" className="open-button">
@@ -160,6 +160,6 @@ export default function AccessibilityControls() {
                     </label>
                 </div>
             </div>
-        </form>
+        </>
     );
 }
