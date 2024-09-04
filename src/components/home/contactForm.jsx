@@ -29,7 +29,7 @@ export default function ContactForm() {
                         <div className="form__group">
                             <div className="form__input">
                                 <label htmlFor="" className="text--white">Mensaje:</label>
-                                <textarea style={{resize: 'none', height: '100px'}}></textarea>
+                                <textarea style={{resize: 'none', height: '100px'}} placeholder="Escribe tu retroalimentación..."></textarea>
                             </div>
                         </div>
                         <Button className="button--orange" themeColor="warning" svgIcon={icons.uploadIcon}>
