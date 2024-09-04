@@ -7,6 +7,7 @@ import Error from './pages/error';
 import Wcag from './pages/wcag';
 import Docs from './pages/docs';
 import SearchUrl from './pages/searchUrl';
+import Team from './pages/team';
 
 export default function App() {
     return (
@@ -19,6 +20,7 @@ export default function App() {
                         <Route path="/wcag" element={<Wcag />} />
                         <Route path="/docs/*" element={<Docs />} />
                         <Route path="/searchUrl" element={<SearchUrl />} />
+                        <Route path="/team" element={<Team />} />
                     </Route>
                     <Route path="*" element={<Error />} />
                 </Routes>
