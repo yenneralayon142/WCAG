@@ -7,7 +7,7 @@ import Intro from "../components/docsWcag/intro";
 import Perceptible from "../components/docsWcag/perceptible/perceptible";
 import Operable from "../components/docsWcag/operable/operable";
 import Comprensible from "../components/docsWcag/comprensible";
-import Robusto from "../components/docsWcag/robusto";
+import Robusto from "../components/docsWcag/robusto/robusto";
 
 export default function Docs() {
     return (
