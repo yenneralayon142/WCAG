@@ -8,7 +8,6 @@ export function useContrastChange() {
 	useEffect(() => {
 		const contrastElement = document.getElementById('contrast');
 		const currentIndex = options.findIndex(contrast => contrast == settings.contrast);
-		console.info("El indice actual es: " + currentIndex);
 
 		const changeContrast = () => {
 			const nextIndex = currentIndex < options.length - 1 ? currentIndex + 1 : 0;
