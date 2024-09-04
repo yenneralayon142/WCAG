@@ -4,8 +4,8 @@ import Sidebar from "../layouts/sidebarDocumentation";
 import SearchFilters from "../layouts/searchFilters";
 
 import Intro from "../components/docsWcag/intro";
-import Perceptible from "../components/docsWcag/perceptible";
-import Operable from "../components/docsWcag/operable";
+import Perceptible from "../components/docsWcag/perceptible/perceptible";
+import Operable from "../components/docsWcag/operable/operable";
 import Comprensible from "../components/docsWcag/comprensible";
 import Robusto from "../components/docsWcag/robusto";
 
