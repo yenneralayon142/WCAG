@@ -252,4 +252,16 @@
     }
 }
 
+/* PRINCIPLES SECTION */
+.perceptible__section{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.perceptible__section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
   

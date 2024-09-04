@@ -13,8 +13,14 @@ export default function Header() {
             route: "/",
         },
         {
-            text: "Enfermedades y WCAG",
+            text: "WCAG",
             route: "/wcag",
+            items: [
+                {
+                    text: "Quienes somos",
+                    route: "/team",
+                }
+            ]
         },
         {
             text: "Busqueda Url",

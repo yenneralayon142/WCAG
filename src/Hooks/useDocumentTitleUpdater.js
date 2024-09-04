@@ -19,6 +19,9 @@ export default function UseDocumentTitleUpdater() {
             case '/docs':
                 document.title = 'Documentación | Web Accesible';
                 break;
+            case '/team':
+                document.title = 'Quienes somos | Web Accesible';
+                break;
             case '/docs/perceptible':
                 document.title = 'Perceptible | Web Accesible';
                 break;
