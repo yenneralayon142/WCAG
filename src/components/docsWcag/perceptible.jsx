@@ -1,20 +1,72 @@
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 export default function Perceptible() {
+    const imgExample = `<img src="imagen.jpg" alt="Descripción de la imagen" />`;
+
     return (
-        <section>
-            <h1>Perceptible</h1>
-            <div>
-                <h2>Criterio de Perceptibilidad</h2>
-                <h3>Nivel A</h3>
-                <div className="perceptibilidad__levelA">
-                    <h4>1.1.1 Contenido no textual</h4>
-                    <p></p>
-                    <img src="" alt="Ejemplo de implementación" />
+        <div>
+            <section className="perceptible__section">
+                <h3 className="text--extralarge text--blue">Nivel A</h3>
+                <div>
+                    <p className="text--normal text--bolder"> Criterio de Exito: 1.1.1 Contenido No Textual</p>
+                    <p>
+                        Proveer texto alternativo para cualquier contenido no
+                        textual
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {imgExample}
+                    </SyntaxHighlighter>
                 </div>
+                <div>
+                    <p className="text--normal text--bolder"> 1.2.1 Solo Audio y Solo Video (grabado) </p>
+                    <p>
+                        Proveer una alternativa para el contenido solo de audio
+                        o solo de video
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {imgExample}
+                    </SyntaxHighlighter>
+                </div>
+                <div>
+                    <p className="text--normal text--bolder"> 1.2.2 Subtítulos (grabado) </p>
+                    <p>
+                        Proveer texto alternativo para cualquier contenido no
+                        textual
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {imgExample}
+                    </SyntaxHighlighter>
+                </div>
+                <div>
+                    <p className="text--normal text--bolder"> 1.2.3 Audio Descripción o Medio Alternativo (grabado) </p>
+                    <p>
+                        Proveer texto alternativo para cualquier contenido no
+                        textual
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {imgExample}
+                    </SyntaxHighlighter>
+                </div>
+                <div>
+                    <p className="text--normal text--bolder"> 1.3.1 Información y Relaciones </p>
+                    <p>
+                        Proveer texto alternativo para cualquier contenido no
+                        textual
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {imgExample}
+                    </SyntaxHighlighter>
+                </div>
+            </section>
+
+            <section>
                 <h3>Nivel AA</h3>
-                <div className="perceptibilidad__levelAA"></div>
+            </section>
+
+            <section>
                 <h3>Nivel AAA</h3>
-                <div className="perceptibilidad__levelAAA"></div>
-            </div>
-        </section>
-    )
+            </section>
+        </div>
+    );
 }
