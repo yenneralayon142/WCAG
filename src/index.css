@@ -524,10 +524,10 @@ a {
 .k-scrollview {
     border: 0px;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
 .k-scrollview-view {
-    border-radius: 5px;
     align-content: center;
 }
 
