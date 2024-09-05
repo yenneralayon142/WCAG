@@ -1,23 +1,8 @@
 import { ScrollView } from "@progress/kendo-react-scrollview";
 import CarouselItem from "../carousel-item";
+import { investigationTeam } from "./team";
 
 export default function Investigation() {
-    const items = [
-        {
-            position: 1,
-            url: "/team/kevin-lopez.jpg",
-            name: "Kevin Lopez",
-            role: "Investigador Experto",
-            description: "Ayude con la creación de un sitio web.",
-        },
-        {
-            position: 2,
-            url: "/team/yenner-alayon.jpg",
-            name: "Yenner Alayon",
-            role: "Investigador Junior",
-            description: "Ayude con la creación de un sitio web.",
-        },
-    ];
     return (
         <section>
             <div className="container carousel carousel--green">
@@ -29,7 +14,7 @@ export default function Investigation() {
                     }}
                     pageable={false}
                 >
-                    {items.map((item, index) => {
+                    {investigationTeam.map((item, index) => {
                         return (
                             <CarouselItem
                                 key={item.position}
