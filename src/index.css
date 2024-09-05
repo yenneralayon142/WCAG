@@ -474,6 +474,23 @@ a {
     width: 100%;
 }
 
+.nivela__section {
+    display: none;
+}
+
+.nivelb__section {
+    display: none;
+}
+
+.nivelc__section {
+    display: none;
+}
+.docs__main:has(#c-a:checked) .nivela__section,
+.docs__main:has(#c-aa:checked) .nivelb__section,
+.docs__main:has(#c-aaa:checked) .nivelc__section {
+    display: flex;
+}
+
 .search-bar {
     display: block;
     min-width: 100dvh;
@@ -545,6 +562,8 @@ a {
 }
 
 .carousel__card {
+    width: 100%;
+    max-width: 420px;
     background-color: var(--color-green);
     color: #fff;
     padding: 40px;
@@ -552,6 +571,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    text-wrap: wrap;
 }
 
 .carousel__card button {

@@ -1,16 +1,8 @@
 import { ScrollView } from "@progress/kendo-react-scrollview";
 import CarouselItem from "../carousel-item";
+import { designerTeam } from "./team";
 
 export default function Designer() {
-    const items = [
-        {
-            position: 1,
-            url: "/team/sofia-pinzon.jpg",
-            name: "Luna Sofia Pinzón Bejarano",
-            role: "Diseñadora",
-            description: "Ayude con la creación de un sitio web.",
-        },
-    ];
     return (
         <section>
             <div className="container carousel carousel--blue">
@@ -22,7 +14,7 @@ export default function Designer() {
                     }}
                     pageable={false}
                 >
-                    {items.map((item, index) => {
+                    {designerTeam.map((item, index) => {
                         return (
                             <CarouselItem
                                 key={item.position}
