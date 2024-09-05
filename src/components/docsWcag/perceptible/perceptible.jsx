@@ -12,7 +12,7 @@ import { autoplay,exampleContrats,exampleFontSize,sizeImage,betterContrast,offSo
 export default function Perceptible() {
     return (
         <div>
-            <section className="principio__section">
+            <section className="principio__section nivela__section">
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
                 <div className="perceptible__section example_codeP">
                     <p className="text--normal text--bolder"> Criterio de Exito: 1.1.1 Contenido No Textual</p>
@@ -81,7 +81,7 @@ export default function Perceptible() {
                     </SyntaxHighlighter>
                 </div>
             </section>
-            <section className="principio__section">
+            <section className="principio__section nivelb__section">
                 <h3>Nivel AA</h3>
                 <div className="perceptible__section example_codeP">
                     <p className="text--normal text--bolder"> 1.4.3 Contraste (Mínimo)   </p>
@@ -111,7 +111,7 @@ export default function Perceptible() {
                     </SyntaxHighlighter>
                 </div>
             </section>
-            <section className="principio__section">
+            <section className="principio__section nivelc__section">
                 <h3>Nivel AAA</h3>
                 <div className="perceptible__section example_codeP">
                     <p className="text--normal text--bolder"> 1.4.6 Contraste Mejorado </p>

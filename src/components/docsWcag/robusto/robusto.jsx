@@ -5,7 +5,7 @@ import { codeExample1, codeExample2, codeExample3 } from './exampleRobust';
 export default function Robusto() {
     return (
         <div>
-            <section className="principio__section">
+            <section className="principio__section nivela__section">
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
                 <div className="perceptible__section example_codeP">
                     <p className="text--normal text--bolder"> Criterio de Exito: 4.1.1 Análisis sintáctico </p>

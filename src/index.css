@@ -474,6 +474,23 @@ a {
     width: 100%;
 }
 
+.nivela__section {
+    display: none;
+}
+
+.nivelb__section {
+    display: none;
+}
+
+.nivelc__section {
+    display: none;
+}
+.docs__main:has(#c-a:checked) .nivela__section,
+.docs__main:has(#c-aa:checked) .nivelb__section,
+.docs__main:has(#c-aaa:checked) .nivelc__section {
+    display: flex;
+}
+
 .search-bar {
     display: block;
     min-width: 100dvh;
