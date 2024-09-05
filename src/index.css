@@ -513,6 +513,36 @@ a {
     cursor: pointer;
 }
 
+@media screen and (max-width: 768px) { /* Ajuste para pantallas pequeñas, como tablets y móviles */
+    .docs {
+        flex-direction: column; /* Cambia la dirección del flex para móviles */
+    }
+
+    .docs__main {
+        padding: 0px 15px; /* Menos padding en pantallas pequeñas */
+        gap: 10px; /* Menos espacio entre elementos */
+    }
+
+    .docs__sidebar {
+        width: 100%; /* El sidebar ocupa el ancho completo en pantallas pequeñas */
+        max-width: none; /* Sin límite de ancho en pantallas pequeñas */
+        padding: 0px 5px; /* Menos padding en pantallas pequeñas */
+        gap: 15px; /* Menos espacio entre elementos */
+        overflow-y: auto; /* Scroll si es necesario */
+    }
+
+    .docs__sidebar__list a {
+        padding: 8px 6px; /* Menos padding en pantallas pequeñas */
+        border-radius: 4px; /* Menor radio de borde */
+    }
+
+    .search-bar {
+        padding: 8px;
+        margin-bottom: 10px; /* Menor margen en pantallas pequeñas */
+    }
+}
+
+
 /* CAROUSEL */
 .carousel__item {
     display: flex;

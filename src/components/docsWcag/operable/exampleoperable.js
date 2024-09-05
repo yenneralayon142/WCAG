@@ -400,3 +400,186 @@ export const purposeLink =
 </html>
 
 `
+
+export const locationPage = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiples Formas de Navegación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación principal -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Caja de búsqueda -->
+    <form action="buscar.html" method="GET">
+        <label for="search">Buscar en el sitio:</label>
+        <input type="search" id="search" name="query" placeholder="Buscar...">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Breadcrumbs (Migas de pan) -->
+    <div class="breadcrumb">
+        <a href="#inicio">Inicio</a> > <a href="#productos">Productos</a> > Detalles del producto
+    </div>
+
+    <!-- Mapa del sitio -->
+    <h2>Mapa del sitio</h2>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <!-- Contenido de la página -->
+    <section id="inicio">
+        <h1>Bienvenido a nuestro sitio web</h1>
+        <p>Esta es la página de inicio de nuestro sitio.</p>
+    </section>
+
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <p>Aquí puedes ver los productos que ofrecemos.</p>
+    </section>
+
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <p>Aquí puedes conocer los servicios que ofrecemos.</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes ponerte en contacto con nosotros a través de este formulario.</p>
+    </section>
+</body>
+</html>
+`
+
+// Examples AA
+
+export const label = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Comentarios</title>
+</head>
+<body>
+    <!-- Encabezado claro que describe el propósito de la página -->
+    <h1>Formulario de Comentarios</h1>
+
+    <!-- Formulario con etiquetas descriptivas -->
+    <form>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo">
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario"></textarea>
+
+        <button type="submit">Enviar Comentario</button>
+    </form>
+</body>
+</html>
+
+`
+export const appareanceFocus = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Comentarios</title>
+</head>
+<body>
+    <!-- Encabezado claro que describe el propósito de la página -->
+    <h1>Formulario de Comentarios</h1>
+
+    <!-- Formulario con etiquetas descriptivas -->
+    <form>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo">
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario"></textarea>
+
+        <button type="submit">Enviar Comentario</button>
+    </form>
+</body>
+</html>
+
+`
+// Examples AAA
+
+export const onlyPurpose = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propósito del Enlace</title>
+</head>
+<body>
+    <p>Consulta nuestras <a href="/terminos">Condiciones de Servicio</a>.</p>
+    <p>Visita nuestra <a href="/preguntas-frecuentes">sección de Preguntas Frecuentes</a> para más información.</p>
+</body>
+</html>
+
+`
+
+export const sectionHeader = 
+`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encabezados de Sección</title>
+</head>
+<body>
+    <h1>Tienda en Línea</h1>
+
+    <h2>Productos Electrónicos</h2>
+    <p>Encuentra una amplia gama de productos electrónicos...</p>
+
+    <h2>Accesorios para el Hogar</h2>
+    <p>Todo lo que necesitas para tu hogar está aquí...</p>
+
+    <h2>Ofertas Especiales</h2>
+    <p>Aprovecha nuestras ofertas y descuentos...</p>
+</body>
+</html>
+
+`

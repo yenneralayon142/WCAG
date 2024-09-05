@@ -1,6 +1,6 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { accesibleKeypad, focusOrder, justTime, noBlocks, outSpan, pageWithTittle, pause, purposeLink, threeFlash } from "./exampleoperable";
+import { accesibleKeypad, appareanceFocus, focusOrder, justTime, label, locationPage, noBlocks, onlyPurpose, outSpan, pageWithTittle, pause, purposeLink, sectionHeader, threeFlash } from "./exampleoperable";
 
 export default function Operable() {
     return (
@@ -88,7 +88,58 @@ export default function Operable() {
                         {purposeLink}
                     </SyntaxHighlighter>
                 </div>
-             </section>
+
+                <h3 className="text--extralarge text--blue">Nivel AA</h3>
+                
+                <div className="perceptible__section example_codeP">
+                    <p className="text--normal text--bolder">2.4.5 Múltiples Formas   </p>
+                    <p>
+                        Proveer múltiples formas para localizar una página web dentro de un conjunto de páginas 
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {locationPage}
+                    </SyntaxHighlighter>
+                </div>
+                <div className="perceptible__section example_codeP">
+                    <p className="text--normal text--bolder">2.4.6 Encabezados y Etiquetas   </p>
+                    <p>
+                        Los encabezados y etiquetas describen el tema o propósito 
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {label}
+                    </SyntaxHighlighter>
+                </div>
+                <div className="perceptible__section example_codeP">
+                    <p className="text--normal text--bolder">2.4.7 Apariencia del Enfoque  </p>
+                    <p>
+                        Asegurar que cualquier interfaz tiene un modo de operabilidad por teclado visible 
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {appareanceFocus}
+                    </SyntaxHighlighter>
+                </div>
+
+                <h3 className="text--extralarge text--blue">Nivel AAA</h3>
+
+                <div className="perceptible__section example_codeP">
+                    <p className="text--normal text--bolder">2.4.9 Propósito del Enlace (Solo Enlace) </p>
+                    <p>
+                        El propósito de cada enlace se puede determinar a partir del enlace solo 
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {onlyPurpose}
+                    </SyntaxHighlighter>
+                </div>
+                <div className="perceptible__section example_codeP">
+                    <p className="text--normal text--bolder">2.4.10 Encabezados de Sección </p>
+                    <p>
+                        Proveer encabezados para organizar el contenido 
+                    </p>
+                    <SyntaxHighlighter language="html" style={darcula}>
+                        {sectionHeader}
+                    </SyntaxHighlighter>
+                </div>
+            </section>
         </div>
     );
 }
