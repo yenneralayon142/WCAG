@@ -252,56 +252,41 @@
     }
 }
 
-/*DOCS STYLES*/
+/* PRINCIPIES SECTION */
 
-/* App.css */
-.app {
-    display: row;
-  }
-  
-  .sidebar__Documentation {
-    width: 200px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-right: 1px solid #ccc;
-  }
-  
-  .sidebar__Documentation h3 {
-    margin-bottom: 20px;
-  }
-  
-  .sidebar__Documentation ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar__Documentationl li {
-    margin-bottom: 10px;
-  }
-  
-  .content {
-    flex-grow: 1;
-    padding: 20px;
-  }
-  
-  .search-bar {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .filters h4 {
-    margin-bottom: 10px;
-  }
-  
-  .filters button {
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    background-color: #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+.principio__section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre elementos */
+    padding: 10px; /* Espaciado interno */
+    justify-content: flex-start; /* Alineación en pantallas pequeñas */
+}
+
+.principio__section > div {
+    display: block; /* Los elementos hijos se muestran en bloque */
+    max-width: 75dvh; /* Los elementos ocupan todo el ancho disponible */
+    margin-bottom: 10px; /* Separación entre los bloques */
+}
+
+@media screen and (min-width: 992px) {
+    .principio__section {
+        flex-direction: column;
+        gap: 25px; /* Espaciado entre elementos en pantallas grandes */
+        justify-content: center; /* Centrado en pantallas grandes */
+        padding: 20px; /* Espaciado interno ajustado para pantallas grandes */
+    }
+    
+    .principio__section > div {
+        display: flex; /* Cambia a display flex en pantallas grandes */
+        flex-direction: column;
+        gap: 5px; /* Espaciado entre elementos hijos */
+        max-width: 150vh; /* Ajustado de 'dvh' a 'vh' para compatibilidad */
+        width: 100%; /* Asegura que los elementos no excedan el ancho del contenedor */
+    }
+}
+
+
+
+
+
+

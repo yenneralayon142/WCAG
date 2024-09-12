@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
 import { Button } from "@progress/kendo-react-buttons";
 import * as icons from "@progress/kendo-svg-icons";
+// Hooks
 import { useAccessibilityContext } from "../contexts/accesibilityContext";
 import { useFontSizeChange } from "../Hooks/useFontsizeChange";
 import { useSidebarSizeChange } from "../Hooks/useSidebarSizeChange";
 import { useReadText } from "../Hooks/useReadText";
 import { useCursorChange } from "../Hooks/useCursorChange";
-import SidebarItem from "../components/sidebarItem";
 import { useHighLightLinks } from "../Hooks/useHighlightLinks";
+import { useContrastChange } from "../Hooks/useContrastChange";
+// Components
+import SidebarItem from "../components/sidebarItem";
 
 export default function AccessibilityControls() {
     
@@ -27,8 +30,8 @@ export default function AccessibilityControls() {
             icon: 'contrast',
             id: 'contrast',
             hasIndex: true,
-            options: ["normal", "high", "low"],
-            optionName: "colorContrast",
+            options: ["normal", "medio", "alto", "invertido"],
+            optionName: "contrast",
         },
         {
             text: 'Lector pantalla',
@@ -67,6 +70,7 @@ export default function AccessibilityControls() {
     useReadText();
     useCursorChange();
     useHighLightLinks();
+    useContrastChange();
 
     const handleMoveSidebar = () => {
         if (settings.sidebarPosition == 'left') {
@@ -81,7 +85,7 @@ export default function AccessibilityControls() {
     };
 
     return (
-        <form>
+        <>
             <input type="checkbox" id="open-menu" className="hidden" aria-label="Abrir menú de accesibilidad web"/>
             
             <label htmlFor="open-menu" className="open-button">
@@ -156,6 +160,6 @@ export default function AccessibilityControls() {
                     </label>
                 </div>
             </div>
-        </form>
+        </>
     );
 }

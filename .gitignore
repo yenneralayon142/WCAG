@@ -5,7 +5,7 @@ logs
 **/*.backup.*
 **/*.back.*
 
-
+dist/
 node_modules/
 package-lock.json/
 bower_components
