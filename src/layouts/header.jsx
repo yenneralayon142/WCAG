@@ -13,26 +13,22 @@ export default function Header() {
             route: "/",
         },
         {
-            text: "Enfermedades y WCAG",
+            text: "WCAG",
             route: "/wcag",
+            items: [
+                {
+                    text: "Quienes somos",
+                    route: "/team",
+                }
+            ]
         },
         {
             text: "Busqueda Url",
             route:"/searchUrl",
         },
         {
-            text: "Documentos",
+            text: "Documentación",
             route: "/docs",
-            items: [
-                {
-                    text: "Desarrollador",
-                    route: "/docs/developer",
-                },
-                {
-                    text: "Diseñador",
-                    route: "/docs/designer",
-                },
-            ],
         }
     ];
 
@@ -50,7 +46,7 @@ export default function Header() {
     };
 
     return (
-        <AppBar className="header" positionMode="sticky" themeColor="light" style={{zIndex: 99}}>
+        <AppBar className="header" positionMode="sticky" themeColor="light">
             <nav className="header__container">
                 {/* Logo */}
                 <AppBarSection>
@@ -58,7 +54,6 @@ export default function Header() {
                         <div className="header__logo">
                             <img src="/logo-sena.png" alt="Logo sena" className="image"/>
                         </div>
-                        <h1>SENA</h1>
                     </Link>
                 </AppBarSection>
 
@@ -66,7 +61,7 @@ export default function Header() {
 
                 {/* Menú */}
                 <AppBarSection >
-                    <div id="header__desktop">
+                    <div id="header__desktop" className="header__desktop">
                         <Menu onSelect={onSelect} items={menuItems} />
                     </div>
                 </AppBarSection>

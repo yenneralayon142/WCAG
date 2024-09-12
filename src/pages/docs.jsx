@@ -1,11 +1,29 @@
+import { Routes, Route } from "react-router-dom";
+
+import Sidebar from "../layouts/sidebarDocumentation";
+import SearchFilters from "../layouts/searchFilters";
+
+import Intro from "../components/docsWcag/intro";
+import Perceptible from "../components/docsWcag/perceptible/perceptible";
+import Operable from "../components/docsWcag/operable/operable";
+import Comprensible from "../components/docsWcag/comprensible/comprensible";
+import Robusto from "../components/docsWcag/robusto/robusto";
+
 export default function Docs() {
     return (
-        <main>
-            <section>
-                <div className="container">
-                    <h1>Docs</h1>
-                </div>
-            </section>
-        </main>
+        <div className="docs">
+            <Sidebar />
+            <main className="docs__main">
+                <SearchFilters />
+                <Routes>
+                    <Route index element={<Intro />} />
+                    <Route path="/perceptible" element={<Perceptible />} />
+                    <Route path="/operable" element={<Operable />} />
+                    <Route path="/comprensible" element={<Comprensible />} />
+                    <Route path="/robusto" element={<Robusto />} />
+                    <Route path="*" element={<h1>404</h1>} />
+                </Routes>
+            </main>
+        </div>
     );
 }
