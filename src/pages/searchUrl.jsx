@@ -1,48 +1,51 @@
-import React from 'react';
-import instagram from '../mocks/instagram.json';
+import React, { useState, useEffect, useRef } from 'react';
+import { useSearch } from '../Hooks/useSearch';
+import { useAnalyzeUrls } from '../Hooks/Maps/useAnalyzeUrls';
+import {AnalyzeUrls} from '../components/searchUrl/analyzeUrl'
+import {Urls} from '../components/searchUrl/specifyUrl'
+import { useUrls } from '../Hooks/Maps/useSpecifyUrls';
+
 
 export default function SearchUrl() {
-  const urls = instagram.inapplicable; // Accediendo al array 'Inapplicable'
-  const hasUrls = urls?.length > 0;
+  
+  const { search, updateSearch, error } = useSearch()
+  const { urls,getUrls } = useUrls({search})
+  //const {analyzeUrls, postAnalyzeUrls} = useAnalyzeUrls({search})
+  const [query, setQuery] = useState('')
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    getUrls()
+  };
+
+  const handleChange = (event) => {
+    setQuery(event.target.value);
+    updateSearch(event.target.value); // Actualiza también el estado del hook useSearch
+  };
+
 
   return (
     <div className='page'>
       <header>
         <h1>Buscador URLs</h1>
-        <form className='form'>
-          <input placeholder='Ingrese Url' />
-          <button type='submit'>Buscar</button>
+        <form className='form' onSubmit={handleSubmit}>
+          <input
+            style={{
+              border: '1px solid transparent',
+              borderColor: error ? 'red' : 'transparent'
+            }}
+            onChange={handleChange}
+            value={query}
+            name='query'
+            placeholder='Ingrese URL'
+          />
+          <button type='submit'>Analizar</button>
         </form>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
       </header>
       <main>
-        {hasUrls ? (
-          <table>
-            <thead>
-              <tr>
-                <th>Descripción</th>
-                <th>Ayuda</th>
-                <th>URL de Ayuda</th>
-                <th>Impacto</th>
-              </tr>
-            </thead>
-            <tbody>
-              {urls.map((url) => (
-                <tr key={url.id}>
-                  <td>{url.description}</td>
-                  <td>{url.help}</td>
-                  <td>
-                    <a href={url.helpUrl} target='_blank' rel='noopener noreferrer'>
-                      {url.helpUrl}
-                    </a>
-                  </td>
-                  <td>{url.impact ? url.impact : 'No especificado'}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        ) : (
-          <p>No se encontraron resultados</p>
-        )}
+        <Urls urls={urls}/>
       </main>
     </div>
   );

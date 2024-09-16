@@ -1,0 +1,10 @@
+{
+  "data": [
+    {
+      "error": "Message: session not created: This version of ChromeDriver only supports Chrome version 114\nCurrent browser version is 128.0.6613.138 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\nStacktrace:\nBacktrace:\n\tGetHandleVerifier [0x008CA813+48355]\n\t(No symbol) [0x0085C4B1]\n\t(No symbol) [0x00765358]\n\t(No symbol) [0x007861AC]\n\t(No symbol) [0x00781EF3]\n\t(No symbol) [0x00780579]\n\t(No symbol) [0x007B0C55]\n\t(No symbol) [0x007B093C]\n\t(No symbol) [0x007AA536]\n\t(No symbol) [0x007882DC]\n\t(No symbol) [0x007893DD]\n\tGetHandleVerifier [0x00B2AABD+2539405]\n\tGetHandleVerifier [0x00B6A78F+2800735]\n\tGetHandleVerifier [0x00B6456C+2775612]\n\tGetHandleVerifier [0x009551E0+616112]\n\t(No symbol) [0x00865F8C]\n\t(No symbol) [0x00862328]\n\t(No symbol) [0x0086240B]\n\t(No symbol) [0x00854FF7]\n\tBaseThreadInitThunk [0x763CFCC9+25]\n\tRtlGetAppContainerNamedObjectPath [0x778480CE+286]\n\tRtlGetAppContainerNamedObjectPath [0x7784809E+238]\n",
+      "url": "https://gics-sennova.com/"
+    }
+  ],
+  "message": "Analisis completado",
+  "status": "success"
+}
