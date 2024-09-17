@@ -13,6 +13,7 @@ export default function Designer() {
                         height: 500,
                     }}
                     pageable={false}
+                    endless={true}
                 >
                     {designerTeam.map((item, index) => {
                         return (
