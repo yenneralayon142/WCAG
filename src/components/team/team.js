@@ -47,24 +47,31 @@ export const fullTeam = [
     },
     {
         id: 6,
-        url: "pendiente",
+        url: "/team/luna-pinzon.jpg",
         name: "Luna Sofia Pinzón Bejarano",
         role: "Diseñadora",
-        description: `pendiente`,
+        description: `Soy aprendiz del SENA en el tecnólogo de Producción Multimedia, apasionada por la creación de contenido 
+        audiovisual y el desarrollo de proyectos innovadores. Me enfoqué en crear una experiencia visual atractiva y funcional 
+        que permita a los usuarios navegar de manera fluida e intuitiva, haciendo de la accesibilidad una prioridad en cada decisión de diseño.`,
     },
     {
         id: 7,
-        url: "pendiente",
-        name: "Daniela Gomez",
+        url: "/team/angie-gomez.jpg",
+        name: "Angie Daniela Gómez Quevedo",
         role: "Diseñadora",
-        description: `pendiente`,
+        description: `Soy aprendiz del SENA en el tecnólogo de Producción Multimedia, he aplicado los conocimientos adquiridos 
+        para contribuir de manera significativa al diseño de la página web. Me enfoqué en encontrar soluciones que no solo se 
+        ajustaran a las sugerencias del equipo, sino que también respondieran a las necesidades de los usuarios, buscando la accesibilidad.`,
     },
     {
         id: 8,
-        url: "pendiente",
-        name: "Lina Muñoz",
+        url: "/team/lina-muñoz.jpg",
+        name: "Lina Mercedes Muñoz González ",
         role: "Diseñadora",
-        description: `pendiente`,
+        description: `Soy aprendiz del SENA en el programa de Tecnólogo en Producción Multimedia, he tenido la aportunidad de 
+        aplicar mis conocimiento y habilidades en diseño de forma satisfactoria en este proyecto. Mi rol consiste en plantear 
+        ideas de diseño accesibles, proponiendo estructuras minimalistas y combinaciones de colores que contrasten para asegurar 
+        una mayor visibilidad, siempre con un enfoque en la inclusión.`,
     },
     {
         id: 9,
@@ -72,7 +79,7 @@ export const fullTeam = [
         name: "Evelyn Pacheco",
         role: "Diseñadora",
         description: `pendiente`,
-    }
+    },
 ];
 
 export const investigationTeam = [
