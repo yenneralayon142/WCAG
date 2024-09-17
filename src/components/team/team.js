@@ -48,7 +48,7 @@ export const fullTeam = [
     {
         id: 6,
         url: "/team/luna-pinzon.jpg",
-        name: "Luna Sofia Pinzón Bejarano",
+        name: "Luna Sofía Pinzón Bejarano",
         role: "Diseñadora",
         description: `Soy aprendiz del SENA en el tecnólogo de Producción Multimedia, apasionada por la creación de contenido 
         audiovisual y el desarrollo de proyectos innovadores. Me enfoqué en crear una experiencia visual atractiva y funcional 
@@ -75,10 +75,12 @@ export const fullTeam = [
     },
     {
         id: 9,
-        url: "pendiente",
-        name: "Evelyn Pacheco",
+        url: "/team/evelin-pacheco.jpg",
+        name: "Evelyn Sofía Pacheco Sierra",
         role: "Diseñadora",
-        description: `pendiente`,
+        description: `Soy aprendiz del SENA en el tecnólogo de Producción Multimedia, apasionado por el diseño web accesible. He 
+        aplicado mis conocimientos para desarrollar soluciones que respondan a las necesidades de todos los usuarios, asegurando 
+        una navegación inclusiva y amigable, de manera sencilla y cómoda.`,
     },
 ];
 
