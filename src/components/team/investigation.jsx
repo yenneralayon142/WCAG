@@ -13,6 +13,7 @@ export default function Investigation() {
                         height: 500,
                     }}
                     pageable={false}
+                    endless={true}
                 >
                     {investigationTeam.map((item, index) => {
                         return (

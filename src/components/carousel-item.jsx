@@ -5,7 +5,7 @@ export default function CarouselItem(props) {
         <div className="carousel__item text--center">
             <div>
                 <figure className="carousel__item__image">
-                    <img src={url} alt={`Foto de ${name}`} className="image" />
+                    <img src={url} alt={`Foto de ${name}`} className="image image--cover" />
                 </figure>
                 <h4 className="text--large">{name}</h4>
                 <p className="text--normal">{role}</p>
