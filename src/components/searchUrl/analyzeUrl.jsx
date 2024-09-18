@@ -12,13 +12,6 @@ export function ListofAnalyze({ analyzeUrls }) {
 }
 
 
-
-export function renderNoResults () {
-    return(
-        <p>No se encontraron resultados</p>
-    )
-}
-
 export function AnalyzeUrls({ analyzeUrls }) {
     const hasAnalyzeUrls = analyzeUrls?.length > 0; 
     return (

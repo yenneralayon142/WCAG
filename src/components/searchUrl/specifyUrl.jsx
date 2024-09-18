@@ -1,25 +1,21 @@
-export function ListOfUrls ({urls}) {
-    return(
-      <ul>
+function ListOfUrls({ urls }) {
+  return (
+    <ul>
       {urls.map(url => (
-        <li key={url.id}>
-          <p><strong>ID:</strong> {url.id}</p>
+        <li key={url._id}>
           <p><strong>Domain:</strong> {url.domain}</p>
           <p><strong>URL:</strong> {url.url}</p>
-          <p><strong>Date:</strong> {url.date}</p>
           <hr />
         </li>
       ))}
     </ul>
-    )
+  );
 }
 
-
-export function Urls ({urls}) {
-    const hasUrls = urls?.length > 0;
-    return (
-        hasUrls
-        ? <ListOfUrls urls ={urls}/>
-        : <p>No se encontraron resultados</p>
-    )
+export function Urls({ urls }) {
+  return (
+    urls.length > 0
+      ? <ListOfUrls urls={urls} />
+      : <p>No se encontraron resultados</p>
+  );
 }
