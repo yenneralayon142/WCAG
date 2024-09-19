@@ -14,6 +14,7 @@ export default function Developer() {
                         height: 500,
                     }}
                     pageable={false}
+                    endless={true}
                 >
                     {developerTeam.map((item, index) => {
                         return (

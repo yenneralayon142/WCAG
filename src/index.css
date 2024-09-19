@@ -69,6 +69,10 @@ footer {
     height: 100%;
 }
 
+.image--cover {
+    object-fit: cover;
+}
+
 .link--highlighted {
     background: var(--color-light-blue);
     border-radius: 10px;
