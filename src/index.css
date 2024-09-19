@@ -431,28 +431,43 @@ a {
 
 /*DOCS STYLES*/
 
-/* App.css */
-.docs {
-    width: 100%;
-    height: 100%;
+#docs__container {
+    height: 100vh;
     display: flex;
-    flex-grow: 1;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+
+    & > .header {
+        flex: none;
+    }
 }
 
 .docs__main {
-    height: initial;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.docs__content {
     flex-grow: 1;
-    padding: 0px 30px;
+    height: initial;
+    padding: 0px 20px;
     gap: 20px;
+    overflow-y: scroll;
 }
 
 .docs__sidebar {
-    height: initial;
-    width: 100%;
-    max-width: 300px;
-    padding: 0px 10px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    height: initial;
+    padding: 0px 10px;
     gap: 20px;
     overflow-y: scroll;
 }
@@ -478,74 +493,30 @@ a {
     width: 100%;
 }
 
-.nivela__section {
-    display: none;
-}
-
-.nivelb__section {
-    display: none;
-}
-
-.nivelc__section {
-    display: none;
-}
-.docs__main:has(#c-a:checked) .nivela__section,
-.docs__main:has(#c-aa:checked) .nivelb__section,
-.docs__main:has(#c-aaa:checked) .nivelc__section {
-    display: flex;
-}
-
 .search-bar {
     display: block;
-    min-width: 100dvh;
+    min-width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-.filters h4 {
-    margin-bottom: 10px;
+.nivela__section,
+.nivelb__section,
+.nivelc__section {
+    display: none;
 }
 
-.filters button {
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    background-color: #ddd;
-    border-radius: 5px;
-    cursor: pointer;
+.docs__main:has(#c-a:checked) .nivela__section,
+.docs__main:has(#c-aa:checked) .nivelb__section,
+.docs__main:has(#c-aaa:checked) .nivelc__section {
+    display: flex;
 }
 
-@media screen and (max-width: 768px) { /* Ajuste para pantallas pequeñas, como tablets y móviles */
-    .docs {
-        flex-direction: column; /* Cambia la dirección del flex para móviles */
-    }
-
-    .docs__main {
-        padding: 0px 15px; /* Menos padding en pantallas pequeñas */
-        gap: 10px; /* Menos espacio entre elementos */
-    }
-
-    .docs__sidebar {
-        width: 100%; /* El sidebar ocupa el ancho completo en pantallas pequeñas */
-        max-width: none; /* Sin límite de ancho en pantallas pequeñas */
-        padding: 0px 5px; /* Menos padding en pantallas pequeñas */
-        gap: 15px; /* Menos espacio entre elementos */
-        overflow-y: auto; /* Scroll si es necesario */
-    }
-
-    .docs__sidebar__list a {
-        padding: 8px 6px; /* Menos padding en pantallas pequeñas */
-        border-radius: 4px; /* Menor radio de borde */
-    }
-
-    .search-bar {
-        padding: 8px;
-        margin-bottom: 10px; /* Menor margen en pantallas pequeñas */
-    }
+.k-dropdownlist {
+    width: fit-content !important;
 }
-
 
 /* CAROUSEL */
 .carousel__item {
