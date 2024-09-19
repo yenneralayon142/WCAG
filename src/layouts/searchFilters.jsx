@@ -2,7 +2,6 @@ import { DropDownList } from "@progress/kendo-react-dropdowns";
 import { useEffect } from "react";
 
 export default function SearchFilters() {
-    
     const leverFilter = [
         {
             text: "Nivel A",
@@ -34,26 +33,24 @@ export default function SearchFilters() {
     }, []);
 
     const handleInputChange = (event) => {
-        console.log(event.value);
-
         document.querySelectorAll(".filter-check").forEach((element) => {
             element.removeAttribute("checked");
         });
 
         switch (event.value.id) {
-            case 'nivel-a':
-                document.getElementById('c-a').setAttribute("checked", true);
+            case "nivel-a":
+                document.getElementById("c-a").setAttribute("checked", true);
                 break;
-            case 'nivel-aa':
-                document.getElementById('c-aa').setAttribute("checked", true);
+            case "nivel-aa":
+                document.getElementById("c-aa").setAttribute("checked", true);
                 break;
-            case 'nivel-aaa':
-                document.getElementById('c-aaa').setAttribute("checked", true);
+            case "nivel-aaa":
+                document.getElementById("c-aaa").setAttribute("checked", true);
                 break;
             case 'todos': 
                 document.querySelectorAll(".filter-check").forEach((element) => {
-                    element.setAttribute("checked", true);
-                });
+                        element.setAttribute("checked", true);
+                    });
                 break;
             default:
                 break;
