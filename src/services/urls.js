@@ -13,5 +13,5 @@ export const searchUrls = async () => {
     } catch (e) {
         console.error('Error buscando URLs:', e.message || e);
         return []; // Devuelve un array vacío en caso de error
-    }
+    }
 };
