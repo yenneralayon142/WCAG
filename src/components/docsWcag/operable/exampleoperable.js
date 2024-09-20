@@ -1,6 +1,5 @@
 export const accesibleKeypad = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -24,10 +23,10 @@ export const accesibleKeypad =
     </form>
 </body>
 </html>
-`
+`;
+
 export const outSpan = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -93,12 +92,10 @@ export const outSpan =
 
 </body>
 </html>
-
-`
+`;
 
 export const time = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -164,11 +161,10 @@ export const time =
 
 </body>
 </html>
+`;
 
-`
 export const justTime = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -204,12 +200,10 @@ export const justTime =
     </form>
 </body>
 </html>
-
-`
+`;
 
 export const pause = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -256,12 +250,10 @@ export const pause =
     </script>
 </body>
 </html>
-
-`
+`;
 
 export const threeFlash = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -287,11 +279,10 @@ export const threeFlash =
     <div class="flash"></div>
 </body>
 </html>
+`;
 
-`
 export const noBlocks = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -317,12 +308,10 @@ export const noBlocks =
     <div class="flash"></div>
 </body>
 </html>
-
-`
+`;
 
 export const pageWithTittle = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -334,12 +323,10 @@ export const pageWithTittle =
     <p>Por favor, rellena el formulario a continuación para ponerte en contacto con nosotros.</p>
 </body>
 </html>
-
-`
+`;
 
 export const focusOrder = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -379,10 +366,10 @@ export const focusOrder =
     </main>
 </body>
 </html>
-`
+`;
+
 export const purposeLink = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -398,12 +385,10 @@ export const purposeLink =
     </ul>
 </body>
 </html>
-
-`
+`;
 
 export const locationPage = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -476,13 +461,12 @@ export const locationPage =
     </section>
 </body>
 </html>
-`
+`;
 
-// Examples AA
+// AA Examples
 
 export const label = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -508,11 +492,10 @@ export const label =
     </form>
 </body>
 </html>
+`;
 
-`
 export const appareanceFocus = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -538,13 +521,12 @@ export const appareanceFocus =
     </form>
 </body>
 </html>
+`;
 
-`
-// Examples AAA
+// AAA Examples
 
 export const onlyPurpose = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -556,12 +538,10 @@ export const onlyPurpose =
     <p>Visita nuestra <a href="/preguntas-frecuentes">sección de Preguntas Frecuentes</a> para más información.</p>
 </body>
 </html>
-
-`
+`;
 
 export const sectionHeader = 
-`
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -581,5 +561,4 @@ export const sectionHeader =
     <p>Aprovecha nuestras ofertas y descuentos...</p>
 </body>
 </html>
-
-`
+`;
