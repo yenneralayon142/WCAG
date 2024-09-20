@@ -472,20 +472,20 @@ a {
     & > h3 {
         border-bottom: #04324d solid 1px;
     }
+
+    & a {
+        text-decoration: underline;
+    }
+
+    & ul {
+        padding-left: 25px;
+    }
 }
 
 .accessibility__item {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
-    & ul {
-        padding-left: 25px;
-    }
-
-    & a {
-        text-decoration: underline;
-    }
 
     & code , & pre {
         font-size: 14px;
@@ -509,30 +509,37 @@ a {
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    & a {
+        color: #000;
+        padding: 10px 8px;
+        border-radius: 5px;
+        transition: 200ms;
+    
+        &:hover {
+            background-color: #d8d8d8;
+        }
+    }
 }
 
-.docs__sidebar__list a {
-    color: #000;
-    padding: 10px 8px;
-    border-radius: 5px;
-    transition: 200ms;
-}
+.docs__search-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-.docs__sidebar__list a:hover {
-    background-color: #d8d8d8;
-}
-
-.search-filters {
     width: 100%;
+
+    & input[type="text"] { 
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
 }
 
-.search-bar {
-    display: block;
-    min-width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.k-dropdownlist {
+    font-size: 15px;
+    width: 120px;
 }
 
 .accessibility--level-a,
@@ -545,10 +552,6 @@ a {
 .docs__main:has(#c-aa:checked) .accessibility--level-aa,
 .docs__main:has(#c-aaa:checked) .accessibility--level-aaa {
     display: flex;
-}
-
-.k-dropdownlist {
-    width: fit-content !important;
 }
 
 /* CAROUSEL */
