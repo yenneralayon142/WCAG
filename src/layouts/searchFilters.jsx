@@ -1,8 +1,45 @@
-import { DropDownList } from "@progress/kendo-react-dropdowns";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { DropDownList, AutoComplete } from "@progress/kendo-react-dropdowns";
+import { filterBy } from "@progress/kendo-data-query";
+import { useNavigate } from "react-router-dom";
+
+const source = ["Perceptible", "Operable", "Comprensible", "Robusto"];
 
 export default function SearchFilters() {
-    
+
+    const navigation = useNavigate();
+
+    const [state, setState] = useState({
+        data: source,
+        value: "",
+        suggest: "",
+    });
+
+    const filterData = (value) => {
+        const data = source;
+        const filter = {
+            value: value,
+            operator: "startswith",
+            ignoreCase: true,
+        };
+        return value ? filterBy(data, filter) : data;
+    };
+
+    const handleSearchChange = (event) => {
+        const value = event.value;
+        setState({
+            data: filterData(value),
+            value: value,
+            suggest: event.suggestion ? event.suggestion.value : "",
+        });
+    };
+
+    const handleSearchClose = () => {
+        if (source.find(x => x === state.value || state.suggest ) !== undefined) {
+            navigation("/docs/" + state.value.toLocaleLowerCase() );
+        }
+    }
+
     const leverFilter = [
         {
             text: "Nivel A",
@@ -34,26 +71,26 @@ export default function SearchFilters() {
     }, []);
 
     const handleInputChange = (event) => {
-        console.log(event.value);
-
         document.querySelectorAll(".filter-check").forEach((element) => {
             element.removeAttribute("checked");
         });
 
         switch (event.value.id) {
-            case 'nivel-a':
-                document.getElementById('c-a').setAttribute("checked", true);
+            case "nivel-a":
+                document.getElementById("c-a").setAttribute("checked", true);
                 break;
-            case 'nivel-aa':
-                document.getElementById('c-aa').setAttribute("checked", true);
+            case "nivel-aa":
+                document.getElementById("c-aa").setAttribute("checked", true);
                 break;
-            case 'nivel-aaa':
-                document.getElementById('c-aaa').setAttribute("checked", true);
+            case "nivel-aaa":
+                document.getElementById("c-aaa").setAttribute("checked", true);
                 break;
-            case 'todos': 
-                document.querySelectorAll(".filter-check").forEach((element) => {
-                    element.setAttribute("checked", true);
-                });
+            case "todos":
+                document
+                    .querySelectorAll(".filter-check")
+                    .forEach((element) => {
+                        element.setAttribute("checked", true);
+                    });
                 break;
             default:
                 break;
@@ -61,7 +98,7 @@ export default function SearchFilters() {
     };
 
     return (
-        <div className="search-filters">
+        <div className="docs__search-filters">
             <input type="checkbox" className="hidden filter-check" id="c-a" />
             <input type="checkbox" className="hidden filter-check" id="c-aa" />
             <input type="checkbox" className="hidden filter-check" id="c-aaa" />
@@ -70,15 +107,19 @@ export default function SearchFilters() {
                 Documentacion
             </h2>
 
-            <input type="text" placeholder="Búsqueda" className="search-bar" />
-            <div className="filters">
-                <h4 className="text--bold text--subtitle text--blue">
+            <AutoComplete
+                data={state.data}
+                value={state.value}
+                suggest={true}
+                onChange={handleSearchChange}
+                onClose={handleSearchClose}
+                placeholder="Buscar tema..."
+            />
+            <div className="docs__filters">
+                <h4 className="text--bold text--extralarge text--blue">
                     Filtros de búsqueda
                 </h4>
                 <DropDownList
-                    style={{
-                        width: "300px",
-                    }}
                     data={leverFilter}
                     textField="text"
                     dataItemKey="id"

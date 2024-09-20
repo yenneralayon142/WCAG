@@ -431,28 +431,76 @@ a {
 
 /*DOCS STYLES*/
 
-/* App.css */
-.docs {
-    width: 100%;
-    height: 100%;
+#docs__container {
+    height: 100vh;
     display: flex;
-    flex-grow: 1;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+
+    & > .header {
+        flex: none;
+    }
 }
 
 .docs__main {
-    height: initial;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.docs__content {
     flex-grow: 1;
-    padding: 0px 30px;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    height: initial;
+    padding: 0px 20px;
+    gap: 40px;
+    overflow-y: scroll;
+}
+
+.accessibility {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 15px;
+
+    & > h3 {
+        border-bottom: #04324d solid 1px;
+    }
+
+    & a {
+        text-decoration: underline;
+    }
+
+    & ul {
+        padding-left: 25px;
+    }
+}
+
+.accessibility__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & code , & pre {
+        font-size: 14px;
+        line-height: 1.2 !important;
+        border-radius: 5px;
+    }
 }
 
 .docs__sidebar {
-    height: initial;
-    width: 100%;
-    max-width: 300px;
-    padding: 0px 10px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    height: initial;
+    padding: 0px 10px;
     gap: 20px;
     overflow-y: scroll;
 }
@@ -461,91 +509,50 @@ a {
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    & a {
+        color: #000;
+        padding: 10px 8px;
+        border-radius: 5px;
+        transition: 200ms;
+    
+        &:hover {
+            background-color: #d8d8d8;
+        }
+    }
 }
 
-.docs__sidebar__list a {
-    color: #000;
-    padding: 10px 8px;
-    border-radius: 5px;
-    transition: 200ms;
-}
+.docs__search-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-.docs__sidebar__list a:hover {
-    background-color: #d8d8d8;
-}
-
-.search-filters {
     width: 100%;
+
+    & input[type="text"] { 
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
 }
 
-.nivela__section {
+.k-dropdownlist {
+    font-size: 15px;
+    width: 120px;
+}
+
+.accessibility--level-a,
+.accessibility--level-aa,
+.accessibility--level-aaa {
     display: none;
 }
 
-.nivelb__section {
-    display: none;
-}
-
-.nivelc__section {
-    display: none;
-}
-.docs__main:has(#c-a:checked) .nivela__section,
-.docs__main:has(#c-aa:checked) .nivelb__section,
-.docs__main:has(#c-aaa:checked) .nivelc__section {
+.docs__main:has(#c-a:checked) .accessibility--level-a,
+.docs__main:has(#c-aa:checked) .accessibility--level-aa,
+.docs__main:has(#c-aaa:checked) .accessibility--level-aaa {
     display: flex;
 }
-
-.search-bar {
-    display: block;
-    min-width: 100dvh;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.filters h4 {
-    margin-bottom: 10px;
-}
-
-.filters button {
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    background-color: #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) { /* Ajuste para pantallas pequeñas, como tablets y móviles */
-    .docs {
-        flex-direction: column; /* Cambia la dirección del flex para móviles */
-    }
-
-    .docs__main {
-        padding: 0px 15px; /* Menos padding en pantallas pequeñas */
-        gap: 10px; /* Menos espacio entre elementos */
-    }
-
-    .docs__sidebar {
-        width: 100%; /* El sidebar ocupa el ancho completo en pantallas pequeñas */
-        max-width: none; /* Sin límite de ancho en pantallas pequeñas */
-        padding: 0px 5px; /* Menos padding en pantallas pequeñas */
-        gap: 15px; /* Menos espacio entre elementos */
-        overflow-y: auto; /* Scroll si es necesario */
-    }
-
-    .docs__sidebar__list a {
-        padding: 8px 6px; /* Menos padding en pantallas pequeñas */
-        border-radius: 4px; /* Menor radio de borde */
-    }
-
-    .search-bar {
-        padding: 8px;
-        margin-bottom: 10px; /* Menor margen en pantallas pequeñas */
-    }
-}
-
 
 /* CAROUSEL */
 .carousel__item {
