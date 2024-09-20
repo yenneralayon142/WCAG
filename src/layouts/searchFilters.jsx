@@ -3,7 +3,29 @@ import { DropDownList, AutoComplete } from "@progress/kendo-react-dropdowns";
 import { filterBy } from "@progress/kendo-data-query";
 import { useNavigate } from "react-router-dom";
 
-const source = ["Perceptible", "Operable", "Comprensible", "Robusto"];
+const source = ["Introduccion", "Perceptible", "Operable", "Comprensible", "Robusto"];
+const links = [
+    {
+        text: "Introduccion",
+        url: "/docs",
+    },
+    {
+        text: "Perceptible",
+        url: "/docs/perceptible",
+    },
+    {
+        text: "Operable",
+        url: "/docs/operable",
+    },
+    {
+        text: "Comprensible",
+        url: "/docs/comprensible",
+    },
+    {
+        text: "Robusto",
+        url: "/docs/robusto",
+    }
+];
 
 export default function SearchFilters() {
 
@@ -35,8 +57,11 @@ export default function SearchFilters() {
     };
 
     const handleSearchClose = () => {
-        if (source.find(x => x === state.value || state.suggest ) !== undefined) {
-            navigation("/docs/" + state.value.toLocaleLowerCase() );
+        const index = links.findIndex(x => x.text.toLowerCase() == state.value.toLowerCase() || x.text.toLocaleLowerCase() == state.suggest.toLowerCase() )
+        if (index >= 0) {
+            navigation( links[index].url );
+        } else {
+            console.error("Elemento no encontrado: " + state.value)
         }
     }
 
@@ -108,11 +133,12 @@ export default function SearchFilters() {
             </h2>
 
             <AutoComplete
-                data={state.data}
+                data={links}
                 value={state.value}
                 suggest={true}
                 onChange={handleSearchChange}
                 onClose={handleSearchClose}
+                textField="text"
                 placeholder="Buscar tema..."
             />
             <div className="docs__filters">
