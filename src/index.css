@@ -459,17 +459,38 @@ a {
     flex-direction: column;
     height: initial;
     padding: 0px 20px;
-    gap: 20px;
+    gap: 40px;
     overflow-y: scroll;
+}
 
-    & > section {
-        padding: 0;
-        flex-direction: column;
-        gap: 15px;
+.accessibility {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 15px;
 
-        & code, & pre {
-            line-height: 1.2 !important;
-        }
+    & > h3 {
+        border-bottom: #04324d solid 1px;
+    }
+}
+
+.accessibility__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    & ul {
+        padding-left: 25px;
+    }
+
+    & a {
+        text-decoration: underline;
+    }
+
+    & code , & pre {
+        font-size: 14px;
+        line-height: 1.2 !important;
+        border-radius: 5px;
     }
 }
 
@@ -514,15 +535,15 @@ a {
     border: 1px solid #ccc;
 }
 
-.nivela__section,
-.nivelb__section,
-.nivelc__section {
+.accessibility--level-a,
+.accessibility--level-aa,
+.accessibility--level-aaa {
     display: none;
 }
 
-.docs__main:has(#c-a:checked) .nivela__section,
-.docs__main:has(#c-aa:checked) .nivelb__section,
-.docs__main:has(#c-aaa:checked) .nivelc__section {
+.docs__main:has(#c-a:checked) .accessibility--level-a,
+.docs__main:has(#c-aa:checked) .accessibility--level-aa,
+.docs__main:has(#c-aaa:checked) .accessibility--level-aaa {
     display: flex;
 }
 
