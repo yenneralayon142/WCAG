@@ -1,7 +1,7 @@
 //Ejemplos A
 export const imgExample = `<img src="imagen.jpg" alt="Descripción de la imagen" />`;
-export const audioExample = `
-<audio controls>
+export const audioExample = 
+`<audio controls>
     <source src="podcast.mp3" type="audio/mpeg" />
     Tu navegador no soporta el elemento de audio.
 </audio>
@@ -23,9 +23,10 @@ Nuestro invitado especial, Juan Pérez, comparte su experiencia sobre cómo impl
 Conclusión y resumen de los puntos clave.
     </code>
 </pre>
-`
-export const textExample = `
-<video controls>
+`;
+
+export const textExample = 
+`<video controls>
 <source src="video.mp4" type="video/mp4" />
     <track 
             kind="subtitles" 
@@ -37,9 +38,10 @@ export const textExample = `
     Tu navegador no soporta el elemento de video.
 </video>
 <p>Descripción del Video: Este video muestra un tutorial paso a paso sobre cómo implementar accesibilidad en una página web.</p>
-    `
-export const domExample = `
-<article>
+`;
+
+export const domExample = 
+`<article>
 <header>
     <h1>Accesibilidad Web</h1>
     <p>Por Juan Pérez</p>
@@ -56,10 +58,10 @@ export const domExample = `
     <p>Publicado el 1 de Septiembre de 2024</p>
 </footer>
 </article>
-`
+`;
 
-export const ordenContent = `
-<div>
+export const ordenContent = 
+`<div>
     <h1>Encabezado Principal</h1>
     <p>Este es un párrafo que proporciona información introductoria sobre el contenido siguiente.</p>
     
@@ -77,10 +79,10 @@ export const ordenContent = `
         <p>Información de contacto y enlaces importantes.</p>
     </footer>
 </div>
-`
+`;
 
-export const colorExample = `
-<!DOCTYPE html>
+export const colorExample = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -116,10 +118,10 @@ export const colorExample = `
 <p>Recuerda que los mensajes de error, advertencia e información están claramente indicados mediante texto, no solo con color.</p>
 </body>
 </html>
-`
+`;
 
-export const autoplay = `
-<!DOCTYPE html>
+export const autoplay = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -173,12 +175,12 @@ export const autoplay = `
 </script>
 </body>
 </html>
-`
+`;
 
 //Ejemplos AA
 
-export const exampleContrats = `
-<!DOCTYPE html>
+export const exampleContrats = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -220,10 +222,10 @@ export const exampleContrats = `
 </p>
 </body>
 </html>
-`
+`;
 
-export const exampleFontSize = `
-<!DOCTYPE html>
+export const exampleFontSize = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -274,9 +276,10 @@ export const exampleFontSize = `
 </div>
 </body>
 </html>
-`
-export const sizeImage = `
-<!DOCTYPE html>
+`;
+
+export const sizeImage = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -293,10 +296,10 @@ export const sizeImage = `
 <h1>Texto HTML Accesible</h1>
 </body>
 </html>
-`
+`;
 
-export const betterContrast =`
-<!DOCTYPE html>
+export const betterContrast = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -333,9 +336,10 @@ export const betterContrast =`
 </div>
 </body>
 </html>
-`
-export const offSound = `
-<!DOCTYPE html>
+`;
+
+export const offSound = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -387,4 +391,4 @@ export const offSound = `
 </script>
 </body>
 </html>
-`
+`;
