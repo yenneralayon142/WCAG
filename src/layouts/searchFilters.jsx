@@ -58,7 +58,7 @@ export default function SearchFilters() {
     };
 
     return (
-        <div className="search-filters">
+        <div className="docs__search-filters">
             <input type="checkbox" className="hidden filter-check" id="c-a" />
             <input type="checkbox" className="hidden filter-check" id="c-aa" />
             <input type="checkbox" className="hidden filter-check" id="c-aaa" />
@@ -68,14 +68,11 @@ export default function SearchFilters() {
             </h2>
 
             <input type="text" placeholder="Búsqueda" className="search-bar" />
-            <div className="filters">
-                <h4 className="text--bold text--subtitle text--blue">
+            <div className="docs__filters">
+                <h4 className="text--bold text--extralarge text--blue">
                     Filtros de búsqueda
                 </h4>
                 <DropDownList
-                    style={{
-                        width: "300px",
-                    }}
                     data={leverFilter}
                     textField="text"
                     dataItemKey="id"

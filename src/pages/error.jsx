@@ -4,7 +4,7 @@ export default function Error() {
             <section>
                 <div className="container" style={{textAlign: 'center'}}>
                     <h1 className="text-4xl">404</h1>
-                    <p>página no encontrada</p>
+                    <p className="text--normal">página no encontrada</p>
                 </div>
             </section>
         </main>
