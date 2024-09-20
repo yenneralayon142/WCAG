@@ -1,59 +1,142 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { codeExample1, codeExample2, codeExample3 } from "./exampleRobust";
+import { oneDark as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { codeExample1, codeExample2, codeExample3, codeExample4, codeExample5, codeExample6, codeExample7 } from "./exampleRobust";
 
 export default function Robusto() {
     return (
         <>
-            <section className="nivela__section">
+            <section className="accessibility accessibility--level-a">
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
-                <div>
+
+                {/* Criterio de Exito: 4.1.1 Análisis sintáctico */}
+                <div className="accessibility__item">
                     <p className="text--normal text--bolder">
-                        
                         Criterio de Exito: 4.1.1 Análisis sintáctico
                     </p>
                     <p>
-                        
-                        En el contenido implementado usando lenguajes de
-                        marcado, los elementos tienen etiquetas completas y
-                        están anidados de acuerdo a sus especificaciones.
+                        Asegúrate de que el código HTML esté bien estructurado y respete las reglas de marcado. Esto incluye:
                     </p>
-                    <SyntaxHighlighter language="html" style={darcula}>
+                    <ul>
+                        <li>Etiquetas bien cerradas</li>
+                        <li>Anidación correcta de elementos (no colocar etiquetas dentro de otras de forma incorrecta)</li>
+                        <li>Atributos apropiados para cada elemento (como <span className="text--bold">`lang`</span>, <span className="text--bold">`alt`</span>, <span className="text--bold">`title`</span> )</li>
+                        <li>Valida el código con herramientas como el <a href="https://validator.w3.org/" target="_blank">Validador de W3C</a></li>
+                    </ul>
+                    <SyntaxHighlighter language="html" style={codeTheme}>
                         {codeExample1}
                     </SyntaxHighlighter>
                 </div>
-                <div>
+
+                {/* Criterio de Exito: 4.1.2 Nombre, Rol, Valor */}
+                <div className="accessibility__item">
                     <p className="text--normal text--bolder">
-                        
                         Criterio de Exito: 4.1.2 Nombre, Rol, Valor
                     </p>
                     <p>
-                        Para todos los componentes de la interfaz de usuario, el
-                        nombre y el rol pueden ser determinados
-                        programáticamente; los estados, propiedades y valores
-                        que peuden ser establecidos por el usuario pueden ser
-                        determinados por programas, y los cambios en estos
-                        elementos son notificados a las herramientas de usuario,
-                        incluyendo tecnologías de asistencia
+                        Para todos los componentes de la interfaz de usuario, el nombre y el rol pueden ser determinados programáticamente. Asegúrate de que:
                     </p>
-                    <SyntaxHighlighter language="html" style={darcula}>
+                    <ul>
+                        <li>Los elementos interactivos tengan descripciones claras utilizando <span className="text--bold">`aria-label`</span> o <span className="text--bold">`aria-labelledby`</span></li>
+                        <li>El rol de cada elemento interactivo, como botones y cuadros de texto, sea claro</li>
+                        <li>Las tecnologías de asistencia puedan identificar y notificar los cambios en los estados, propiedades y valores de los elementos</li>
+                    </ul>
+                    <SyntaxHighlighter language="html" style={codeTheme}>
                         {codeExample2}
                     </SyntaxHighlighter>
                 </div>
-                <div>
+
+                {/* Criterio de Exito: 4.1.3 Uso adecuado de ARIA */}
+                <div className="accessibility__item">
                     <p className="text--normal text--bolder">
-                        
                         Criterio de Exito: 4.1.3 Uso adecuado de ARIA
                     </p>
                     <p>
-                        Este ejemplo se enfoca en asegurarse de que los
-                        elementos interactivos en una página web, como botones y
-                        cuadros de diálogo modales, sean compatibles con las
-                        tecnologías de asistencia mediante el uso adecuado de
-                        atributos ARIA.
+                        Los atributos ARIA se deben utilizar correctamente para mejorar la accesibilidad sin alterar el comportamiento natural del HTML. Asegúrate de que:
                     </p>
-                    <SyntaxHighlighter language="html" style={darcula}>
+                    <ul>
+                        <li>No uses atributos ARIA en elementos que ya tienen comportamiento semántico (por ejemplo, no añadas `role="button"` a un botón)</li>
+                        <li>Los modales y diálogos usan `role="dialog"` y el foco es gestionado adecuadamente para usuarios de teclado</li>
+                        <li>Los atributos ARIA, como `aria-hidden`, se usen para controlar la visibilidad de los elementos que deben ser ignorados por las tecnologías de asistencia</li>
+                    </ul>
+                    <SyntaxHighlighter language="html" style={codeTheme}>
                         {codeExample3}
+                    </SyntaxHighlighter>
+                </div>
+            </section>
+
+            {/* Nivel AA */}
+            <section className="accessibility accessibility--level-aa">
+                <h3 className="text--extralarge text--blue">Nivel AA</h3>
+
+                {/* Criterio de Éxito 1.4.3 Contraste de Color */}
+                <div className="accessibility__item">
+                    <p className="text--normal text--bolder">
+                        Criterio de Éxito: 1.4.3 Contraste de Color
+                    </p>
+                    <p>
+                        Asegúrate de que el contraste entre el texto y su fondo sea de al menos 4.5:1 para texto normal y 3:1 para texto grande.
+                    </p>
+                    <ul>
+                        <li>Usa herramientas como <a href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a> para verificar el contraste de tus colores</li>
+                        <li>Asegúrate de que las combinaciones de color no dependan solo de la percepción del color (ej., no uses solo color para resaltar información)</li>
+                    </ul>
+                    <SyntaxHighlighter language="html" style={codeTheme}>
+                        {codeExample4}
+                    </SyntaxHighlighter>
+                </div>
+
+                {/* Criterio de Éxito 2.4.7 Enfoque Visible */}
+                <div className="accessibility__item">
+                    <p className="text--normal text--bolder">
+                        Criterio de Éxito: 2.4.7 Enfoque Visible
+                    </p>
+                    <p>
+                        El estado de enfoque debe ser claramente visible para los usuarios que navegan utilizando el teclado.
+                    </p>
+                    <ul>
+                        <li>Asegúrate de que los elementos interactivos (botones, enlaces, campos de formulario) tienen un indicador de enfoque visible al usar el teclado</li>
+                        <li>El indicador de enfoque debe ser fácilmente distinguible, como un borde resaltado o un cambio de color</li>
+                    </ul>
+                    <SyntaxHighlighter language="html" style={codeTheme}>
+                        {codeExample5}
+                    </SyntaxHighlighter>
+                </div>
+            </section>
+
+            {/* Nivel AAA */}
+            <section className="accessibility accessibility--level-aaa">
+                <h3 className="text--extralarge text--blue">Nivel AAA</h3>
+
+                {/* Criterio de Éxito 1.4.6 Contraste Mejorado */}
+                <div className="accessibility__item">
+                    <p className="text--normal text--bolder">
+                        Criterio de Éxito: 1.4.6 Contraste Mejorado
+                    </p>
+                    <p>
+                        Para usuarios con visión baja, el contraste entre el texto y el fondo debe ser de al menos 7:1 para texto normal y 4.5:1 para texto grande.
+                    </p>
+                    <ul>
+                        <li>Este es un nivel más alto que garantiza mejor legibilidad en condiciones de baja visibilidad</li>
+                    </ul>
+                    <SyntaxHighlighter language="html" style={codeTheme}>
+                        {codeExample6}
+                    </SyntaxHighlighter>
+                </div>
+
+                {/* Criterio de Éxito 2.4.9 Enlaces con Propósito Claro */}
+                <div className="accessibility__item">
+                    <p className="text--normal text--bolder">
+                        Criterio de Éxito: 2.4.9 Enlaces con Propósito Claro
+                    </p>
+                    <p>
+                        Los enlaces deben describir claramente su propósito, incluso cuando se lean fuera de contexto.
+                    </p>
+                    <ul>
+                        <li>Asegúrate de que los enlaces tengan un texto descriptivo que explique a dónde llevará el usuario</li>
+                        <li>Evita enlaces con textos genéricos como "haz clic aquí" o "más información"</li>
+                    </ul>
+                    <SyntaxHighlighter language="html" style={codeTheme}>
+                        {codeExample7}
                     </SyntaxHighlighter>
                 </div>
             </section>
