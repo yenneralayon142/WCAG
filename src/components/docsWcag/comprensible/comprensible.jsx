@@ -10,7 +10,7 @@ export default function Comprensible() {
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
                 <div>
                     <p className="text--normal text--bolder">
-                        3.1.1 Idioma de la Página{" "}
+                        3.1.1 Idioma de la Página
                     </p>
                     <p>
                         El idioma predeterminado de cada página web puede ser
@@ -32,8 +32,8 @@ export default function Comprensible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        3.2.2 Al Entrada{" "}
+                        
+                        3.2.2 Al Entrada
                     </p>
                     <p>
                         Cambiar la configuración de cualquier componente de la
@@ -45,8 +45,8 @@ export default function Comprensible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        3.3.1 Identificación de Errores{" "}
+                        
+                        3.3.1 Identificación de Errores
                     </p>
                     <p>
                         Si ocurre un error de entrada, es identificado y
@@ -58,8 +58,8 @@ export default function Comprensible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        3.3.2 Etiquetas o Instrucciones{" "}
+                        
+                        3.3.2 Etiquetas o Instrucciones
                     </p>
                     <p>
                         Las etiquetas o instrucciones están disponibles cuando
@@ -75,8 +75,8 @@ export default function Comprensible() {
                 <h3 className="text--extralarge text--blue">Nivel AA</h3>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        3.2.3 Navegación Consistente{" "}
+                        
+                        3.2.3 Navegación Consistente
                     </p>
                     <p>
                         Los mecanismos de navegación que se repiten en múltiples
@@ -89,7 +89,7 @@ export default function Comprensible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        3.2.4 Identificación Consistente{" "}
+                        3.2.4 Identificación Consistente
                     </p>
                     <p>
                         Los componentes que tienen la misma funcionalidad dentro
@@ -102,7 +102,7 @@ export default function Comprensible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        3.3.3 Sugerencias de Error{" "}
+                        3.3.3 Sugerencias de Error
                     </p>
                     <p>
                         Si ocurre un error de entrada y se detectan sugerencias,
@@ -115,7 +115,7 @@ export default function Comprensible() {
                 <div>
                     <p className="text--normal text--bolder">
                         3.3.4 Prevención de Errores (Legales, Financieros,
-                        Datos){" "}
+                        Datos)
                     </p>
                     <p>
                         Para páginas web que provocan compromisos legales o
@@ -133,7 +133,7 @@ export default function Comprensible() {
                 <h3 className="text--extralarge text--blue">Nivel AAA</h3>
                 <div>
                     <p className="text--normal text--bolder">
-                        3.1.3 Palabras Inusuales{" "}
+                        3.1.3 Palabras Inusuales
                     </p>
                     <p>
                         Proveer un mecanismo para identificar definiciones
@@ -155,7 +155,7 @@ export default function Comprensible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        3.1.5 Nivel de Lectura{" "}
+                        3.1.5 Nivel de Lectura
                     </p>
                     <p>
                         Cuando el texto requiere una capacidad de lectura
@@ -167,7 +167,7 @@ export default function Comprensible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        3.1.6 Pronunciación{" "}
+                        3.1.6 Pronunciación
                     </p>
                     <p>
                         Proveer un mecanismo para identificar la pronunciación
@@ -180,7 +180,7 @@ export default function Comprensible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        3.2.5 Cambio a Pedido del Usuario{" "}
+                        3.2.5 Cambio a Pedido del Usuario
                     </p>
                     <p>
                         Los cambios de contexto solo se realizan a pedido del

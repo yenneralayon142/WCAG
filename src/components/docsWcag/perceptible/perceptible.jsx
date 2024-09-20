@@ -6,8 +6,14 @@ import { textExample } from "./exampleperceptible";
 import { domExample } from "./exampleperceptible";
 import { ordenContent } from "./exampleperceptible";
 import { colorExample } from "./exampleperceptible";
-import { autoplay,exampleContrats,exampleFontSize,sizeImage,betterContrast,offSound } from "./exampleperceptible";
-
+import {
+    autoplay,
+    exampleContrats,
+    exampleFontSize,
+    sizeImage,
+    betterContrast,
+    offSound,
+} from "./exampleperceptible";
 
 export default function Perceptible() {
     return (
@@ -16,7 +22,6 @@ export default function Perceptible() {
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
                         Criterio de Exito: 1.1.1 Contenido No Textual
                     </p>
                     <p>
@@ -29,8 +34,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.2.1 Solo Audio y Solo Video (grabado){" "}
+                        1.2.1 Solo Audio y Solo Video (grabado)
                     </p>
                     <p>
                         Proveer una alternativa para el contenido solo de audio
@@ -42,8 +46,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.2.2 Subtítulos (grabado){" "}
+                        1.2.2 Subtítulos (grabado)
                     </p>
                     <p>
                         Proveer texto alternativo para cualquier contenido no
@@ -55,8 +58,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.3.1 Información y Relaciones{" "}
+                        1.3.1 Información y Relaciones
                     </p>
                     <p>
                         La información, estructura y relaciones transmitidas a
@@ -69,8 +71,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.3.2 Secuencia Significativa{" "}
+                        1.3.2 Secuencia Significativa
                     </p>
                     <p>
                         Presentar el contenido en un orden que preserve el
@@ -82,8 +83,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.4.1 Uso del Color{" "}
+                        1.4.1 Uso del Color
                     </p>
                     <p>
                         No usar el color como único medio visual para transmitir
@@ -96,8 +96,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.4.2 Control del Audio{" "}
+                        1.4.2 Control del Audio
                     </p>
                     <p>
                         Si el audio en una página web se reproduce
@@ -110,11 +109,10 @@ export default function Perceptible() {
                 </div>
             </section>
             <section className="nivelb__section">
-                <h3>Nivel AA</h3>
+                <h3 className="text--extralarge text--blue">Nivel AA</h3>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.4.3 Contraste (Mínimo){" "}
+                        1.4.3 Contraste (Mínimo)
                     </p>
                     <p>
                         Proveer suficiente contraste entre el texto y el fondo
@@ -125,8 +123,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.4.4 Redimensionar Texto{" "}
+                        1.4.4 Redimensionar Texto
                     </p>
                     <p>
                         Proveer la capacidad de redimensionar el texto hasta un
@@ -138,8 +135,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.4.5 Imagenes de Texto{" "}
+                        1.4.5 Imagenes de Texto
                     </p>
                     <p>
                         Proveer la capacidad de redimensionar el texto hasta un
@@ -151,11 +147,10 @@ export default function Perceptible() {
                 </div>
             </section>
             <section className="nivelc__section">
-                <h3>Nivel AAA</h3>
+                <h3 className="text--extralarge text--blue">Nivel AAA</h3>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        1.4.6 Contraste Mejorado{" "}
+                        1.4.6 Contraste Mejorado
                     </p>
                     <p>
                         Proveer un contraste mejorado (mínimo 7:1) entre el
@@ -167,7 +162,7 @@ export default function Perceptible() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        1.4.7 Sonido de Fondo Bajo Apagado{" "}
+                        1.4.7 Sonido de Fondo Bajo Apagado
                     </p>
                     <p>
                         Asegurarse de que cualquier sonido de fondo sea bajo o

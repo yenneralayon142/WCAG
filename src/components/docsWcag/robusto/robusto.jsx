@@ -9,14 +9,14 @@ export default function Robusto() {
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        Criterio de Exito: 4.1.1 Análisis sintáctico{" "}
+                        
+                        Criterio de Exito: 4.1.1 Análisis sintáctico
                     </p>
                     <p>
-                        {" "}
+                        
                         En el contenido implementado usando lenguajes de
                         marcado, los elementos tienen etiquetas completas y
-                        están anidados de acuerdo a sus especificaciones.{" "}
+                        están anidados de acuerdo a sus especificaciones.
                     </p>
                     <SyntaxHighlighter language="html" style={darcula}>
                         {codeExample1}
@@ -24,8 +24,8 @@ export default function Robusto() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        Criterio de Exito: 4.1.2 Nombre, Rol, Valor{" "}
+                        
+                        Criterio de Exito: 4.1.2 Nombre, Rol, Valor
                     </p>
                     <p>
                         Para todos los componentes de la interfaz de usuario, el
@@ -42,8 +42,8 @@ export default function Robusto() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        {" "}
-                        Criterio de Exito: 4.1.3 Uso adecuado de ARIA{" "}
+                        
+                        Criterio de Exito: 4.1.3 Uso adecuado de ARIA
                     </p>
                     <p>
                         Este ejemplo se enfoca en asegurarse de que los

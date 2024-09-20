@@ -1,4 +1,5 @@
-export const codeExample1 = `<!DOCTYPE html>
+export const codeExample1 = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -33,7 +34,8 @@ export const codeExample1 = `<!DOCTYPE html>
 </html>
 `;
 
-export const codeExample2 = `<!DOCTYPE html>
+export const codeExample2 = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -69,7 +71,8 @@ export const codeExample2 = `<!DOCTYPE html>
 </html>
 `;
 
-export const codeExample3 = `<!DOCTYPE html>
+export const codeExample3 = 
+`<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">

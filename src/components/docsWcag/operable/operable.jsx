@@ -18,7 +18,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.1.2 Sin Trampas en el Teclado{" "}
+                        2.1.2 Sin Trampas en el Teclado
                     </p>
                     <p>
                         No colocar trampas en el teclado que impidan salir de
@@ -30,7 +30,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.2.1 Ajuste de Tiempo{" "}
+                        2.2.1 Ajuste de Tiempo
                     </p>
                     <p>
                         Proveer mecanismos para ajustar los límites de tiempo en
@@ -42,7 +42,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.2.2 Pausa, Parar, Ocultar{" "}
+                        2.2.2 Pausa, Parar, Ocultar
                     </p>
                     <p>
                         Proveer mecanismos para pausar, detener o ocultar
@@ -54,7 +54,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.3.2 Tres Destellos{" "}
+                        2.3.2 Tres Destellos
                     </p>
                     <p>No provocar destellos, de cualquier tipo</p>
                     <SyntaxHighlighter language="html" style={darcula}>
@@ -63,7 +63,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.1 Evitar Bloques{" "}
+                        2.4.1 Evitar Bloques
                     </p>
                     <p>
                         Proveer mecanismos para saltar bloques repetitivos de
@@ -75,7 +75,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.2 Página con Título{" "}
+                        2.4.2 Página con Título
                     </p>
                     <p>
                         Cada página web tiene un título que describe su tema o
@@ -87,7 +87,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.3 Orden del Foco{" "}
+                        2.4.3 Orden del Foco
                     </p>
                     <p>
                         Asegurar que el orden del foco sigue una secuencia que
@@ -99,7 +99,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.4 Propósito del Enlace (En Contexto){" "}
+                        2.4.4 Propósito del Enlace (En Contexto)
                     </p>
                     <p>
                         El propósito de cada enlace puede determinarse a partir
@@ -115,7 +115,7 @@ export default function Operable() {
 
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.5 Múltiples Formas{" "}
+                        2.4.5 Múltiples Formas
                     </p>
                     <p>
                         Proveer múltiples formas para localizar una página web
@@ -127,7 +127,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.6 Encabezados y Etiquetas{" "}
+                        2.4.6 Encabezados y Etiquetas
                     </p>
                     <p>
                         Los encabezados y etiquetas describen el tema o
@@ -139,7 +139,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.7 Apariencia del Enfoque{" "}
+                        2.4.7 Apariencia del Enfoque
                     </p>
                     <p>
                         Asegurar que cualquier interfaz tiene un modo de
@@ -155,7 +155,7 @@ export default function Operable() {
 
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.9 Propósito del Enlace (Solo Enlace){" "}
+                        2.4.9 Propósito del Enlace (Solo Enlace)
                     </p>
                     <p>
                         El propósito de cada enlace se puede determinar a partir
@@ -167,7 +167,7 @@ export default function Operable() {
                 </div>
                 <div>
                     <p className="text--normal text--bolder">
-                        2.4.10 Encabezados de Sección{" "}
+                        2.4.10 Encabezados de Sección
                     </p>
                     <p>Proveer encabezados para organizar el contenido</p>
                     <SyntaxHighlighter language="html" style={darcula}>
