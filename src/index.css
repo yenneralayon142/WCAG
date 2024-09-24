@@ -18,6 +18,7 @@ body {
     --color-orange: #fbad20;
     --color-green: #39a900;
     --color-dark-green: #216100;
+    --kendo-color-primary: var(--color-green);
 }
 
 h1,
@@ -429,6 +430,17 @@ a {
     opacity: 0.5;
 }
 
+/* BREADCRUMB STYLES */
+
+.k-breadcrumb-link:hover {
+    color: var(--color-dark-green);
+}
+
+.k-button-solid-primary:hover {
+    background-color: var(--color-dark-green);
+    border: 1px solid transparent;
+}
+
 /*DOCS STYLES*/
 
 #docs__container {
@@ -487,7 +499,8 @@ a {
     flex-direction: column;
     gap: 5px;
 
-    & code , & pre {
+    & code,
+    & pre {
         font-size: 14px;
         line-height: 1.2 !important;
         border-radius: 5px;
@@ -515,7 +528,7 @@ a {
         padding: 10px 8px;
         border-radius: 5px;
         transition: 200ms;
-    
+
         &:hover {
             background-color: #d8d8d8;
         }
@@ -529,7 +542,7 @@ a {
 
     width: 100%;
 
-    & input[type="text"] { 
+    & input[type="text"] {
         width: 100%;
         padding: 8px 12px;
         border-radius: 5px;
@@ -569,7 +582,9 @@ a {
 }
 
 .k-scrollview-view {
-    align-content: center;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel--green .k-scrollview-view {
