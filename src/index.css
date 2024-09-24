@@ -600,7 +600,7 @@ a {
 .carousel__item__image {
     height: 220px;
     width: 220px;
-    margin: 0px 0px 20px;
+    margin: 0px auto 20px;
     background-color: var(--color-green);
     mask: url("/mask.png") center no-repeat;
     mask-size: contain;
@@ -659,4 +659,27 @@ a {
     background-color: #fff;
     fill: black;
     border: 2px solid black;
+}
+
+@media screen and (max-width: 992px) {
+    .carousel__item {
+        padding: 10px;
+        flex-direction: column;
+    }
+    .k-scrollview {
+        height: 1000px !important;
+    }
+    .docs__sidebar{
+        flex: none;
+        width: fit-content;
+
+        & > h3 {
+            font-size: 1.5rem !important;
+        }
+
+        & > .docs__sidebar__list > .text--normal {
+
+            font-size: 0.7rem !important;
+        }
+    }
 }
