@@ -30,7 +30,7 @@ export default function App() {
                     <Route path="/" element={<AppLayout />}>
                         <Route index element={<Home />} />
                         <Route path="/wcag" element={<Wcag />} />
-                        <Route path="/searchUrl" element={<SearchUrl />} />
+                        <Route path="/searchUrl/*" element={<SearchUrl />} />
                         <Route path="/team" element={<Team />} />
                     </Route>
 
