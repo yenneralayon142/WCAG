@@ -4,7 +4,7 @@ const API_URL = "http://127.0.0.1:5000";
 export const searchHistoric = async () => {
     const data = await Fetchdata("/history");
 
-    const response = data.map((url) => ({
+    const response = data.data.map((url) => ({
         id: url._id,
         domain: url.domain,
         url: url.url,
@@ -20,12 +20,12 @@ export const searchHistoricDomain = async (domain) => {
 
     const data = await Fetchdata(`/history/domain/${domain}`);
 
-    const response = {
-        id: data._id,
-        domain: data.domain,
-        url: data.url,
-        date: data.date,
-    };
+    const response = data.data.map((url) => ({
+        id: url._id,
+        domain: url.domain,
+        url: url.url,
+        date: url.date,
+    }));
 
     return response;
 };

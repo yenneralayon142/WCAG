@@ -3,11 +3,12 @@ import { TextBox } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
 
 // Hooks
+import { useAnalyze } from "../../Hooks/Maps/useAnalyzeUrls";
 
 export default function Analyze() {
     // Manejar dominios y sus cambios
     const [domains, setDomains] = useState([""]);
-    const [UrlsResponse, setUrlsResponse] = useState([]); // Inicializa como arreglo vacío
+    const {response ,analyzeUrlHook } = useAnalyze();
 
     const handleDomainChange = (index, value) => {
         const newDomains = [...domains];
@@ -29,7 +30,8 @@ export default function Analyze() {
 
     // Manejar formulario
     const handleAnalyze = async () => {
-        console.log("Analizando url...")
+        const result = await analyzeUrlHook(domains);
+        console.log(result);
     };
 
     return (

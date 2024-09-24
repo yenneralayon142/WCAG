@@ -1,27 +1,14 @@
-import analyze from '../../mocks/analyze.json';
-import withoutResults from '../../mocks/no-result.json';
 import { useState } from "react";
+import { analyzeUrl } from "../../services/analyze";
 
-export function useAnalyzeUrls({ search }) {
-    const [responseAnalyzeUrls, setResponseAnalyzeUrl] = useState([]);
-    const analyzeUrls = analyze.data
+// Obtener TODO el histórico
+export function useAnalyze() {
+    const [response, setResponse] = useState([]);
 
-    const mappedAnalyze = analyzeUrls?.map(analyzeUrl => ({
-        message:analyzeUrl.message,
-        status: analyzeUrl.message
-    }))
-
-    const postAnalyzeUrls = () => {
-        if (search) {
-            fetch('http://127.0.0.1:5000/analyze')
-            .then(res => res.json())
-            .then(json =>{
-                setResponseAnalyzeUrl(json)
-            })
-        } else {
-            setResponseAnalyzeUrl(withoutResults)
-        }
+    const analyzeUrlHook = async (domain) => {
+        const newUrls = await analyzeUrl(domain);
+        setResponse(newUrls);
     };
 
-    return { analyzeUrls: mappedAnalyze, postAnalyzeUrls };
+    return { response, analyzeUrlHook };
 }
