@@ -16,7 +16,7 @@ export default function Intro() {
                     </p>
                 </div>
             </div>
-            <div className="accessibility">
+            <div className="accessibility" id="intro-content">
                 <h3 className="text--extralarge text--blue">Contenido de la documentación:</h3>
                 <ul>
                     <li className="text--normal">
@@ -42,7 +42,7 @@ export default function Intro() {
                 </ul>
             </div>
 
-            <div className="accessibility">
+            <div className="accessibility" id="intro-benefits">
                 <h3 className="text--extralarge text--blue">Beneficios de implementar los estándares WCAG:</h3>
                 <p className="text--normal">
                     Integrar prácticas de accesibilidad en tu desarrollo web no solo amplía tu audiencia potencial, sino que también mejora la satisfacción del usuario y la calidad general del sitio. Al seguir estas pautas, contribuirás a crear un entorno digital más inclusivo y equitativo.

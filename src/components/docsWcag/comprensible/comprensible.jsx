@@ -9,7 +9,7 @@ export default function Comprensible() {
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
 
                 {/* Criterio de Éxito: 3.1.1 Idioma de la Página */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-language">
                     <p className="text--normal text--bolder">3.1.1 Idioma de la Página</p>
                     <p className="text--normal">
                         El idioma predeterminado de cada página web puede ser programáticamente determinado.
@@ -24,7 +24,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.2.1 Al Foco */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-focus">
                     <p className="text--normal text--bolder">3.2.1 Al Foco</p>
                     <p className="text--normal">
                         Cuando cualquier componente recibe el foco, no inicia un cambio de contexto.
@@ -39,7 +39,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.2.2 Al Entrada */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-start">
                     <p className="text--normal text--bolder">3.2.2 Al Entrada</p>
                     <p className="text--normal">
                         Cambiar la configuración de cualquier componente de la interfaz no provoca un cambio de contexto.
@@ -54,7 +54,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.3.1 Identificación de Errores */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-errors">
                     <p className="text--normal text--bolder">3.3.1 Identificación de Errores</p>
                     <p className="text--normal">
                         Si ocurre un error de entrada, es identificado y descrito al usuario en texto.
@@ -69,7 +69,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.3.2 Etiquetas o Instrucciones */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-instructions">
                     <p className="text--normal text--bolder">3.3.2 Etiquetas o Instrucciones</p>
                     <p className="text--normal">
                         Las etiquetas o instrucciones están disponibles cuando el contenido requiere entrada del usuario.
@@ -88,7 +88,7 @@ export default function Comprensible() {
                 <h3 className="text--extralarge text--blue">Nivel AA</h3>
 
                 {/* Criterio de Éxito: 3.2.3 Navegación Consistente */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-navigationConsistent">
                     <p className="text--normal text--bolder">3.2.3 Navegación Consistente</p>
                     <p className="text--normal">
                         Los mecanismos de navegación que se repiten en múltiples páginas web aparecen en el mismo orden relativo cada vez que se repiten.
@@ -103,7 +103,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.2.4 Identificación Consistente */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-identificationConsistent">
                     <p className="text--normal text--bolder">3.2.4 Identificación Consistente</p>
                     <p className="text--normal">
                         Los componentes que tienen la misma funcionalidad dentro de un conjunto de páginas web son identificados consistentemente.
@@ -118,7 +118,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.3.3 Sugerencias de Error */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-errorSuggestion">
                     <p className="text--normal text--bolder">3.3.3 Sugerencias de Error</p>
                     <p className="text--normal">
                         Si ocurre un error de entrada y se detectan sugerencias, se proporcionan estas sugerencias al usuario.
@@ -133,7 +133,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.3.4 Prevención de Errores (Legales, Financieros, Datos) */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-preventionErrors">
                     <p className="text--normal text--bolder">3.3.4 Prevención de Errores (Legales, Financieros, Datos)</p>
                     <p className="text--normal">
                         Para páginas web que provocan compromisos legales o financieros, o modificaciones de datos controlables por el usuario, se proveen mecanismos para la revisión, corrección y confirmación de la información antes de finalizar la transacción.
@@ -152,7 +152,7 @@ export default function Comprensible() {
                 <h3 className="text--extralarge text--blue">Nivel AAA</h3>
 
                 {/* Criterio de Éxito: 3.1.3 Palabras Inusuales */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-inusualWords">
                     <p className="text--normal text--bolder">3.1.3 Palabras Inusuales</p>
                     <p className="text--normal">
                         Proveer un mecanismo para identificar definiciones específicas de palabras o frases inusuales o especializadas.
@@ -167,7 +167,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: Abreviaturas */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-abbreviations">
                     <p className="text--normal text--bolder">Abreviaturas</p>
                     <p className="text--normal">
                         Proveer un mecanismo para identificar las abreviaturas.
@@ -182,7 +182,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.1.5 Nivel de Lectura */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-levelofRead">
                     <p className="text--normal text--bolder">3.1.5 Nivel de Lectura</p>
                     <p className="text--normal">
                         Cuando el texto requiere una capacidad de lectura avanzada, se provee contenido suplementario.
@@ -197,7 +197,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.1.6 Pronunciación */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-pronuntiation">
                     <p className="text--normal text--bolder">3.1.6 Pronunciación</p>
                     <p className="text--normal">
                         Proveer un mecanismo para identificar la pronunciación específica de palabras cuando su significado depende de esta.
@@ -212,7 +212,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.2.5 Cambio a Pedido del Usuario */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-changeUser">
                     <p className="text--normal text--bolder">3.2.5 Cambio a Pedido del Usuario</p>
                     <p className="text--normal">
                         Los cambios de contexto solo se realizan a pedido del usuario o se proporciona un mecanismo para que el usuario desactive el cambio automático.
@@ -227,7 +227,7 @@ export default function Comprensible() {
                 </div>
 
                 {/* Criterio de Éxito: 3.3.5 Ayuda */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="comprensible-helpFinally">
                     <p className="text--normal text--bolder">3.3.5 Ayuda</p>
                     <p className="text--normal">Ayuda contextual está disponible.</p>
                     <ul>

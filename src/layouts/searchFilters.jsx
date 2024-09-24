@@ -2,30 +2,7 @@ import { useEffect, useState } from "react";
 import { DropDownList, AutoComplete } from "@progress/kendo-react-dropdowns";
 import { filterBy } from "@progress/kendo-data-query";
 import { useNavigate } from "react-router-dom";
-
-const source = ["Introduccion", "Perceptible", "Operable", "Comprensible", "Robusto"];
-const links = [
-    {
-        text: "Introduccion",
-        url: "/docs",
-    },
-    {
-        text: "Perceptible",
-        url: "/docs/perceptible",
-    },
-    {
-        text: "Operable",
-        url: "/docs/operable",
-    },
-    {
-        text: "Comprensible",
-        url: "/docs/comprensible",
-    },
-    {
-        text: "Robusto",
-        url: "/docs/robusto",
-    }
-];
+import { source, links } from "./docsSearch";
 
 export default function SearchFilters() {
 

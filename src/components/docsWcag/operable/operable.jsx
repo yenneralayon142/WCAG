@@ -9,7 +9,7 @@ export default function Operable() {
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
                 
                 {/* Criterio de Éxito: 2.1.1 Teclado */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-keyboard">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.1.1 Teclado</p>
                     <p className="text--normal">
                         Todo el contenido debe ser accesible mediante un teclado.
@@ -24,7 +24,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.1.2 Sin Trampas en el Teclado */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-keyboard-cheat">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.1.2 Sin Trampas en el Teclado</p>
                     <p className="text--normal">
                         No colocar trampas en el teclado que impidan salir de elementos interactivos.
@@ -39,7 +39,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.2.1 Ajuste de Tiempo */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-just-time">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.2.1 Ajuste de Tiempo</p>
                     <p className="text--normal">
                         Proveer mecanismos para ajustar los límites de tiempo en actividades.
@@ -54,7 +54,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.2.2 Pausa, Parar, Ocultar */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-pause-stop-hide">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.2.2 Pausa, Parar, Ocultar</p>
                     <p className="text--normal">
                         Proveer mecanismos para pausar, detener o ocultar contenido en movimiento, parpadeo o desplazamiento.
@@ -69,7 +69,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.3.2 Tres Destellos */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-three-flash">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.3.2 Tres Destellos</p>
                     <p className="text--normal">No provocar destellos, de cualquier tipo.</p>
                     <ul>
@@ -82,7 +82,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.4.1 Evitar Bloques */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-no-blocks">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.1 Evitar Bloques</p>
                     <p className="text--normal">Proveer mecanismos para saltar bloques repetitivos de contenido.</p>
                     <ul>
@@ -95,7 +95,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.4.2 Página con Título */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-page-title">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.2 Página con Título</p>
                     <p className="text--normal">Cada página web tiene un título que describe su tema o propósito.</p>
                     <ul>
@@ -108,7 +108,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.4.3 Orden del Foco */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-focus-order">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.3 Orden del Foco</p>
                     <p className="text--normal">Asegurar que el orden del foco sigue una secuencia que preserve el significado y la operabilidad.</p>
                     <ul>
@@ -121,7 +121,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.4.4 Propósito del Enlace (En Contexto) */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-purpose-link">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.4 Propósito del Enlace (En Contexto)</p>
                     <p className="text--normal">El propósito de cada enlace puede determinarse a partir del texto del enlace solo.</p>
                     <ul>
@@ -139,7 +139,7 @@ export default function Operable() {
                 <h3 className="text--extralarge text--blue">Nivel AA</h3>
 
                 {/* Criterio de Éxito: 2.4.5 Múltiples Formas */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-location-page">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.5 Múltiples Formas</p>
                     <p className="text--normal">Proveer múltiples formas para localizar una página web dentro de un conjunto de páginas.</p>
                     <ul>
@@ -152,7 +152,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.4.6 Encabezados y Etiquetas */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-label">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.6 Encabezados y Etiquetas</p>
                     <p className="text--normal">Los encabezados y etiquetas describen el tema o propósito.</p>
                     <ul>
@@ -165,7 +165,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.4.7 Apariencia del Enfoque */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-appareance-focus">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.7 Apariencia del Enfoque</p>
                     <p className="text--normal">Asegurar que cualquier interfaz tiene un modo de operabilidad por teclado visible.</p>
                     <ul>
@@ -183,7 +183,7 @@ export default function Operable() {
                 <h3 className="text--extralarge text--blue">Nivel AAA</h3>
 
                 {/* Criterio de Éxito: 2.4.9 Propósito del Enlace (Solo Enlace) */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-only-purpose">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.9 Propósito del Enlace (Solo Enlace)</p>
                     <p className="text--normal">El propósito de cada enlace se puede determinar a partir del enlace solo.</p>
                     <ul>
@@ -196,7 +196,7 @@ export default function Operable() {
                 </div>
 
                 {/* Criterio de Éxito: 2.4.10 Encabezados de Sección */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="operable-section-header">
                     <p className="text--normal text--bolder">Criterio de Éxito: 2.4.10 Encabezados de Sección</p>
                     <p className="text--normal">Proveer encabezados para organizar el contenido.</p>
                     <ul>

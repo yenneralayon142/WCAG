@@ -9,7 +9,7 @@ export default function Robusto() {
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
 
                 {/* Criterio de Exito: 4.1.1 Análisis sintáctico */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="robusto-syntax">
                     <p className="text--normal text--bolder">
                         Criterio de Exito: 4.1.1 Análisis sintáctico
                     </p>
@@ -28,7 +28,7 @@ export default function Robusto() {
                 </div>
 
                 {/* Criterio de Exito: 4.1.2 Nombre, Rol, Valor */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="robusto-aria">
                     <p className="text--normal text--bolder">
                         Criterio de Exito: 4.1.2 Nombre, Rol, Valor
                     </p>
@@ -46,7 +46,7 @@ export default function Robusto() {
                 </div>
 
                 {/* Criterio de Exito: 4.1.3 Uso adecuado de ARIA */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="robusto-aria2">
                     <p className="text--normal text--bolder">
                         Criterio de Exito: 4.1.3 Uso adecuado de ARIA
                     </p>
@@ -69,7 +69,7 @@ export default function Robusto() {
                 <h3 className="text--extralarge text--blue">Nivel AA</h3>
 
                 {/* Criterio de Éxito 1.4.3 Contraste de Color */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="robusto-contrast">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.4.3 Contraste de Color
                     </p>
@@ -86,7 +86,7 @@ export default function Robusto() {
                 </div>
 
                 {/* Criterio de Éxito 2.4.7 Enfoque Visible */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="robusto-focus">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 2.4.7 Enfoque Visible
                     </p>
@@ -108,7 +108,7 @@ export default function Robusto() {
                 <h3 className="text--extralarge text--blue">Nivel AAA</h3>
 
                 {/* Criterio de Éxito 1.4.6 Contraste Mejorado */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="robusto-contrast2">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.4.6 Contraste Mejorado
                     </p>
@@ -124,7 +124,7 @@ export default function Robusto() {
                 </div>
 
                 {/* Criterio de Éxito 2.4.9 Enlaces con Propósito Claro */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="robusto-links">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 2.4.9 Enlaces con Propósito Claro
                     </p>

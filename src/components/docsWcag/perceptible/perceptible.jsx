@@ -9,7 +9,7 @@ export default function Perceptible() {
                 <h3 className="text--extralarge text--blue">Nivel A</h3>
 
                 {/* Criterio de Éxito: 1.1.1 Contenido No Textual */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-textless-content">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.1.1 Contenido No Textual
                     </p>
@@ -26,7 +26,7 @@ export default function Perceptible() {
                 </div>
 
                 {/* Criterio de Éxito: 1.2.1 Solo Audio y Solo Video (grabado) */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-audio-video">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.2.1 Solo Audio y Solo Video (grabado)
                     </p>
@@ -43,7 +43,7 @@ export default function Perceptible() {
                 </div>
 
                 {/* Criterio de Éxito: 1.2.2 Subtítulos (grabado) */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-subtitles">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.2.2 Subtítulos (grabado)
                     </p>
@@ -60,7 +60,7 @@ export default function Perceptible() {
                 </div>
 
                 {/* Criterio de Éxito: 1.3.1 Información y Relaciones */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-dom">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.3.1 Información y Relaciones
                     </p>
@@ -77,7 +77,7 @@ export default function Perceptible() {
                 </div>
 
                 {/* Criterio de Éxito: 1.3.2 Secuencia Significativa */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-ordered-content">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.3.2 Secuencia Significativa
                     </p>
@@ -95,7 +95,7 @@ export default function Perceptible() {
 
                 {/* Criterio de Éxito: 1.4.1 Uso del Color */}
                 <div className="accessibility__item">
-                    <p className="text--normal text--bolder">
+                    <p className="text--normal text--bolder" id="perceptible-color">
                         Criterio de Éxito: 1.4.1 Uso del Color
                     </p>
                     <p className="text--normal">
@@ -111,7 +111,7 @@ export default function Perceptible() {
                 </div>
 
                 {/* Criterio de Éxito: 1.4.2 Control del Audio */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-autoplay">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.4.2 Control del Audio
                     </p>
@@ -133,7 +133,7 @@ export default function Perceptible() {
                 <h3 className="text--extralarge text--blue">Nivel AA</h3>
 
                 {/* Criterio de Éxito: 1.4.3 Contraste (Mínimo) */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-contrast-min">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.4.3 Contraste (Mínimo)
                     </p>
@@ -150,7 +150,7 @@ export default function Perceptible() {
                 </div>
 
                 {/* Criterio de Éxito: 1.4.4 Redimensionar Texto */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-font-size">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.4.4 Redimensionar Texto
                     </p>
@@ -167,7 +167,7 @@ export default function Perceptible() {
                 </div>
 
                 {/* Criterio de Éxito: 1.4.5 Imágenes de Texto */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-image-text">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.4.5 Imágenes de Texto
                     </p>
@@ -189,7 +189,7 @@ export default function Perceptible() {
                 <h3 className="text--extralarge text--blue">Nivel AAA</h3>
 
                 {/* Criterio de Éxito: 1.4.6 Contraste Mejorado */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-better-contrast">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.4.6 Contraste Mejorado
                     </p>
@@ -206,7 +206,7 @@ export default function Perceptible() {
                 </div>
 
                 {/* Criterio de Éxito: 1.4.7 Sonido de Fondo Bajo Apagado */}
-                <div className="accessibility__item">
+                <div className="accessibility__item" id="perceptible-off-sound">
                     <p className="text--normal text--bolder">
                         Criterio de Éxito: 1.4.7 Sonido de Fondo Bajo Apagado
                     </p>
