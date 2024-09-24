@@ -4,14 +4,36 @@ const API_URL = "http://127.0.0.1:5000";
 export const searchHistoric = async () => {
     const data = await Fetchdata("/history");
 
-    const response = data.data.map((url) => ({
-        id: url._id,
-        domain: url.domain,
-        url: url.url,
-        date: url.date,
-    }));
+    // const data = {
+    //     data: [
+    //         {
+    //             _id: "66e47b7f-3b8e-4b2d-8b8c-2d3b8c2d3b8c",
+    //             date: "2022-01-01T00:00:00.000Z",
+    //             domain: "gics-sennova.com",
+    //             url: "https://gics-sennova.com/",
+    //         },
+    //         {
+    //             _id: "66e47b7f-3b8e-4b2d-8b8c-2d3b8c2d3b8ca",
+    //             date: "2022-01-01T00:00:00.000Z",
+    //             domain: "www.instagram.com",
+    //             url: "https://www.instagram.com/",
+    //         },
+    //     ],
+    //     status: "success",
+    // };
 
-    return response;
+    if (data.status === "success") {
+        const response = data.data.map((url) => ({
+            id: url._id,
+            domain: url.domain,
+            url: url.url,
+            date: url.date,
+        }));
+
+        return response;
+    } else {
+        return [];
+    }
 };
 
 // Buscar en el historico por dominio
@@ -20,14 +42,36 @@ export const searchHistoricDomain = async (domain) => {
 
     const data = await Fetchdata(`/history/domain/${domain}`);
 
-    const response = data.data.map((url) => ({
-        id: url._id,
-        domain: url.domain,
-        url: url.url,
-        date: url.date,
-    }));
+    // const data = {
+    //     data: [
+    //         {
+    //             _id: "66e47b7f-3b8e-4b2d-8b8c-2d3b8c2d3b8c",
+    //             date: "2022-01-01T00:00:00.000Z",
+    //             domain: "gics-sennova.com",
+    //             url: "https://gics-sennova.com/",
+    //         },
+    //         {
+    //             _id: "66e47b7f-3b8e-4b2d-8b8c-2d3b8c2d3b8ca",
+    //             date: "2022-01-01T00:00:00.000Z",
+    //             domain: "www.instagram.com",
+    //             url: "https://www.instagram.com/",
+    //         },
+    //     ],
+    //     status: "success",
+    // };
 
-    return response;
+    if (data.status === "success") {
+        const response = data.data.map((url) => ({
+            id: url._id,
+            domain: url.domain,
+            url: url.url,
+            date: url.date,
+        }));
+
+        return response;
+    } else {
+        return [];
+    }
 };
 
 // Obtener información de la API
