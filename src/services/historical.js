@@ -40,6 +40,14 @@ export const searchHistoric = async () => {
 export const searchHistoricDomain = async (domain) => {
     if (domain === "") return null;
 
+    if (domain.startsWith("http://")) {
+        domain = domain.slice(7);
+    } else if (domain.startsWith("https://")) {
+        domain = domain.slice(8);
+    }
+
+    domain = domain.split("/")[0];
+
     const data = await Fetchdata(`/history/domain/${domain}`);
 
     // const data = {

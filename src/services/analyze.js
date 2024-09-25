@@ -2,6 +2,14 @@ const API_URL = "http://127.0.0.1:5000";
 
 // Obtener el histórico
 export const analyzeUrl = async (url) => {
+    if (url.startsWith("http://")) {
+        url = url.slice(7);
+    } else if (url.startsWith("https://")) {
+        url = url.slice(8);
+    }
+
+    url = url.split("/")[0];
+    
     const data = await Fetchdata("/analyze", url);
 
     return data;
