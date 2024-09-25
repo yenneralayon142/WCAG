@@ -105,7 +105,7 @@ export default function SearchFilters() {
             <input type="checkbox" className="hidden filter-check" id="c-aa" />
             <input type="checkbox" className="hidden filter-check" id="c-aaa" />
 
-            <h2 className="text--bold text--subtitle text--blue">
+            <h2 className="text--bold text--subtitle text--blue text--truncate">
                 Documentacion
             </h2>
 

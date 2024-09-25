@@ -5,7 +5,7 @@ export function useFontSizeChange() {
     const { settings, updateSettings } = useAccessibilityContext();
 
     const options = ["small", "normal", "large", "extralarge", "giant"];
-    
+
     useEffect(() => {
         const fontSizeElement = document.getElementById("font-size");
         const currentIndex = options.findIndex(size => size === settings.textSize);
@@ -20,8 +20,8 @@ export function useFontSizeChange() {
             const subtitles = document.querySelectorAll('.text--subtitle');
             const extralarges = document.querySelectorAll('.text--extralarge');
             const larges = document.querySelectorAll('.text--large, .k-menu-link-text');
-            const normals = document.querySelectorAll('.text--normal, label, .sidebar__item p');
-    
+            const normals = document.querySelectorAll('.text--normal, label, .sidebar__item p, code, .k-breadcrumb-item-text');
+
             let scaleFactor = 1;
 
             switch (options[currentIndex]) {
@@ -45,6 +45,12 @@ export function useFontSizeChange() {
                     break;
             }
 
+            if (window.innerWidth < 512) {
+                scaleFactor -= 0.3;
+            } else if (window.innerWidth < 768) {
+                scaleFactor -= 0.1;
+            }
+
             titles.forEach(element => element.style.fontSize = `${1.5 * scaleFactor}em`);
             subtitles.forEach(element => element.style.fontSize = `${2.5 * scaleFactor}rem`);
             extralarges.forEach(element => element.style.fontSize = `${1.75 * scaleFactor}rem`);
@@ -52,13 +58,14 @@ export function useFontSizeChange() {
             normals.forEach(element => element.style.fontSize = `${1 * scaleFactor}rem`);
         }
 
-        if(fontSizeElement) {
+        if (fontSizeElement) {
             applyFontSize();
             fontSizeElement.addEventListener("click", ChangeFontSize);
+            window.addEventListener("resize", applyFontSize);
         }
 
         return () => {
-            if(fontSizeElement) {
+            if (fontSizeElement) {
                 fontSizeElement.removeEventListener("click", ChangeFontSize);
             }
         }

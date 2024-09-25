@@ -672,14 +672,13 @@ a {
     .docs__sidebar{
         flex: none;
         width: fit-content;
+    }
+}
 
-        & > h3 {
-            font-size: 1.5rem !important;
-        }
-
-        & > .docs__sidebar__list > .text--normal {
-
-            font-size: 0.7rem !important;
-        }
+@media screen and (max-width: 480px) {
+    .text--truncate {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
