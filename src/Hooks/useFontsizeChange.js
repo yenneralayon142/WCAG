@@ -1,8 +1,12 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+// Context
 import { useAccessibilityContext } from "../contexts/accesibilityContext";
 
 export function useFontSizeChange() {
     const { settings, updateSettings } = useAccessibilityContext();
+    const location = useLocation();
 
     const options = ["small", "normal", "large", "extralarge", "giant"];
 
@@ -70,7 +74,7 @@ export function useFontSizeChange() {
             }
         }
 
-    }, [settings]);
+    }, [settings, location.pathname]);
 
     return null;
 }
