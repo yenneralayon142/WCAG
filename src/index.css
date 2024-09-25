@@ -667,7 +667,7 @@ a {
         flex-direction: column;
     }
     .k-scrollview {
-        height: 1000px !important;
+        height: 800px !important;
     }
     .docs__sidebar{
         flex: none;

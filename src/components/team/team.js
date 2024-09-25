@@ -3,12 +3,19 @@ export const fullTeam = [
         id: 1,
         url: "pendiente",
         name: "William Navarro",
-        role: "Lider de semilleros",
-        description: `pendiente`,
+        role: "Lider de semilleros, investigador e instructor",
+        description: `Liderar y gestionar las actividades para garantizar el cumplimiento de términos.
+        Realizar seguimiento y control del presupuesto del proyecto
+        Realizar seguimiento al cronograma del proyecto
+        Apoyar en el desarrollo del software y en el funcionamiento de la misma.
+        Liderar aprobar los informes de gestión mensuales, trimestrales y finales del proyecto.
+        Liderar la creación de los productos de divulgación.
+        Gestionar la infraestructura necesaria para la puesta en marcha de los aplicativos realizados.
+        Apoyar en el diseño de arquitecturas de software, asegurando la viabilidad técnica y la innovación en los proyectos.`,
     },
     {
         id: 2,
-        url: "pendiente",
+        url: "/team/juan-sanabria.jpg",
         name: "Juan Pablo Sanabria",
         role: "Investigador Experto",
         description: `Participar en el diseño y planificacion de experimentos o estuidos.
@@ -19,7 +26,7 @@ export const fullTeam = [
     },
     {
         id: 3,
-        url: "pendiente",
+        url: "/team/kevin-lopez.jpg",
         name: "Kevin Lopez",
         role: "Investigador Senior",
         description: `Investigación y desarrollo de proyectos tecnológicos.
