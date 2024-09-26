@@ -23,11 +23,24 @@ export const analyzeUrl = async (urls) => {
     if (data.status === "success") {
         alert(data.message);
 
-        const response = data.data.map((result) => ({
+        const response = data.data.map((result) => {
+            let domain = result.url;
+
+            if (domain.startsWith("http://")) {
+                domain = domain.slice(7);
+            } else if (domain.startsWith("https://")) {
+                domain = domain.slice(8);
+            }
+
+            domain = domain.split("/")[0];
+
+            return {
             id: result.unique_id,
             url: result.url,
+                domain: domain,
             date: result.date,
-        }));
+            };
+        });
 
         return {
             status: "success",
