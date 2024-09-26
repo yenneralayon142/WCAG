@@ -6,7 +6,8 @@ export default function UseDocumentTitleUpdater() {
 
     useEffect(() => {
         // Cambia el título de la página según la ruta actual
-        switch (location.pathname) {
+        const pathname = location.pathname.startsWith("/searchUrl/") ? "/searchUrl/:id" : location.pathname;
+        switch (pathname) {
             case '/':
                 document.title = 'Inicio | Web Accesible';
                 break;
@@ -15,6 +16,9 @@ export default function UseDocumentTitleUpdater() {
                 break;
             case '/searchUrl':
                 document.title = 'Busqueda Url | Web Accesible'
+                break;
+            case '/searchUrl/:id':
+                document.title = 'Detalles dominio | Web Accesible'
                 break;
             case '/docs':
                 document.title = 'Documentación | Web Accesible';

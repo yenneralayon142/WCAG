@@ -13,14 +13,26 @@ export default function Historic() {
 
     const [historical, setHistorical] = useState([]);
     const [domainHistorical, setDomainHistorical] = useState([]);
+    const [isAnalyzing, setIsAnalyzing] = useState(false);
 
     // Obtener el histórico de un dominio en específico
     const handleSubmitHistoricDomain = async () => {
-        if (historicalDomain) {
-            setDomainHistorical(await searchHistoricalDomain(historicalDomain));
-        } else {
-            alert("Por favor ingrese un dominio válido");
+        if (historicalDomain === "") {
+            alert("Por favor ingrese un dominio");
+            return;
         }
+        setIsAnalyzing(true);
+
+        setTimeout(async () => {
+            await searchHistoricalDomain(historicalDomain)
+                .then((response) => {
+                    setDomainHistorical(response);
+                    alert("Historial de dominio extraido");
+                })
+                .finally(() => {
+                    setIsAnalyzing(false);
+                });
+        }, 500);
     };
 
     return (
@@ -49,11 +61,13 @@ export default function Historic() {
 
                     <span>
                         <Button
-                            onClick={handleSubmitHistoricDomain}
+                            onClick={() => handleSubmitHistoricDomain()}
                             type="button"
-                            themeColor={"primary"}
+                            themeColor="primary"
+                            disabled={isAnalyzing}
+                            className={isAnalyzing ? "button--loading" : ""}
                         >
-                            Ver detalle de la búsqueda de dominio
+                            {isAnalyzing ? "Analizando..." : "Ver detalle de la búsqueda de dominio"}                            
                         </Button>
                         <Button onClick={ async () => setHistorical( await searchHistorical())} type="button">
                             Ver histórico

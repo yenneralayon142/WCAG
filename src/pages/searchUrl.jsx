@@ -1,7 +1,10 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+
+// Components
 import Analyze from "../components/searchUrl/analyze";
 import Historic from "../components/searchUrl/historic";
-import { Route, Router, Routes } from "react-router-dom";
+import Url from "../components/url/url";
 
 export default function SearchUrl() {
     return (
@@ -16,8 +19,9 @@ export default function SearchUrl() {
                 }
             />
             <Route path="/:id" element={
-                <main>
-                </main>
+                <main className="url__page">
+                    <Url />
+                </main> 
             } />
         </Routes>
     );
