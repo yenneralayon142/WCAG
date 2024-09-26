@@ -3,12 +3,15 @@ import { TextBox } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
 
 // Hooks
-import { useAnalyze } from "../../Hooks/Maps/useAnalyzeUrls";
+import { analyzeUrl } from "../../services/analyze";
+
+// Components
+import AnalyzeList from "./utils/analyzeList";
 
 export default function Analyze() {
     // Manejar dominios y sus cambios
     const [domains, setDomains] = useState([""]);
-    const {response ,analyzeUrlHook } = useAnalyze();
+    const [analyzeResponse, setAnalyzeResponse] = useState({});
 
     const handleDomainChange = (index, value) => {
         const newDomains = [...domains];
@@ -26,12 +29,6 @@ export default function Analyze() {
         } else {
             alert("No se puede eliminar el último dominio");
         }
-    };
-
-    // Manejar formulario
-    const handleAnalyze = async () => {
-        const result = await analyzeUrlHook(domains);
-        console.log(result);
     };
 
     return (
@@ -65,7 +62,9 @@ export default function Analyze() {
 
                     <span>
                         <Button
-                            onClick={handleAnalyze}
+                            onClick={async () => {
+                                setAnalyzeResponse(await analyzeUrl(domains));
+                            }}
                             type="button"
                             themeColor="primary"
                         >
@@ -81,9 +80,14 @@ export default function Analyze() {
                 </form>
 
                 {/* Results */}
-                <ul>
-                    No se encontró información.
-                </ul>
+                <div className="search__results">
+                    <div>
+                        <h4 className="text--normal text--bold text--blue">
+                            Resultado del análisis:
+                        </h4>
+                        <AnalyzeList data={analyzeResponse} />
+                    </div>
+                </div>
             </div>
         </section>
     );

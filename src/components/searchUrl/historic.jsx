@@ -7,7 +7,7 @@ import { useHistoric } from "../../Hooks/Maps/useHistoric";
 import { useHistoricDomain } from "../../Hooks/Maps/useHistoricDomain";
 
 // Components
-import { UrlsList } from "./urlsList";
+import { UrlsList } from "./utils/urlsList";
 
 export default function Historic() {
     const [historicalDomain, setHistoricalDomain] = useState("");
