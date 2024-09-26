@@ -1,8 +1,8 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "http://127.0.0.1:5000"
 
 // Obtener el histórico
 export const searchHistoric = async () => {
-    const data = await Fetchdata("/history");
+    const data = await Fetchdata("/history")
 
     // const data = {
     //     data: [
