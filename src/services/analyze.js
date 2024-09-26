@@ -1,24 +1,12 @@
 const API_URL = "http://127.0.0.1:5000";
 
+import analyze from "../mocks/analyze.json";
+
 // Obtener el Analisis
 export const analyzeUrl = async (urls) => {
-    // const data = await Fetchdata("/analyze", urls);
+    const data = await Fetchdata("/analyze", urls);
 
-    const data = {
-        data: [
-            {
-                _id: "InsertOneResult(ObjectId('66f59aad52b1268563b59b62'), acknowledged=True)",
-                date: new Date(),
-                suggestions: {
-                    error: "\n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
-                },
-                unique_id: "061de6c6-5b5f-4d14-a152-069607886634",
-                url: "https://wcag.gics-semilleros.com",
-            },
-        ],
-        message: "An\u00e1lisis completado",
-        status: "success",
-    };
+    // const data = analyze;
 
     if (data.status === "success") {
         const response = data.data.map((result) => {
