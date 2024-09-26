@@ -36,6 +36,10 @@ export default function BreadCrumb() {
         }),
     ];
 
+    if (items.length == 3 && items[1].text == "Búsqueda url") {
+        items[2].text = "Detalles dominio";
+    }
+
     const handleItemSelect = (event) => {
         const itemIndex = items.findIndex(
             (curValue) => curValue.id === event.id

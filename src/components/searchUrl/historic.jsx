@@ -3,8 +3,7 @@ import { TextBox } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
 
 // Hooks
-import { useHistoric } from "../../Hooks/Maps/useHistoric";
-import { useHistoricDomain } from "../../Hooks/Maps/useHistoricDomain";
+import { searchHistorical, searchHistoricalDomain } from "../../services/historical";
 
 // Components
 import { UrlsList } from "./utils/urlsList";
@@ -12,13 +11,13 @@ import { UrlsList } from "./utils/urlsList";
 export default function Historic() {
     const [historicalDomain, setHistoricalDomain] = useState("");
 
-    const { urls, getUrls } = useHistoric();
-    const { domainUrls, getDomainUrls } = useHistoricDomain();
+    const [historical, setHistorical] = useState([]);
+    const [domainHistorical, setDomainHistorical] = useState([]);
 
     // Obtener el histórico de un dominio en específico
-    const handleSubmitHistoricDomain = () => {
+    const handleSubmitHistoricDomain = async () => {
         if (historicalDomain) {
-            getDomainUrls(historicalDomain);
+            setDomainHistorical(await searchHistoricalDomain(historicalDomain));
         } else {
             alert("Por favor ingrese un dominio válido");
         }
@@ -56,7 +55,7 @@ export default function Historic() {
                         >
                             Ver detalle de la búsqueda de dominio
                         </Button>
-                        <Button onClick={() => getUrls()} type="button">
+                        <Button onClick={ async () => setHistorical( await searchHistorical())} type="button">
                             Ver histórico
                         </Button>
                     </span>
@@ -68,13 +67,13 @@ export default function Historic() {
                         <h4 className="text--normal text--bold text--blue">
                             Resultado de búsqueda por dominio:
                         </h4>
-                        <UrlsList urls={domainUrls} />
+                        <UrlsList urls={domainHistorical} />
                     </div>
                     <div>
                         <h4 className="text--normal text--bold text--blue">
                             Histórico total:
                         </h4>
-                        <UrlsList urls={urls} />
+                        <UrlsList urls={historical} />
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 const API_URL = "http://127.0.0.1:5000"
 
 // Obtener el histórico
-export const searchHistoric = async () => {
+export const searchHistorical = async () => {
     const data = await Fetchdata("/history")
 
     // const data = {
@@ -37,7 +37,7 @@ export const searchHistoric = async () => {
 };
 
 // Buscar en el historico por dominio
-export const searchHistoricDomain = async (domain) => {
+export const searchHistoricalDomain = async (domain) => {
     if (domain === "") return null;
 
     if (domain.startsWith("http://")) {

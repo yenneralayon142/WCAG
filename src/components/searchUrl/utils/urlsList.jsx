@@ -24,7 +24,7 @@ function ListOfUrls({ urls }) {
                             {new Date(url.date).toLocaleDateString("es-ES")}
                         </p>
                     </div>
-                    <a href={`/searchUrl/${url._id}`}>
+                    <a href={`/searchUrl/${url.id}`}>
                         <Button themeColor={"primary"}>
                             Ver más información
                         </Button>
