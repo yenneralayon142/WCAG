@@ -6,7 +6,7 @@ export default function AnalyzeList({ data }) {
             <li key={item.id}>
                 <div>
                     <p className="url__title">
-                        <strong>Dominio:</strong> {item.url.split("/")[2]}
+                        <strong>Dominio:</strong> {item.domain}
                     </p>
                     <p>
                         <strong>Link:</strong>

@@ -3,8 +3,7 @@ import { TextBox } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
 
 // Hooks
-import { useHistoric } from "../../Hooks/Maps/useHistoric";
-import { useHistoricDomain } from "../../Hooks/Maps/useHistoricDomain";
+import { searchHistorical, searchHistoricalDomain } from "../../services/historical";
 
 // Components
 import { UrlsList } from "./utils/urlsList";
@@ -12,16 +11,28 @@ import { UrlsList } from "./utils/urlsList";
 export default function Historic() {
     const [historicalDomain, setHistoricalDomain] = useState("");
 
-    const { urls, getUrls } = useHistoric();
-    const { domainUrls, getDomainUrls } = useHistoricDomain();
+    const [historical, setHistorical] = useState([]);
+    const [domainHistorical, setDomainHistorical] = useState([]);
+    const [isAnalyzing, setIsAnalyzing] = useState(false);
 
     // Obtener el histórico de un dominio en específico
-    const handleSubmitHistoricDomain = () => {
-        if (historicalDomain) {
-            getDomainUrls(historicalDomain);
-        } else {
-            alert("Por favor ingrese un dominio válido");
+    const handleSubmitHistoricDomain = async () => {
+        if (historicalDomain === "") {
+            alert("Por favor ingrese un dominio");
+            return;
         }
+        setIsAnalyzing(true);
+
+        setTimeout(async () => {
+            await searchHistoricalDomain(historicalDomain)
+                .then((response) => {
+                    setDomainHistorical(response);
+                    alert("Historial de dominio extraido");
+                })
+                .finally(() => {
+                    setIsAnalyzing(false);
+                });
+        }, 500);
     };
 
     return (
@@ -50,13 +61,15 @@ export default function Historic() {
 
                     <span>
                         <Button
-                            onClick={handleSubmitHistoricDomain}
+                            onClick={() => handleSubmitHistoricDomain()}
                             type="button"
-                            themeColor={"primary"}
+                            themeColor="primary"
+                            disabled={isAnalyzing}
+                            className={isAnalyzing ? "button--loading" : ""}
                         >
-                            Ver detalle de la búsqueda de dominio
+                            {isAnalyzing ? "Analizando..." : "Ver detalle de la búsqueda de dominio"}                            
                         </Button>
-                        <Button onClick={() => getUrls()} type="button">
+                        <Button onClick={ async () => setHistorical( await searchHistorical())} type="button">
                             Ver histórico
                         </Button>
                     </span>
@@ -68,13 +81,13 @@ export default function Historic() {
                         <h4 className="text--normal text--bold text--blue">
                             Resultado de búsqueda por dominio:
                         </h4>
-                        <UrlsList urls={domainUrls} />
+                        <UrlsList urls={domainHistorical} />
                     </div>
                     <div>
                         <h4 className="text--normal text--bold text--blue">
                             Histórico total:
                         </h4>
-                        <UrlsList urls={urls} />
+                        <UrlsList urls={historical} />
                     </div>
                 </div>
             </div>

@@ -21,22 +21,22 @@ export default function Intro() {
                 <ul>
                     <li className="text--normal">
                         <p className="text--normal">
-                            <a href="/docs/perceptible" className="text--bold">Perceptible</a>: Aprende cómo asegurar que toda la información en tu sitio web sea presentada de manera que los usuarios puedan percibirla. Esto incluye el uso de texto alternativo, subtítulos y un diseño que facilite la visualización del contenido.
+                            <a href="/docs/perceptible" className="text--bold link">Perceptible</a>: Aprende cómo asegurar que toda la información en tu sitio web sea presentada de manera que los usuarios puedan percibirla. Esto incluye el uso de texto alternativo, subtítulos y un diseño que facilite la visualización del contenido.
                         </p>
                     </li>
                     <li className="text--normal">
                         <p className="text--normal">
-                            <a href="/docs/operable" className="text--bold">Operable</a>: Descubre cómo hacer que tu sitio web sea navegable y utilizable para todos. Esto abarca el uso de teclados y dispositivos de asistencia, así como la gestión adecuada del enfoque y la navegación coherente.
+                            <a href="/docs/operable" className="text--bold link">Operable</a>: Descubre cómo hacer que tu sitio web sea navegable y utilizable para todos. Esto abarca el uso de teclados y dispositivos de asistencia, así como la gestión adecuada del enfoque y la navegación coherente.
                         </p>
                     </li>
                     <li className="text--normal">
                         <p className="text--normal">
-                            <a href="/docs/comprensible" className="text--bold">Comprensible</a>: Conoce las mejores prácticas para garantizar que el contenido y la interfaz sean fáciles de entender. Esto incluye el uso de un lenguaje claro, instrucciones útiles y la identificación adecuada de errores.
+                            <a href="/docs/comprensible" className="text--bold link">Comprensible</a>: Conoce las mejores prácticas para garantizar que el contenido y la interfaz sean fáciles de entender. Esto incluye el uso de un lenguaje claro, instrucciones útiles y la identificación adecuada de errores.
                         </p>
                     </li>
                     <li className="text--normal">
                         <p className="text--normal">
-                            <a href="/docs/robusto" className="text--bold">Robusto</a>: Asegúrate de que tu contenido sea compatible con diversas tecnologías asistivas. Esto implica seguir estándares de codificación y asegurar que tu sitio se mantenga accesible a medida que evoluciona la tecnología.
+                            <a href="/docs/robusto" className="text--bold link">Robusto</a>: Asegúrate de que tu contenido sea compatible con diversas tecnologías asistivas. Esto implica seguir estándares de codificación y asegurar que tu sitio se mantenga accesible a medida que evoluciona la tecnología.
                         </p>
                     </li>
                 </ul>

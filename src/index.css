@@ -113,6 +113,15 @@ a {
     text-decoration: none;
 }
 
+.link {
+    color: var(--color-green);
+    text-decoration: underline;
+
+    &:hover {
+        color: var(--color-dark-green);
+    }
+}
+
 .text--normal {
     font-size: 16px;
 }
@@ -179,6 +188,13 @@ a {
     font-weight: bold;
     font-size: 20px;
     color: #ffff;
+}
+
+.button--loading {
+    background-color: gray;
+    color: white;
+    pointer-events: none;
+    border: 1px solid transparent;
 }
 
 /*- - - - - -HEADER SECTION- - - - - -*/
@@ -669,7 +685,7 @@ a {
     .k-scrollview {
         height: 800px !important;
     }
-    .docs__sidebar{
+    .docs__sidebar {
         flex: none;
         width: fit-content;
     }

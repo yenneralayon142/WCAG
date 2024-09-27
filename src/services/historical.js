@@ -1,26 +1,14 @@
-const API_URL = "http://127.0.0.1:5000"
+const API_URL = "http://127.0.0.1:5000";
+
+import historical from "../mocks/historical.json";
+import domain_historic from "../mocks/domain_historic.json";
+import response_id from "../mocks/response_id.json";
 
 // Obtener el histórico
-export const searchHistoric = async () => {
-    const data = await Fetchdata("/history")
+export const searchHistorical = async () => {
+    const data = await Fetchdata("/history");
 
-    // const data = {
-    //     data: [
-    //         {
-    //             _id: "66e47b7f-3b8e-4b2d-8b8c-2d3b8c2d3b8c",
-    //             date: "2022-01-01T00:00:00.000Z",
-    //             domain: "gics-sennova.com",
-    //             url: "https://gics-sennova.com/",
-    //         },
-    //         {
-    //             _id: "66e47b7f-3b8e-4b2d-8b8c-2d3b8c2d3b8ca",
-    //             date: "2022-01-01T00:00:00.000Z",
-    //             domain: "www.instagram.com",
-    //             url: "https://www.instagram.com/",
-    //         },
-    //     ],
-    //     status: "success",
-    // };
+    // const data = historical;
 
     if (data.status === "success") {
         const response = data.data.map((url) => ({
@@ -37,7 +25,7 @@ export const searchHistoric = async () => {
 };
 
 // Buscar en el historico por dominio
-export const searchHistoricDomain = async (domain) => {
+export const searchHistoricalDomain = async (domain) => {
     if (domain === "") return null;
 
     if (domain.startsWith("http://")) {
@@ -48,25 +36,9 @@ export const searchHistoricDomain = async (domain) => {
 
     domain = domain.split("/")[0];
 
-    const data = await Fetchdata(`/history/domain/${domain}`);
+    // const data = await Fetchdata(`/history/domain/${domain}`);
 
-    // const data = {
-    //     data: [
-    //         {
-    //             _id: "66e47b7f-3b8e-4b2d-8b8c-2d3b8c2d3b8c",
-    //             date: "2022-01-01T00:00:00.000Z",
-    //             domain: "gics-sennova.com",
-    //             url: "https://gics-sennova.com/",
-    //         },
-    //         {
-    //             _id: "66e47b7f-3b8e-4b2d-8b8c-2d3b8c2d3b8ca",
-    //             date: "2022-01-01T00:00:00.000Z",
-    //             domain: "www.instagram.com",
-    //             url: "https://www.instagram.com/",
-    //         },
-    //     ],
-    //     status: "success",
-    // };
+    const data = domain_historic;
 
     if (data.status === "success") {
         const response = data.data.map((url) => ({
@@ -79,6 +51,28 @@ export const searchHistoricDomain = async (domain) => {
         return response;
     } else {
         return [];
+    }
+};
+
+export const searchDomain = async (id) => {
+    // const data = await Fetchdata(`/history/${id}`);
+
+    const data = response_id;
+
+    if (data.status === "success") {
+        const response = {
+            id: data.data._id,
+            date: data.data.date,
+            status: data.status,
+            domain: data.data.domain,
+            url: data.data.url,
+            violations: data.data.results.violations,
+            suggestions: data.data.suggestions,
+        };
+
+        return response;
+    } else {
+        return {};
     }
 };
 

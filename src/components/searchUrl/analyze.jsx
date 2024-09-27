@@ -12,6 +12,7 @@ export default function Analyze() {
     // Manejar dominios y sus cambios
     const [domains, setDomains] = useState([""]);
     const [analyzeResponse, setAnalyzeResponse] = useState({});
+    const [isAnalyzing, setIsAnalyzing] = useState(false);
 
     const handleDomainChange = (index, value) => {
         const newDomains = [...domains];
@@ -29,6 +30,27 @@ export default function Analyze() {
         } else {
             alert("No se puede eliminar el último dominio");
         }
+    };
+
+    // Manejar la acción de analizar
+    const handleAnalyze = async () => {
+        if (domains[0] === "") {
+            alert("Por favor ingrese al menos un dominio");
+            return;
+        }
+
+        setIsAnalyzing(true);
+
+        setTimeout(async () => {
+            await analyzeUrl(domains)
+                .then((response) => {
+                    setAnalyzeResponse(response);
+                    alert("Analisis completado");
+                })
+                .finally(() => {
+                    setIsAnalyzing(false);
+                });
+        }, 450);
     };
 
     return (
@@ -62,13 +84,13 @@ export default function Analyze() {
 
                     <span>
                         <Button
-                            onClick={async () => {
-                                setAnalyzeResponse(await analyzeUrl(domains));
-                            }}
+                            onClick={() => handleAnalyze()}
                             type="button"
                             themeColor="primary"
+                            disabled={isAnalyzing}
+                            className={isAnalyzing ? "button--loading" : ""}
                         >
-                            Analizar dominio
+                            {isAnalyzing ? "Analizando..." : "Analizar dominio"}
                         </Button>
                         <Button type="button" onClick={handleAddDomain}>
                             Añadir otro dominio
