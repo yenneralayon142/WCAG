@@ -20,7 +20,7 @@ export default function Robusto() {
                         <li className="text--normal">Etiquetas bien cerradas</li>
                         <li className="text--normal">Anidación correcta de elementos (no colocar etiquetas dentro de otras de forma incorrecta)</li>
                         <li className="text--normal">Atributos apropiados para cada elemento (como <span className="text--bold">`lang`</span>, <span className="text--bold">`alt`</span>, <span className="text--bold">`title`</span> )</li>
-                        <li className="text--normal">Valida el código con herramientas como el <a href="https://validator.w3.org/" target="_blank">Validador de W3C</a></li>
+                        <li className="text--normal">Valida el código con herramientas como el <a href="https://validator.w3.org/" className="link" target="_blank">Validador de W3C</a></li>
                     </ul>
                     <SyntaxHighlighter language="html" style={codeTheme}>
                         {codeExample1}

@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000"
+const API_URL = "http://127.0.0.1:5000";
 
 import historical from "../mocks/historical.json";
 import domain_historic from "../mocks/domain_historic.json";
@@ -6,7 +6,7 @@ import response_id from "../mocks/response_id.json";
 
 // Obtener el histórico
 export const searchHistorical = async () => {
-    const data = await Fetchdata("/history")
+    const data = await Fetchdata("/history");
 
     // const data = historical;
 
@@ -36,9 +36,9 @@ export const searchHistoricalDomain = async (domain) => {
 
     domain = domain.split("/")[0];
 
-    const data = await Fetchdata(`/history/domain/${domain}`);
+    // const data = await Fetchdata(`/history/domain/${domain}`);
 
-    // const data = domain_historic;
+    const data = domain_historic;
 
     if (data.status === "success") {
         const response = data.data.map((url) => ({
@@ -55,9 +55,9 @@ export const searchHistoricalDomain = async (domain) => {
 };
 
 export const searchDomain = async (id) => {
-    const data = await Fetchdata(`/history/${id}`);
+    // const data = await Fetchdata(`/history/${id}`);
 
-    // const data = response_id;
+    const data = response_id;
 
     if (data.status === "success") {
         const response = {
@@ -67,13 +67,14 @@ export const searchDomain = async (id) => {
             domain: data.data.domain,
             url: data.data.url,
             violations: data.data.results.violations,
+            suggestions: data.data.suggestions,
         };
 
         return response;
     } else {
         return {};
     }
-}
+};
 
 // Obtener información de la API
 const Fetchdata = async (endpoint) => {
