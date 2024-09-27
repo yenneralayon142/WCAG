@@ -1,7 +1,15 @@
 export const fullTeam = [
     {
         id: 1,
-        url: "pendiente",
+        url: "/team/vladimir-cortes.jpg",
+        name: "Vladirmir Cortés Arevalo",
+        role: "Lider de semilleros",
+        description: `pendiente.`,
+
+    },
+    {
+        id: 2,
+        url: "/team/william-navarro.jpg",
         name: "William Navarro",
         role: "Lider de semilleros, investigador e instructor",
         description: `Liderar y gestionar las actividades para garantizar el cumplimiento de términos.
@@ -14,9 +22,16 @@ export const fullTeam = [
         Apoyar en el diseño de arquitecturas de software, asegurando la viabilidad técnica y la innovación en los proyectos.`,
     },
     {
-        id: 2,
+        id: 3,
+        url: "/team/alexander-vanegas.jpg",
+        name: "Alexander Vanegas",
+        role: "Instructor",
+        description: `pendiente`,
+    },
+    {
+        id: 4,
         url: "/team/juan-sanabria.jpg",
-        name: "Juan Pablo Sanabria",
+        name: "Juan Pablo Sanabria Moscoso",
         role: "Investigador Experto",
         description: `Participar en el diseño y planificacion de experimentos o estuidos.
         Ayudar en la redacción de propuestas de investigación y solicitudes de financiamiento.
@@ -25,7 +40,7 @@ export const fullTeam = [
         Desarrollo de software para productos propuestos.`,
     },
     {
-        id: 3,
+        id: 5,
         url: "/team/kevin-lopez.jpg",
         name: "Kevin Lopez",
         role: "Investigador Senior",
@@ -35,9 +50,9 @@ export const fullTeam = [
         Diseño de arquitecturas de software, asegurando la viabilidad técnica y la inovación en los proyectos.`,
     },
     {
-        id: 4,
+        id: 6,
         url: "/team/yenner-alayon.jpg",
-        name: "Yenner Alayon",
+        name: "Yenner Sneider Alayon Benavides",
         role: "Investigador Junior",
         description: `Participar en el diseño y planificacion de experimentos o estuidos.
         Ayudar en la redacción de propuestas de investigación y solicitudes de financiamiento.
@@ -46,14 +61,14 @@ export const fullTeam = [
         Desarrollo de software para productos propuestos.`,
     },
     {
-        id: 5,
+        id: 7,
         url: "/team/andres-gutierrez.jpg",
         name: "Andrés Gutiérrez Hurtado",
         role: "Monitor",
         description: `Ayudar con el levantamiento de información, desarrollo de las herramientas de accesibilidad, desarrollo front-end y control de versiones de la página web.`,
     },
     {
-        id: 6,
+        id: 8,
         url: "/team/luna-pinzon.jpg",
         name: "Luna Sofía Pinzón Bejarano",
         role: "Diseñadora",
@@ -62,7 +77,7 @@ export const fullTeam = [
         que permita a los usuarios navegar de manera fluida e intuitiva, haciendo de la accesibilidad una prioridad en cada decisión de diseño.`,
     },
     {
-        id: 7,
+        id: 9,
         url: "/team/angie-gomez.jpg",
         name: "Angie Daniela Gómez Quevedo",
         role: "Diseñadora",
@@ -71,7 +86,7 @@ export const fullTeam = [
         ajustaran a las sugerencias del equipo, sino que también respondieran a las necesidades de los usuarios, buscando la accesibilidad.`,
     },
     {
-        id: 8,
+        id: 10,
         url: "/team/lina-muñoz.jpg",
         name: "Lina Mercedes Muñoz González ",
         role: "Diseñadora",
@@ -81,7 +96,7 @@ export const fullTeam = [
         una mayor visibilidad, siempre con un enfoque en la inclusión.`,
     },
     {
-        id: 9,
+        id: 11,
         url: "/team/evelin-pacheco.jpg",
         name: "Evelyn Sofía Pacheco Sierra",
         role: "Diseñadora",
@@ -94,48 +109,60 @@ export const fullTeam = [
 export const investigationTeam = [
     {
         position: 1,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 4)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 6)], // Yenner Alayon
     },
     {
         position: 2,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 1)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 1)], // Vladimir Cortés
     },
     {
         position: 3,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 2)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 2)], // William Navarro
     },
     {
         position: 4,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 3)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 3)], // Juan Sanabria
+    },
+    {
+        position: 5,
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 4)], // Kevin Lopez
+    },
+    {
+        position: 6,
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 5)], // Kevin Lopez
     },
 ];
 
 export const developerTeam = [
     {
         position: 1,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 5)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 7)], // Andrés Gutiérrez Hurtado
     },
     {
         position: 2,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 4)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 4)], // Juan Sanabria
+    },
+    {
+        position: 3,
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 6)], // Yenner Alayon
     },
 ];
 
 export const designerTeam = [
     {
         position: 1,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 6)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 8)], // Luna Pinzon
     },
     {
         position: 2,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 7)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 9)], // Angie Gomez
     },
     {
         position: 3,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 8)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 10)], // Lina Muñoz
     },
     {
         position: 4,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 9)],
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 11)], // Evelin Pacheco
     },
 ];
