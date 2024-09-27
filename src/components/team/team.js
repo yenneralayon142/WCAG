@@ -1,7 +1,7 @@
 export const fullTeam = [
     {
         id: 1,
-        url: "pendiente",
+        url: "",
         name: "William Navarro",
         role: "Lider de semilleros, investigador e instructor",
         description: `Liderar y gestionar las actividades para garantizar el cumplimiento de términos.

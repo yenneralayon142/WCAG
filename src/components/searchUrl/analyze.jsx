@@ -50,7 +50,7 @@ export default function Analyze() {
                 .finally(() => {
                     setIsAnalyzing(false);
                 });
-        }, 500);
+        }, 450);
     };
 
     return (
