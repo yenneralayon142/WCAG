@@ -53,7 +53,7 @@ export const fullTeam = [
     {
         id: 6,
         url: "/team/yenner-alayon.jpg",
-        name: "Yenner Sneider Alayon Benavides",
+        name: "Yenner Snyder Alayon Benavides",
         role: "Investigador Junior",
         description: `Participar en el diseño y planificacion de experimentos o estuidos.
         Ayudar en la redacción de propuestas de investigación y solicitudes de financiamiento.
@@ -110,11 +110,11 @@ export const fullTeam = [
 export const investigationTeam = [
     {
         position: 1,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 6)], // Yenner Alayon
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 1)], // Vladimir Cortés Arevalo
     },
     {
         position: 2,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 1)], // Vladimir Cortés
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 3)], // Alexader Vanegas
     },
     {
         position: 3,
@@ -122,22 +122,22 @@ export const investigationTeam = [
     },
     {
         position: 4,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 3)], // Juan Sanabria
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 5)], // Kevin Lopez
     },
     {
         position: 5,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 4)], // Kevin Lopez
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 4)], // Juan Sanabria
     },
     {
         position: 6,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 5)], // Kevin Lopez
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 6)], // Yenner Alayon
     },
 ];
 
 export const developerTeam = [
     {
         position: 1,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 7)], // Andrés Gutiérrez Hurtado
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 5)], // Kevin Lopez
     },
     {
         position: 2,
@@ -147,6 +147,10 @@ export const developerTeam = [
         position: 3,
         ...fullTeam[fullTeam.findIndex((member) => member.id === 6)], // Yenner Alayon
     },
+    {
+        position: 4,
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 7)], // Andrés Gutiérrez Hurtado
+    }
 ];
 
 export const designerTeam = [

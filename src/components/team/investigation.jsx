@@ -6,7 +6,7 @@ export default function Investigation() {
     return (
         <section>
             <div className="container carousel carousel--green">
-                <h2 className="text--extralarge text--green text--center">Equipo de investigación y monitor</h2>
+                <h2 className="text--extralarge text--green text--center">Equipo de investigación</h2>
                 <ScrollView
                     style={{
                         width: '100%',
