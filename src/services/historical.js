@@ -38,7 +38,7 @@ export const searchHistoricalDomain = async (domain) => {
 
     const data = await Fetchdata(`/history/domain/${domain}`);
 
-    //const data = domain_historic;
+    // const data = domain_historic;
 
     if (data.status === "success") {
         const response = data.data.map((url) => ({

@@ -6,8 +6,11 @@ function ListOfUrls({ urls }) {
             {urls.map((url) => (
                 <li key={url.id}>
                     <div>
-                        <p className="url__title">
-                            <strong>Dominio:</strong> {url.domain}
+                        <p className="text--bold text--large text--blue">
+                            {url.domain}{" "}
+                            <span className="text--normal">
+                                - {new Date(url.date).toLocaleDateString("es-CO") + " " + new Date(url.date).toTimeString().split(" ")[0]}
+                            </span>
                         </p>
                         <p>
                             <strong>Link:</strong>{" "}
@@ -18,10 +21,6 @@ function ListOfUrls({ urls }) {
                             >
                                 {url.url}
                             </a>
-                        </p>
-                        <p>
-                            <strong>Fecha:</strong>
-                            {new Date(url.date).toLocaleDateString("es-ES")}
                         </p>
                     </div>
                     <a href={`/searchUrl/${url.id}`}>

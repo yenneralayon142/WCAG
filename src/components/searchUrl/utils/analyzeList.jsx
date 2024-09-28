@@ -5,8 +5,11 @@ export default function AnalyzeList({ data }) {
         data.data.map((item, index) => (
             <li key={item.id}>
                 <div>
-                    <p className="url__title">
-                        <strong>Dominio:</strong> {item.domain}
+                    <p className="text--blue text--bold text--large">
+                        {item.domain}{" "}
+                        <span className="text--normal">
+                                - {new Date(item.date).toLocaleDateString("es-CO") + " " + new Date(item.date).toTimeString().split(" ")[0]}
+                        </span>
                     </p>
                     <p>
                         <strong>Link:</strong>
@@ -17,10 +20,6 @@ export default function AnalyzeList({ data }) {
                         >
                             {item.url}
                         </a>
-                    </p>
-                    <p>
-                        <strong>Fecha:</strong>
-                        {new Date(item.date).toLocaleDateString("es-ES")}
                     </p>
                 </div>
                 <a href={`/searchUrl/${item.id}`}>

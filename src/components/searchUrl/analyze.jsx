@@ -104,7 +104,7 @@ export default function Analyze() {
                 {/* Results */}
                 <div className="search__results">
                     <div>
-                        <h4 className="text--normal text--bold text--blue">
+                        <h4 className="text--bold text--blue text--large">
                             Resultado del análisis:
                         </h4>
                         <AnalyzeList data={analyzeResponse} />
