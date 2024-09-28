@@ -55,9 +55,9 @@ export const searchHistoricalDomain = async (domain) => {
 };
 
 export const searchDomain = async (id) => {
-    // const data = await Fetchdata(`/history/${id}`);
+    const data = await Fetchdata(`/history/${id}`);
 
-    const data = response_id;
+    // const data = response_id;
 
     if (data.status === "success") {
         const response = {
@@ -66,8 +66,7 @@ export const searchDomain = async (id) => {
             status: data.status,
             domain: data.data.domain,
             url: data.data.url,
-            violations: data.data.results.violations,
-            suggestions: data.data.suggestions,
+            violations: data.data.suggestions.violations,
         };
 
         return response;

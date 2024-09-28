@@ -30,6 +30,13 @@ h6 {
     font-family: var(--family-tittle);
 }
 
+.k-expander-title {
+    text-transform: initial;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-blue);
+}
+
 main {
     display: flex;
     flex-direction: column;
