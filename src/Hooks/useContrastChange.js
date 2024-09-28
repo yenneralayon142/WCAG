@@ -17,15 +17,19 @@ export function useContrastChange() {
 		const applyStyles = () => {
 			switch (settings.contrast) {
 				case 'medio':
+					document.querySelectorAll('pre').forEach(code => code.style.filter = "contrast(1)");
 					document.querySelector('html').style = 'filter: contrast(2)';
 					break;
 				case 'alto':
+					document.querySelectorAll('pre').forEach(code => code.style.filter = "contrast(1)");
 					document.querySelector('html').style = 'filter: contrast(3)';
 					break;
 				case 'invertido':
 					document.querySelector('html').style = 'filter: invert(100%)';
+					document.querySelectorAll('pre').forEach(code => code.style.filter = "contrast(2)");
 					break;
 				default:
+					document.querySelectorAll('pre').forEach(code => code.style.filter = "contrast(1)");
 					document.querySelector('html').style = 'filter: invert(0%)';
 					break;
 			}
