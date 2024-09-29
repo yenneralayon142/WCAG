@@ -5,10 +5,10 @@ export default function InfoCard(props) {
     return (
         <article className={`infocard ${color == 'green' && 'infocard--green'}`}>
             <div className="infocard__title bg--blue">
-                <h3 className='text--white text--subtitle text--center text--bolder'> {title} </h3>
+                <h3 className='text--white text-3xl text-center font-bold'> {title} </h3>
             </div>
             <div className='infocard__text'>
-                <p className='text--large'>{text}</p>
+                <p className='text-lg'>{text}</p>
             </div>
         </article>
     )

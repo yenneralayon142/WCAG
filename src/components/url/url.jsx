@@ -29,7 +29,7 @@ export default function Url() {
     return (
         <section>
             <div className="container">
-                <h3 className="text--blue text--title">
+                <h3 className="text--blue text-6xl">
                     Resultados de accesibilidad de{" "}
                     <a
                         href={domain.url || "#"}
@@ -40,7 +40,7 @@ export default function Url() {
                     </a>
                 </h3>
                 <div>
-                    <p className="text--normal text--bold text--blue" style={{padding: '10px 0px'}}> Problemas de accesibilidad: </p>
+                    <p className="text-base font-bold text--blue" style={{padding: '10px 0px'}}> Problemas de accesibilidad: </p>
                     <div className="wrapper">
                         {domain.violations &&
                             domain.violations.map((issue, index) => (
@@ -57,7 +57,7 @@ export default function Url() {
                                 >
                                     {expanded === index && <ExpansionPanelContent>
                                         <p className="text--large"><span className="text--bold">Solución:</span> {issue.solucion}</p>
-                                        <p className="text--bold text--large">Ejemplo código:</p>
+                                        <p className="font-bold text--large">Ejemplo código:</p>
                                         <SyntaxHighlighter
                                             language="html"
                                             style={codeTheme}

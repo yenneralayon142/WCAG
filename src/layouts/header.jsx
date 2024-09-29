@@ -1,7 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@progress/kendo-react-buttons";
-import {  AppBar, AppBarSection, AppBarSpacer, Menu, MenuItem } from "@progress/kendo-react-layout";
+import {
+    AppBar,
+    AppBarSection,
+    AppBarSpacer,
+    Menu,
+    MenuItem,
+} from "@progress/kendo-react-layout";
 import { Popup } from "@progress/kendo-react-popup";
 import { bellIcon, menuIcon } from "@progress/kendo-svg-icons";
 
@@ -19,24 +25,24 @@ export default function Header() {
                 {
                     text: "Quienes somos",
                     route: "/team",
-                }
-            ]
+                },
+            ],
         },
         {
             text: "Busqueda Url",
-            route:"/searchUrl",
+            route: "/searchUrl",
         },
         {
             text: "Documentación",
             route: "/docs",
-        }
+        },
     ];
 
     // Boton responsive
-    const [show, setShow] = React.useState(false);
+    const [show, setShow] = useState(false);
     const anchor = React.useRef(null);
     const handleClick = () => {
-      setShow(!show);
+        setShow(!show);
     };
 
     // Funcion para redireccionar
@@ -45,6 +51,12 @@ export default function Header() {
         navigate(event.item.route);
     };
 
+    useEffect(() => {
+        document.querySelectorAll(".k-menu-link-text").forEach((element) => {
+            element.classList.add("text-xl");
+        });
+    });
+
     return (
         <AppBar className="header" positionMode="sticky" themeColor="light">
             <nav className="header__container">
@@ -52,7 +64,11 @@ export default function Header() {
                 <AppBarSection>
                     <Link to="/" className="header__brand">
                         <div className="header__logo">
-                            <img src="/logo-sena.png" alt="Logo sena" className="image"/>
+                            <img
+                                src="/logo-sena.png"
+                                alt="Logo sena"
+                                className="image"
+                            />
                         </div>
                     </Link>
                 </AppBarSection>
@@ -60,7 +76,7 @@ export default function Header() {
                 <AppBarSpacer />
 
                 {/* Menú */}
-                <AppBarSection >
+                <AppBarSection>
                     <div id="header__desktop" className="header__desktop">
                         <Menu onSelect={onSelect} items={menuItems} />
                     </div>
@@ -70,34 +86,33 @@ export default function Header() {
                 <AppBarSection>
                     <div ref={anchor} id="header__mobile">
                         <Button
-                        fillMode="flat"
-                        onClick={handleClick}
-                        type="button"
-                        svgIcon={menuIcon}
+                            fillMode="flat"
+                            onClick={handleClick}
+                            type="button"
+                            svgIcon={menuIcon}
                         />
                     </div>
                     {show && (
                         <Popup
-                        anchor={anchor.current}
-                        show={show}
-                        style={{
-                            marginLeft: -10,
-                            zIndex: 1000,
-                        }}
-                        >
-                            <Menu  
-                            items={menuItems}
-                            onSelect={onSelect}
-                            vertical={true}
+                            anchor={anchor.current}
+                            show={show}
                             style={{
-                                display: "inline-block"
+                                marginLeft: -10,
+                                zIndex: 1000,
                             }}
+                        >
+                            <Menu
+                                items={menuItems}
+                                onSelect={onSelect}
+                                vertical={true}
+                                style={{
+                                    display: "inline-block",
+                                }}
                             />
                         </Popup>
                     )}
                 </AppBarSection>
-
             </nav>
-        </AppBar>        
+        </AppBar>
     );
 }

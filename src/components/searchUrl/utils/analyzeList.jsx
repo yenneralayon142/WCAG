@@ -5,9 +5,9 @@ export default function AnalyzeList({ data }) {
         data.data.map((item, index) => (
             <li key={item.id}>
                 <div>
-                    <p className="text--blue text--bold text--large">
+                    <p className="text--blue font-bold text-lg">
                         {item.domain}{" "}
-                        <span className="text--normal">
+                        <span>
                                 - {new Date(item.date).toLocaleDateString("es-CO") + " " + new Date(item.date).toTimeString().split(" ")[0]}
                         </span>
                     </p>

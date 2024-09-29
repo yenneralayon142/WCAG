@@ -105,7 +105,7 @@ export default function SearchFilters() {
             <input type="checkbox" className="hidden filter-check" id="c-aa" />
             <input type="checkbox" className="hidden filter-check" id="c-aaa" />
 
-            <h2 className="text--bold text--subtitle text--blue text--truncate">
+            <h2 className="font-bold text-3xl text--blue text--truncate">
                 Documentacion
             </h2>
 
@@ -119,7 +119,7 @@ export default function SearchFilters() {
                 placeholder="Buscar tema..."
             />
             <div className="docs__filters">
-                <h4 className="text--bold text--extralarge text--blue">
+                <h4 className="font-bold text-xl text--blue">
                     Filtros de búsqueda
                 </h4>
                 <DropDownList

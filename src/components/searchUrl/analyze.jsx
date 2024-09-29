@@ -57,14 +57,14 @@ export default function Analyze() {
         <section>
             <div className="container">
                 {/* Title */}
-                <h2 className="text--extralarge text--blue">
+                <h2 className="text-3xl text--blue">
                     Analizar accesibilidad sitios web
                 </h2>
 
                 {/* Form */}
                 <form>
                     <fieldset>
-                        <label htmlFor="new-domain-input">
+                        <label htmlFor="new-domain-input" className="font-semibold text--blue">
                             Analizar dominio nuevo:
                         </label>
                         {domains.map((domain, index) => (
@@ -104,7 +104,7 @@ export default function Analyze() {
                 {/* Results */}
                 <div className="search__results">
                     <div>
-                        <h4 className="text--bold text--blue text--large">
+                        <h4 className="font-bold text--blue text-lg">
                             Resultado del análisis:
                         </h4>
                         <AnalyzeList data={analyzeResponse} />

@@ -6,7 +6,7 @@ export default function Designer() {
     return (
         <section>
             <div className="container carousel carousel--blue">
-                <h2 className="text--extralarge text--green text--center">Equipo de diseño</h2>
+                <h2 className="text-2xl text--green text-center">Equipo de diseño</h2>
                 <ScrollView
                     style={{
                         width: '100%',
