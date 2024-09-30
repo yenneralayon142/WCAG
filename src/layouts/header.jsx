@@ -35,13 +35,8 @@ export default function Header() {
         {
             text: "Documentación",
             route: "/docs",
-<<<<<<< HEAD
-        }
-    ]
-=======
         },
     ];
-feature/andresedition/newwidget
 
     // Boton responsive
     const [show, setShow] = useState(false);
