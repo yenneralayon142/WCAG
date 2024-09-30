@@ -1,8 +1,10 @@
 import Principle from "../principle";
 
 /**
- * Componente Principles que presenta los cuatro principios fundamentales de la WCAG.
+ * Componente Principles que presenta los cuatro principios fundamentales de la WCAG. LLama al componente Principle
+ * @component
  * @returns {JSX.Element} Un componente de sección que muestra un título, una descripción y una lista de principios con iconos.
+ * @see Principle
  */
 
 export default function Principles() {

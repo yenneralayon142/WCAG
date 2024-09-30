@@ -1,5 +1,6 @@
 /**
  * Componente Hero que presenta información introductoria sobre los estándares WCAG.
+ * @component
  * @returns {JSX.Element} Un componente de sección que muestra un título y una descripción sobre las WCAG, junto con una imagen.
  */
 export default function Hero() {
