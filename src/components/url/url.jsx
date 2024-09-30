@@ -10,12 +10,38 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 // Service
 import { searchDomain } from "../../services/historical";
 
+/**
+ * Componente que muestra los resultados de accesibilidad para un dominio específico.
+ * Utiliza el ID del dominio de los parámetros de la URL para realizar una búsqueda.
+ * 
+ * @returns {JSX.Element} El componente Url que renderiza los resultados de accesibilidad.
+ */
 export default function Url() {
+
+    /**
+     * Extrae el ID del dominio de los parámetros de la URL utilizando useParams.
+     * @const {string} id - El ID del dominio que se obtiene de la URL.
+     */
     const { id } = useParams();
 
+    /**
+     * Estado para almacenar la información del dominio.
+     * @const {[Object]} domain - Objeto que contiene los datos del dominio.
+     * @function setDomain - Función para actualizar el estado de domain.
+     */
     const [domain, setDomain] = useState({});
+
+    /**
+     * Estado para manejar la expansión de paneles de información.
+     * @const {[number]} expanded - Índice del panel actualmente expandido.
+     * @function setExpanded - Función para actualizar el estado de expanded.
+     */
     const [expanded, setExpanded] = useState(-1);
 
+     /**
+     * Función asíncrona que obtiene los datos del dominio.
+     * Llama a la API searchDomain con el ID y actualiza el estado de domain.
+     */
     const fetchDomain = async () => {
         const response = await searchDomain(id);
         setDomain(response);

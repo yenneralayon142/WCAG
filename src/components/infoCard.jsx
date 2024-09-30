@@ -1,5 +1,15 @@
 import React from 'react'
-
+/**
+ * Componente que representa una tarjeta de información.
+ *
+ * @component
+ * @param {Object} props - Las propiedades del componente.
+ * @param {string} props.title - El título de la tarjeta.
+ * @param {string} props.text - El texto descriptivo de la tarjeta.
+ * @param {string} [props.color="blue"] - El color de fondo de la tarjeta (opcional, por defecto "blue").
+ * 
+ * @returns {JSX.Element} La tarjeta de información que incluye un título y un texto descriptivo.
+ */
 export default function InfoCard(props) {
     const { title, text, color = "blue" } = props;
     return (
