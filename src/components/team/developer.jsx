@@ -9,7 +9,7 @@ import { developerTeam } from "./team";
  * sobre los miembros del equipo de desarrollo. Utiliza el componente `ScrollView`
  * para permitir una visualización deslizante de los elementos del equipo.
  *
- * @component
+ * @component Developer
  * @returns {JSX.Element} Elemento JSX que representa la sección del equipo de desarrollo de software.
  */
 export default function Developer() {

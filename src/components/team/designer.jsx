@@ -9,7 +9,7 @@ import { designerTeam } from "./team";
  * sobre los miembros del equipo de diseño. Utiliza el componente `ScrollView`
  * para permitir una visualización deslizante de los elementos del equipo.
  *
- * @component
+ * @component Designer
  * @returns {JSX.Element} Elemento JSX que representa la sección del equipo de diseño.
  */
 export default function Designer() {
