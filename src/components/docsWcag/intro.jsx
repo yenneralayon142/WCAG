@@ -1,3 +1,20 @@
+/** 
+ * El componente incluye una introducción al propósito y objetivo de la documentación, y enlaces 
+ * a secciones específicas de los criterios de éxito de WCAG, como Perceptible, Operable, Comprensible y Robusto.
+ * 
+ * @function Intro El nombre de la función es Intro
+ * @returns {JSX.Element} Componente de introducción que presenta el contenido y los beneficios 
+ * de seguir los estándares WCAG en el desarrollo web.
+ * 
+ * @example
+ * <Intro />
+ * 
+ * Contenido incluido:
+ * - Introducción a la documentación de WCAG.
+ * - Enlaces a las secciones: Perceptible, Operable, Comprensible y Robusto.
+ * - Beneficios de implementar las pautas de accesibilidad WCAG.
+ */
+
 export default function Intro() {
     return (
         <>

@@ -2,6 +2,29 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism"; // Importando el tema con un alias
 import { imgExample, audioExample, textExample, domExample, ordenContent, colorExample, autoplay, exampleContrats, exampleFontSize, sizeImage, betterContrast, offSound } from "./exampleperceptible";
 
+/**
+ * Componente de React que presenta criterios de éxito de accesibilidad
+ * basados en las pautas WCAG para asegurar que el contenido sea perceptible 
+ * para todos los usuarios. Organizado en niveles A, AA y AAA, cada criterio de éxito 
+ * tiene su explicación, buenas prácticas y ejemplos de código.
+ * 
+ * Este componente cubre varios temas relacionados con el contenido no textual,
+ * manejo de audio/video, contraste de colores, redimensionado de texto, entre otros.
+ * 
+ * @component
+ * @returns {JSX.Element} Componente que describe los criterios de accesibilidad perceptible 
+ * basados en WCAG 2.1.
+ * 
+ * @example
+ * <Perceptible />
+ * 
+ * Criterios de éxito incluidos:
+ * - Nivel A: Contenido No Textual, Solo Audio y Solo Video (grabado), Subtítulos (grabado), 
+ *   Información y Relaciones, Secuencia Significativa, Uso del Color, Control del Audio.
+ * - Nivel AA: Contraste Mínimo, Redimensionar Texto, Imágenes de Texto.
+ * - Nivel AAA: Contraste Mejorado, Sonido de Fondo Bajo Apagado.
+ */
+
 export default function Perceptible() {
     return (
         <>

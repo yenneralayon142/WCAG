@@ -2,6 +2,30 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { codeExample1, codeExample2, codeExample3, codeExample4, codeExample5, codeExample6, codeExample7 } from "./exampleRobust";
 
+/**
+ * Componente de React que presenta criterios de éxito de accesibilidad
+ * basados en las pautas WCAG para asegurar que el contenido sea robusto 
+ * y accesible para todos los usuarios, incluidas las tecnologías de asistencia.
+ * Organizado en niveles A, AA y AAA, cada criterio de éxito tiene su explicación, 
+ * buenas prácticas y ejemplos de código.
+ * 
+ * Este componente cubre varios temas relacionados con la robustez del contenido, 
+ * como el análisis sintáctico, el uso de atributos ARIA, el manejo de estados de enfoque, 
+ * y el contraste de color mejorado, entre otros.
+ * 
+ * @component
+ * @returns {JSX.Element} Componente que describe los criterios de accesibilidad robusta 
+ * basados en WCAG 2.1.
+ * 
+ * @example
+ * <Robusto />
+ * 
+ * Criterios de éxito incluidos:
+ * - Nivel A: Análisis sintáctico, Nombre/Rol/Valor (ARIA).
+ * - Nivel AA: Contraste de Color, Enfoque Visible.
+ * - Nivel AAA: Contraste Mejorado, Enlaces con Propósito Claro.
+ */
+
 export default function Robusto() {
     return (
         <>

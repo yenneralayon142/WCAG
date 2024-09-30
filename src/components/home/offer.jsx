@@ -1,5 +1,22 @@
 import Service from "../service";
 
+/**
+ * Componente de React que presenta los servicios ofrecidos en la página,
+ * incluyendo información relacionada con las directrices WCAG, documentación
+ * para una mejor comprensión y modelos de HTML/CSS para facilitar la programación.
+ * 
+ * El componente incluye un título y una lista de servicios, cada uno representado
+ * por el componente `Service`, que muestra una imagen, un título y una descripción.
+ * 
+ * @component
+ * @returns {JSX.Element} Componente que describe los servicios ofrecidos.
+ * 
+ * @example
+ * <Offer />
+ * 
+ * Componentes incluidos:
+ * - `Service`: Componente que representa un servicio específico con imagen, título y descripción.
+ */
 export default function Offer() {
     return (
         <section>

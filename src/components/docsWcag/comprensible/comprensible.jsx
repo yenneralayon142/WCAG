@@ -2,6 +2,15 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { abbreviations, changeUser, errorsIdentificcation, errorSuggestion, helpFinally, identificationConsistent, instructions, inusualWords, language, levelofRead, navigationConsistent, preventionErrors, pronuntiation, toFocus, toStart } from "./exampleComprensible";
 
+/**
+ * Componente que representa los criterios de éxito del principio de "Comprensible" de las WCAG.
+ * Este componente muestra diferentes niveles de accesibilidad (A, AA, AAA) y los criterios de éxito
+ * relacionados con la comprensibilidad de las interfaces y contenido web.
+ *
+ * @component
+ * @returns {JSX.Element} El contenido de los criterios de accesibilidad WCAG para el principio de "Comprensible".
+ */
+
 export default function Comprensible() {
     return (
         <>

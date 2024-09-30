@@ -1,6 +1,25 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as codeTheme } from "react-syntax-highlighter/dist/esm/styles/prism"; // Importando el tema con un alias
 import { accesibleKeypad, appareanceFocus, focusOrder, justTime, label, locationPage, noBlocks, onlyPurpose, outSpan, pageWithTittle, pause, purposeLink, sectionHeader, threeFlash } from "./exampleoperable";
+/**
+ * Componente de React que muestra una serie de criterios de éxito
+ * para la accesibilidad web, basados en las pautas WCAG (Web Content Accessibility Guidelines).
+ * 
+ * Cada criterio de éxito está documentado con su explicación, lista de buenas prácticas
+ * y ejemplos de código resaltados utilizando `react-syntax-highlighter`.
+ * 
+ * @component
+ * @returns {JSX.Element} Componente Operable que incluye múltiples secciones de accesibilidad
+ * divididas en niveles A, AA y AAA.
+ * 
+ * @example
+ * <Operable />
+ * 
+ * Criterios de éxito incluidos:
+ * - Nivel A: Teclado, Sin Trampas en el Teclado, Ajuste de Tiempo, Pausa, Parar, Ocultar, Tres Destellos, Evitar Bloques, Página con Título, Orden del Foco, Propósito del Enlace.
+ * - Nivel AA: Múltiples Formas, Encabezados y Etiquetas, Apariencia del Enfoque.
+ * - Nivel AAA: Propósito del Enlace (Solo Enlace), Encabezados de Sección.
+ */
 
 export default function Operable() {
     return (

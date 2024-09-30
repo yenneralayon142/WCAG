@@ -2,6 +2,17 @@ import { ScrollView } from "@progress/kendo-react-scrollview";
 import CarouselItem from "../carousel-item";
 import { investigationTeam } from "./team";
 
+/**
+ * Componente que representa la sección del equipo de investigación de la aplicación.
+ *
+ * Este componente muestra una lista de investigadores, presentando sus nombres,
+ * roles y descripciones a través de un carrusel. Está diseñado para destacar
+ * al equipo involucrado en la investigación y el desarrollo de soluciones inclusivas.
+ *
+ * @component
+ * @returns {JSX.Element} Elemento JSX que representa la sección del equipo de investigación.
+ */
+
 export default function Investigation() {
     return (
         <section>
