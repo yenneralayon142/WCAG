@@ -8,6 +8,7 @@ import { analyzeUrl } from "../../services/analyze";
 // Components
 import AnalyzeList from "./utils/analyzeList";
 
+
 export default function Analyze() {
     // Manejar dominios y sus cambios
     const [domains, setDomains] = useState([""]);
