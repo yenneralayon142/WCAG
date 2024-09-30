@@ -30,7 +30,7 @@ export default function Header() {
             text: "Documentación",
             route: "/docs",
         }
-    ];
+    ]
 
     // Boton responsive
     const [show, setShow] = React.useState(false);

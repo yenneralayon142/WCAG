@@ -1,3 +1,8 @@
+/**
+ * Estas variables almanecenan los ejemplos a renderizar en el componente robusto
+ * @constant {String}
+ */
+
 export const codeExample1 = 
 `<!DOCTYPE html>
 <html lang="es">

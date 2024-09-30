@@ -1,3 +1,8 @@
+/**
+ * Estas variables almacenan los ejemplos a renderizar en el componente perceptible
+ * @constant {String} 
+ */
+
 //Ejemplos A
 export const imgExample = `<img src="imagen.jpg" alt="Descripción de la imagen" />`;
 export const audioExample = 
