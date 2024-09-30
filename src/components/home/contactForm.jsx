@@ -1,6 +1,13 @@
 import { Button } from "@progress/kendo-react-buttons";
 import * as icons from "@progress/kendo-svg-icons";
 
+/**
+ * Componente que renderiza el formulario de contacto para tener conocimiento de que tan funcional está siendo nuestro sitio
+ * 
+ * @component
+ * @returns {JSX.Element} El formulario de contacto para que los usuarios den sus opiniones sobre la pagina
+ */
+
 export default function ContactForm() {
   return (
       <section>
