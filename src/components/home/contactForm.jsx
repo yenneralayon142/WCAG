@@ -4,7 +4,7 @@ import * as icons from "@progress/kendo-svg-icons";
 /**
  * Componente que renderiza el formulario de contacto para tener conocimiento de que tan funcional está siendo nuestro sitio
  * 
- * @component
+ * @component ContactForm
  * @returns {JSX.Element} El formulario de contacto para que los usuarios den sus opiniones sobre la pagina
  */
 

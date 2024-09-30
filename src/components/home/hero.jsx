@@ -1,7 +1,7 @@
 /**
  * Tarjeta que contiene una imagen y un titulo que da a entender al usuario cual es la principal funcionalidad de la pagina
  * 
- * @component
+ * @component Hero
  * @returns {JSX.Element} Tarjeta de bienvenida que le hace entender al usuario cual es el objetivo de la pagina
  */
 

@@ -8,7 +8,7 @@ import Service from "../service";
  * El componente incluye un título y una lista de servicios, cada uno representado
  * por el componente `Service`, que muestra una imagen, un título y una descripción.
  * 
- * @component
+ * @component Offer
  * @returns {JSX.Element} Componente que describe los servicios ofrecidos.
  * 
  * @example

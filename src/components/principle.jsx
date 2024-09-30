@@ -1,7 +1,7 @@
 /**
  * Componente que representa el objetivo de la pagina.
  *
- * @component
+ * @component Principle
  * @param {Object} props - Las propiedades del componente.
  * @param {string} props.image - La URL de la imagen que representa el principio.
  * @param {string} props.title - El título del principio.

@@ -9,7 +9,7 @@ import { investigationTeam } from "./team";
  * roles y descripciones a través de un carrusel. Está diseñado para destacar
  * al equipo involucrado en la investigación y el desarrollo de soluciones inclusivas.
  *
- * @component
+ * @component Investigation
  * @returns {JSX.Element} Elemento JSX que representa la sección del equipo de investigación.
  */
 

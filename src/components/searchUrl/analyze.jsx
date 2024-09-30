@@ -19,7 +19,7 @@ import AnalyzeList from "./utils/analyzeList";
  * y realizar el análisis de accesibilidad. Muestra los resultados del análisis 
  * en el componente `AnalyzeList`.
  * 
- * @component
+ * @component Analyze
  * @returns {JSX.Element} Componente que proporciona un formulario para analizar 
  * la accesibilidad de dominios web y muestra los resultados del análisis.
  * 

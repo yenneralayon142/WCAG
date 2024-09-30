@@ -17,7 +17,7 @@ import { UrlsList } from "./utils/urlsList";
  * los resultados obtenidos de las búsquedas. Incluye controles para realizar 
  * búsquedas y mostrar los resultados.
  * 
- * @component
+ * @component Historic
  * @returns {JSX.Element} Renderiza el componente del historial de análisis 
  * de dominios, incluyendo el formulario para ingresar el dominio y la lista 
  * de resultados.

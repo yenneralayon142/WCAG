@@ -2,7 +2,7 @@ import React from 'react'
 /**
  * Componente que representa una tarjeta de información.
  *
- * @component
+ * @component Infocard
  * @param {Object} props - Las propiedades del componente.
  * @param {string} props.title - El título de la tarjeta.
  * @param {string} props.text - El texto descriptivo de la tarjeta.

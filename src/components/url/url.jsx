@@ -14,6 +14,7 @@ import { searchDomain } from "../../services/historical";
  * Componente que muestra los resultados de accesibilidad para un dominio específico.
  * Utiliza el ID del dominio de los parámetros de la URL para realizar una búsqueda.
  * 
+ * @component Url
  * @returns {JSX.Element} El componente Url que renderiza los resultados de accesibilidad.
  */
 export default function Url() {

@@ -9,7 +9,7 @@ import InfoCard from "../infoCard";
  * El componente utiliza un componente `InfoCard` para mostrar el título y la descripción
  * del objetivo en una tarjeta informativa dentro de una sección.
  * 
- * @component
+ * @component Objective
  * @returns {JSX.Element} Componente que muestra el objetivo de la página.
  * 
  * @example

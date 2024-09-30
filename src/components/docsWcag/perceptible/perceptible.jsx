@@ -11,7 +11,7 @@ import { imgExample, audioExample, textExample, domExample, ordenContent, colorE
  * Este componente cubre varios temas relacionados con el contenido no textual,
  * manejo de audio/video, contraste de colores, redimensionado de texto, entre otros.
  * 
- * @component
+ * @component Perceptible
  * @returns {JSX.Element} Componente que describe los criterios de accesibilidad perceptible 
  * basados en WCAG 2.1.
  * 

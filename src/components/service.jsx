@@ -1,7 +1,7 @@
 /**
  * Componente que representa un servicio ofrecido.
  *
- * @component 
+ * @component Service
  * @param {Object} props - Las propiedades del componente.
  * @param {string} props.image - La URL de la imagen que representa el servicio.
  * @param {string} props.title - El título del servicio.

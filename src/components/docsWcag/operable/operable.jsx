@@ -8,7 +8,7 @@ import { accesibleKeypad, appareanceFocus, focusOrder, justTime, label, location
  * Cada criterio de éxito está documentado con su explicación, lista de buenas prácticas
  * y ejemplos de código resaltados utilizando `react-syntax-highlighter`.
  * 
- * @component
+ * @component Operable
  * @returns {JSX.Element} Componente Operable que incluye múltiples secciones de accesibilidad
  * divididas en niveles A, AA y AAA.
  * 

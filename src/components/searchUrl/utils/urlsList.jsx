@@ -8,7 +8,7 @@ import { Button } from "@progress/kendo-react-buttons";
  * análisis, así como un enlace a la URL y un botón para ver más información 
  * sobre el análisis correspondiente.
  * 
- * @component
+ * @component ListOfUrls
  * @param {Object} props - Propiedades del componente.
  * @param {Array} props.urls - Array de objetos que contienen información 
  * sobre las URLs.

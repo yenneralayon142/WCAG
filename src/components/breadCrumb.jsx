@@ -7,7 +7,7 @@ import * as icons from "@progress/kendo-svg-icons";
  * Componente BreadCrumb que muestra una barra de navegación para facilitar la 
  * navegación a través de la aplicación. Muestra la ruta actual basada en la URL.
  * 
- * @component 
+ * @component breadCrumb
  * @returns {JSX.Element} Un componente que renderiza una barra de navegación 
  * con enlaces a las diferentes secciones de la aplicación.
  */

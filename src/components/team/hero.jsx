@@ -5,7 +5,7 @@
  * compromiso con la creación de una web inclusiva. Incluye una imagen
  * relacionada con las WCAG (Pautas de Accesibilidad para el Contenido Web).
  *
- * @component
+ * @component hero
  * @returns {JSX.Element} Elemento JSX que representa la sección hero.
  */
 export default function Hero() {

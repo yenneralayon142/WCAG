@@ -1,6 +1,6 @@
 /**
  * Componente que representa un elemento individual en un carrusel.
- * @component
+ * @component CarouselItem
  * @param {Object} props - Las propiedades del componente.
  * @param {number} props.position - La posición del elemento en el carrusel.
  * @param {string} props.url - La URL de la imagen a mostrar.

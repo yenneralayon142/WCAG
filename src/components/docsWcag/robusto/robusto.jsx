@@ -13,7 +13,7 @@ import { codeExample1, codeExample2, codeExample3, codeExample4, codeExample5, c
  * como el análisis sintáctico, el uso de atributos ARIA, el manejo de estados de enfoque, 
  * y el contraste de color mejorado, entre otros.
  * 
- * @component
+ * @component Robusto
  * @returns {JSX.Element} Componente que describe los criterios de accesibilidad robusta 
  * basados en WCAG 2.1.
  * 

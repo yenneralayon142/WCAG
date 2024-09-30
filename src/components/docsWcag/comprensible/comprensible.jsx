@@ -7,7 +7,7 @@ import { abbreviations, changeUser, errorsIdentificcation, errorSuggestion, help
  * Este componente muestra diferentes niveles de accesibilidad (A, AA, AAA) y los criterios de éxito
  * relacionados con la comprensibilidad de las interfaces y contenido web.
  *
- * @component
+ * @component Comprensible
  * @returns {JSX.Element} El contenido de los criterios de accesibilidad WCAG para el principio de "Comprensible".
  */
 
