@@ -1,3 +1,14 @@
+/**
+ * Componente que representa un servicio ofrecido.
+ *
+ * @component 
+ * @param {Object} props - Las propiedades del componente.
+ * @param {string} props.image - La URL de la imagen que representa el servicio.
+ * @param {string} props.title - El título del servicio.
+ * @param {string} props.text - Una breve descripción del servicio.
+ * 
+ * @returns {JSX.Element} El servicio que incluye un ícono, un título y una descripción.
+ */
 export default function Service(props) {
     const { image, title, text } = props;
 

@@ -1,3 +1,16 @@
+/**
+ * Componente que representa un elemento individual en un carrusel.
+ * @component
+ * @param {Object} props - Las propiedades del componente.
+ * @param {number} props.position - La posición del elemento en el carrusel.
+ * @param {string} props.url - La URL de la imagen a mostrar.
+ * @param {string} props.name - El nombre de la persona representada.
+ * @param {string} props.role - El rol o título de la persona.
+ * @param {string} props.description - Una descripción breve sobre la persona.
+ * 
+ * @returns {JSX.Element} El elemento del carrusel que incluye una imagen, nombre, rol y descripción.
+ */
+
 export default function CarouselItem(props) {
     const { position, url, name, role, description } = props;
 
