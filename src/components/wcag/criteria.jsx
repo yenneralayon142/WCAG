@@ -1,5 +1,9 @@
 import InfoCard from "../infoCard";
 
+/**
+ * Componente Criteria que presenta los niveles de accesibilidad según las pautas WCAG.
+ * @returns {JSX.Element} Un componente de sección que muestra información sobre los criterios de accesibilidad.
+ */
 export default function Criteria() {
     return(
         <section>
