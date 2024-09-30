@@ -1,10 +1,12 @@
+import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+
+// Components
 import Header from "./header";
-import AccessibilityControls from "./accesibityControls";
 import Sidebar from "./sidebarDocumentation";
 import SearchFilters from "./searchFilters";
 import BreadCrumb from "../components/breadCrumb";
-import { useEffect } from "react";
+import { AccessibilityWidget } from "sena-accessibility";
 
 export default function DocsLayout() {
     const location = useLocation();
@@ -58,7 +60,7 @@ export default function DocsLayout() {
                     </div>
                 </div>
             </div>
-            <AccessibilityControls />
+            <AccessibilityWidget />
         </>
     );
 }

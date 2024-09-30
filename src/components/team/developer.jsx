@@ -17,7 +17,7 @@ export default function Developer() {
     return (
         <section>
             <div className="container carousel">
-                <h2 className="text--extralarge text--blue text--center">Equipo de desarrollo de software</h2>
+                <h2 className="text-2xl text--blue text-center">Equipo de desarrollo de software</h2>
                 <ScrollView
                     style={{
                         width: '100%',

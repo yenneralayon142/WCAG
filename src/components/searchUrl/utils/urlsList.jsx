@@ -33,9 +33,9 @@ function ListOfUrls({ urls }) {
             {urls.map((url) => (
                 <li key={url.id}>
                     <div>
-                        <p className="text--bold text--large text--blue">
+                        <p className="font-bold text-lg text--blue">
                             {url.domain}{" "}
-                            <span className="text--normal">
+                            <span>
                                 - {new Date(url.date).toLocaleDateString("es-CO") + " " + new Date(url.date).toTimeString().split(" ")[0]}
                             </span>
                         </p>

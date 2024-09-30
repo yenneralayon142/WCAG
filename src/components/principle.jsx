@@ -15,7 +15,7 @@ export default function Principle(props) {
             <figure className="principles__card__image">
                 <img src={image} alt="Imagen principio" className="image" />
             </figure>   
-            <h2 className="text--extralarge text--green">{title}</h2>
+            <h2 className="text-2xl text--green">{title}</h2>
         </article>        
     );
 }

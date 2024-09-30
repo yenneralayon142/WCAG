@@ -1,6 +1,6 @@
-import Hero from "../components/wcag/hero";
-import Principles from "../components/wcag/principles";
-import Criteria from "../components/wcag/criteria";
+import Hero from "../components/wcag/hero"
+import Principles from "../components/wcag/principles"
+import Criteria from "../components/wcag/criteria"
 
 /**
  * Componente que representa la sección de WCAG (Web Content Accessibility Guidelines).

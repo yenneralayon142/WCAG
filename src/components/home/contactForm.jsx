@@ -12,8 +12,8 @@ export default function ContactForm() {
   return (
       <section>
             <div className="container contact">
-                    <h2 className="text--subtitle text--center text--blue"> Queremos saber tu opinión </h2>
-                    <p className="text--normal">
+                    <h2 className="text-4xl text-center text--blue"> Queremos saber tu opinión </h2>
+                    <p>
                     Tu experiencia es muy importante para nosotros, y nos gustaría conocer tu opinión sobre el uso y funcionamiento de nuestra página web. Tu retroalimentación nos ayudará a mejorar y ofrecerte una mejor experiencia. Agradecemos mucho el tiempo que dediques a compartir tus comentarios con nosotros. A continuación, te invitamos a compartir tus pensamientos y comentarios:
                     </p>
                     <form action="" method="" className="bg--green form">

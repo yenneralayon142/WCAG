@@ -105,14 +105,14 @@ export default function Historic() {
         <section>
             <div className="container">
                 {/* Title */}
-                <h2 className="text--extralarge text--blue">
+                <h2 className="text-3xl text--blue">
                     Histórico de análisis
                 </h2>
 
                 {/* Form */}
                 <form>
                     <fieldset>
-                        <label htmlFor="historical-domain-input">
+                        <label htmlFor="historical-domain-input" className="font-semibold text--blue">
                             Buscar histórico dominio:
                         </label>
                         <TextBox
@@ -144,13 +144,13 @@ export default function Historic() {
                 {/* Results */}
                 <div className="search__results">
                     <div>
-                        <h4 className="text--bold text--blue text--large">
+                        <h4 className="font-bold text--blue text-lg">
                             Resultado de búsqueda por dominio:
                         </h4>
                         <UrlsList urls={domainHistorical} />
                     </div>
                     <div>
-                        <h4 className="text--bold text--blue text--large">
+                        <h4 className="font-bold text--blue text-lg">
                             Histórico total:
                         </h4>
                         <UrlsList urls={historical} />

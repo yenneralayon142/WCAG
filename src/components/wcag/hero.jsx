@@ -8,8 +8,8 @@ export default function Hero() {
         <section>
             <div className="container hero__wcag">
                 <div className="hero__wcag__title">
-                    <h1 className="text--title text--blue"> ¿Qué son los estándares <span className="text--green">WCAG</span>? </h1>
-                    <p className="text--extralarge">
+                    <h1 className="text-7xl text--blue"> ¿Qué son los estándares <span className="text-7xl text--green">WCAG</span>? </h1>
+                    <p className="text-xl">
                         Las pautas de accesibilidad para el contenido web (WCAG por sus siglas en inglés) son recomendaciones del W3C que buscan 
                         hacer la web más accesible, asegurando que todo en una página sea fácil de usar y comprender.
                     </p>

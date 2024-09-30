@@ -10,8 +10,8 @@ export default function Criteria() {
     return(
         <section>
             <div className="container criteria">
-                <h2 className="text--subtitle text--blue">Criterios de nivel de accesibilidad</h2>
-                <p className="text--extralarge">
+                <h2 className="text-4xl text--blue">Criterios de nivel de accesibilidad</h2>
+                <p className="text-xl">
                     Las pautas de accesibilidad para el contenido web (WCAG) establecen criterios de conformidad que se pueden medir y verificar, organizados en tres nieveles:
                 </p>
                 <div className="criteria__cards__container">
