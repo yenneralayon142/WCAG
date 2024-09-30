@@ -33,7 +33,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.26.0",
     "react-syntax-highlighter": "^15.5.0",
-    "sena-accessibility": "file:../sena-accessibility"
+    "sena-accessibility": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
