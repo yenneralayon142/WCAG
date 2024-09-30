@@ -1,12 +1,21 @@
-const API_URL = "http://127.0.0.1:5000";
 
-import historical from "../mocks/historical.json";
-import domain_historic from "../mocks/domain_historic.json";
-import response_id from "../mocks/response_id.json";
+/**
+ * URL base de la API utilizada para hacer solicitudes HTTP.
+ * En este caso, apunta al servidor local que corre en el puerto 5000.
+ * @constant {String}
+ */
+const API_URL = "http://127.0.0.1:5000"
 
-// Obtener el histórico
+/**
+ * Realiza una búsqueda del historial completo de dominios y URLs.
+ * @async la función es asíncrona
+ * @function searchHistorical el nombre de la función es searchHistorical
+ * @returns {Promise<Array<Object>>} Una promesa que resuelve en un array de objetos que contienen el historial de dominios.
+ * Cada objeto incluye `id`, `domain`, `url` y `date`. Retorna un array vacío si no hay resultados o si ocurre un error.
+ */
+
 export const searchHistorical = async () => {
-    const data = await Fetchdata("/history");
+    const data = await Fetchdata("/history")
 
     // const data = historical;
 
@@ -20,11 +29,19 @@ export const searchHistorical = async () => {
 
         return response;
     } else {
-        return [];
+        return []
     }
 };
 
-// Buscar en el historico por dominio
+/**
+ * Busca el historial de un dominio específico eliminando prefijos "http://" o "https://", y consultando un endpoint de historial.
+ * @async La función es asíncrona
+ * @function searchHistoricalDomain El nombre de la función es searchHistoricalDomain
+ * @param {String} domain - El nombre de dominio que se desea buscar. Se puede pasar con o sin prefijos "http://" o "https://".
+ * @returns {Promise<Array<Object>|null>} Una promesa que resuelve en un array de objetos con los datos históricos del dominio
+ * (incluyendo id, dominio, URL y fecha) si la búsqueda es exitosa. Retorna `null` si el dominio está vacío, y un array vacío si no hay resultados o hay un error.
+ */
+
 export const searchHistoricalDomain = async (domain) => {
     if (domain === "") return null;
 
@@ -50,9 +67,18 @@ export const searchHistoricalDomain = async (domain) => {
 
         return response;
     } else {
-        return [];
+        return []
     }
-};
+}
+
+/**
+ * Busca el historial de un dominio por su ID y retorna los detalles del historial si se encuentra.
+ * @async Es una función asíncrona 
+ * @function searchDomain El nombre de la función es searchDomain
+ * @param {String} id - El identificador único del historial de dominio a buscar.
+ * @returns {Promise<Object>} Una promesa que resuelve con un objeto que contiene los detalles del historial de dominio si el estado es "success".
+ * Si no se encuentra, retorna un objeto vacío.
+ */
 
 export const searchDomain = async (id) => {
     const data = await Fetchdata(`/history/${id}`);
@@ -71,22 +97,31 @@ export const searchDomain = async (id) => {
 
         return response;
     } else {
-        return {};
+        return {}
     }
-};
+}
 
-// Obtener información de la API
+/**
+ * Realiza una solicitud HTTP a un endpoint específico y retorna los datos en formato JSON.
+ * @async La función es asincrona
+ * @function Fetchdata El nombre de la función es FetchData
+ * @param {String} endpoint - El endpoint que se concatenará a la URL base para formar la URL de la solicitud.
+ * @returns {Promise<Object|Array>} Una promesa que resuelve con los datos en formato JSON si la solicitud es exitosa,
+ * o un array vacío si ocurre un error.
+ * @throws {Error} Lanzará un error si la respuesta HTTP no es exitosa (código de estado fuera del rango 2xx).
+ */
+
 const Fetchdata = async (endpoint) => {
     try {
         const response = await fetch(API_URL + endpoint);
 
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            throw new Error(`HTTP error! Status: ${response.status}`)
         }
 
-        return await response.json();
+        return await response.json()
     } catch (e) {
-        console.error("Error buscando URLs:", e.message || e);
+        console.error("Error buscando URLs:", e.message || e)
         return [];
     }
-};
+}

@@ -1,10 +1,23 @@
+
+/**
+ * URL base de la API utilizada para hacer solicitudes HTTP.
+ * En este caso, apunta al servidor local que corre en el puerto 5000.
+ * @constant {String}
+ */
 const API_URL = "http://127.0.0.1:5000";
 
-import analyze from "../mocks/analyze.json";
+/**
+ * Realiza un análisis de una lista de URLs, procesando cada una para extraer su dominio y otros datos.
+ * @async la función es 
+ * @function analyzeUrl
+ * @param {Array<String>} urls - Una lista de URLs a analizar.
+ * @returns {Promise<Object>} Una promesa que resuelve en un objeto que contiene el estado de la operación (`status`), 
+ * un mensaje (`message`), y los datos procesados en caso de éxito. Cada entrada de `data` incluye `id`, `url`, `domain` y `date`.
+ * Retorna un objeto con `status: "error"` y un array vacío si la operación falla.
+ */
 
-// Obtener el Analisis
 export const analyzeUrl = async (urls) => {
-    const data = await Fetchdata("/analyze", urls);
+    const data = await Fetchdata("/analyze", urls)
 
     // const data = analyze;
 
@@ -34,11 +47,21 @@ export const analyzeUrl = async (urls) => {
             data: response,
         };
     } else {
-        return { status: "error", message: data.message, data: [] };
+        return { status: "error", message: data.message, data: [] }
     }
-};
+}
 
-// Obtener información de la API
+/**
+ * Realiza una solicitud POST a un endpoint específico enviando una lista de URLs en el cuerpo de la petición.
+ * @async la función es asíncrona
+ * @function Fetchdata el nombre de la función es FetchData
+ * @param {String} endpoint - El endpoint que se concatenará a la URL base para formar la URL de la solicitud.
+ * @param {Array<String>} urls - Una lista de URLs que se enviarán en el cuerpo de la solicitud.
+ * @returns {Promise<Object|Array>} Una promesa que resuelve en los datos en formato JSON si la solicitud es exitosa, 
+ * o un array vacío si ocurre un error.
+ * @throws {Error} Lanzará un error si la respuesta HTTP no es exitosa (código de estado fuera del rango 2xx).
+ */
+
 const Fetchdata = async (endpoint, urls) => {
     try {
         const response = await fetch(API_URL + endpoint, {

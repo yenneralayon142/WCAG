@@ -1,3 +1,11 @@
+/**
+ * Array que contiene la información del equipo completo involucrado en el proyecto.
+ *
+ * Cada objeto en el array representa un miembro del equipo y contiene detalles
+ * como su identificador, URL de la imagen, nombre, rol y descripción de sus funciones.
+ *
+ * @type {Array<{id: number, url: string, name: string, role: string, description: string}>}
+ */
 export const fullTeam = [
     {
         id: 1,
@@ -107,6 +115,12 @@ export const fullTeam = [
     },
 ];
 
+/**
+ * Array que contiene los miembros del equipo de investigación.
+ * Cada objeto incluye la posición del miembro y sus datos extraídos del array fullTeam.
+ *
+ * @type {Array<{position: number, id: number, url: string, name: string, role: string, description: string}>}
+ */
 export const investigationTeam = [
     {
         position: 1,
@@ -134,6 +148,13 @@ export const investigationTeam = [
     },
 ];
 
+/**
+ * Array que contiene los miembros del equipo de desarrollo.
+ * Cada objeto incluye la posición del miembro y sus datos extraídos del array fullTeam.
+ *
+ * @type {Array<{position: number, id: number, url: string, name: string, role: string, description: string}>}
+ */
+
 export const developerTeam = [
     {
         position: 1,
@@ -153,6 +174,12 @@ export const developerTeam = [
     }
 ];
 
+/**
+ * Array que contiene los miembros del equipo de diseño.
+ * Cada objeto incluye la posición del miembro y sus datos extraídos del array fullTeam.
+ *
+ * @type {Array<{position: number, id: number, url: string, name: string, role: string, description: string}>}
+ */
 export const designerTeam = [
     {
         position: 1,

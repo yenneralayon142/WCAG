@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
-import AccessibilityControls from "./accesibityControls";
 import BreadCrumb from "../components/breadCrumb";
+import { AccessibilityWidget } from "sena-accessibility";
 
 export default function AppLayout() {
     return (
@@ -13,7 +13,7 @@ export default function AppLayout() {
                 <Outlet />
                 <Footer />
             </div>
-            <AccessibilityControls />
+            <AccessibilityWidget />
         </>
     );
 }

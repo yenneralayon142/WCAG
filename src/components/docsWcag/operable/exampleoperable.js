@@ -1,3 +1,8 @@
+/**
+ * Estas variables almacenan los ejemplos a renderizar en el componente Operable
+ * @type {String}
+ */
+
 export const accesibleKeypad = 
 `<!DOCTYPE html>
 <html lang="es">

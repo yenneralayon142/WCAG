@@ -1,3 +1,8 @@
+/**
+ * Estas variables almacenan los ejemplos a renderizar en el componente comprensible
+ * @type {String}
+ */
+
 export const language = 
 `<!DOCTYPE html>
 <html lang="es">

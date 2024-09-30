@@ -1,11 +1,17 @@
 import InfoCard from "../infoCard";
 
+/**
+ * Componente Criteria que presenta los niveles de accesibilidad según las pautas WCAG. Hace uso del componente Infocard
+ * @component Criteria
+ * @returns {JSX.Element} Un componente de sección que muestra información sobre los criterios de accesibilidad.
+ * @see Infocard
+ */
 export default function Criteria() {
     return(
         <section>
             <div className="container criteria">
-                <h2 className="text--subtitle text--blue">Criterios de nivel de accesibilidad</h2>
-                <p className="text--extralarge">
+                <h2 className="text-4xl text--blue">Criterios de nivel de accesibilidad</h2>
+                <p className="text-xl">
                     Las pautas de accesibilidad para el contenido web (WCAG) establecen criterios de conformidad que se pueden medir y verificar, organizados en tres nieveles:
                 </p>
                 <div className="criteria__cards__container">
