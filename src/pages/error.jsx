@@ -1,3 +1,9 @@
+/**
+ * Componente funcional que renderiza una página de error 404 cuando la ruta no es encontrada.
+ * @function Error el nombre de la función es Error
+ * @returns {JSX.Element} Un elemento JSX que muestra un mensaje de error con el código 404 y un mensaje de "página no encontrada".
+ */
+
 export default function Error() {
     return (
         <main>
