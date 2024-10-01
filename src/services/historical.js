@@ -8,7 +8,6 @@ const API_URL = "http://127.0.0.1:5000"
 
 /**
  * Realiza una búsqueda del historial completo de dominios y URLs.
- * @async la función es asíncrona
  * @function searchHistorical el nombre de la función es searchHistorical
  * @returns {Promise<Array<Object>>} Una promesa que resuelve en un array de objetos que contienen el historial de dominios.
  * Cada objeto incluye `id`, `domain`, `url` y `date`. Retorna un array vacío si no hay resultados o si ocurre un error.
@@ -35,7 +34,6 @@ export const searchHistorical = async () => {
 
 /**
  * Busca el historial de un dominio específico eliminando prefijos "http://" o "https://", y consultando un endpoint de historial.
- * @async La función es asíncrona
  * @function searchHistoricalDomain El nombre de la función es searchHistoricalDomain
  * @param {String} domain - El nombre de dominio que se desea buscar. Se puede pasar con o sin prefijos "http://" o "https://".
  * @returns {Promise<Array<Object>|null>} Una promesa que resuelve en un array de objetos con los datos históricos del dominio
@@ -73,7 +71,6 @@ export const searchHistoricalDomain = async (domain) => {
 
 /**
  * Busca el historial de un dominio por su ID y retorna los detalles del historial si se encuentra.
- * @async Es una función asíncrona 
  * @function searchDomain El nombre de la función es searchDomain
  * @param {String} id - El identificador único del historial de dominio a buscar.
  * @returns {Promise<Object>} Una promesa que resuelve con un objeto que contiene los detalles del historial de dominio si el estado es "success".
@@ -103,7 +100,6 @@ export const searchDomain = async (id) => {
 
 /**
  * Realiza una solicitud HTTP a un endpoint específico y retorna los datos en formato JSON.
- * @async La función es asincrona
  * @function Fetchdata El nombre de la función es FetchData
  * @param {String} endpoint - El endpoint que se concatenará a la URL base para formar la URL de la solicitud.
  * @returns {Promise<Object|Array>} Una promesa que resuelve con los datos en formato JSON si la solicitud es exitosa,

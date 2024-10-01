@@ -11,8 +11,25 @@ import {
 import { Popup } from "@progress/kendo-react-popup";
 import { bellIcon, menuIcon } from "@progress/kendo-svg-icons";
 
+
+/**
+ * Componente Header.
+ * 
+ * Este componente renderiza la barra de navegación con un logo, un menú de navegación y una versión responsive para dispositivos móviles.
+ * Incluye enlaces para redirigir a diferentes rutas dentro de la aplicación.
+ * 
+ * @component Header
+ * @returns {JSX.Element} El componente Header que contiene la barra de navegación y el menú.
+ */
+
 export default function Header() {
-    // Menu
+    
+    /**
+     * Array de objetos que representa los elementos del menú.
+     * Cada objeto contiene el texto y la ruta del enlace correspondiente.
+     * @type {Array<{ text: string, url: string }>}
+     */
+
     const menuItems = [
         {
             text: "Inicio",
@@ -21,12 +38,10 @@ export default function Header() {
         {
             text: "WCAG",
             route: "/wcag",
-            items: [
-                {
-                    text: "Quienes somos",
-                    route: "/team",
-                },
-            ],
+        },
+        {
+            text: "Quienes somos",
+            route: "/team",
         },
         {
             text: "Busqueda Url",
@@ -38,19 +53,39 @@ export default function Header() {
         },
     ];
 
-    // Boton responsive
+    // Estado para controlar la visibilidad del menú responsive
     const [show, setShow] = useState(false);
     const anchor = React.useRef(null);
+
+    /**
+     * Función para manejar el clic en el botón del menú responsive.
+     * Alterna la visibilidad del menú.
+     */
     const handleClick = () => {
         setShow(!show);
     };
 
     // Funcion para redireccionar
     const navigate = useNavigate();
+
+    /**
+     * Función que redirige a la ruta seleccionada en el menú.
+     * 
+     * @param {Object} event - Evento de selección del menú.
+     */
     const onSelect = (event) => {
         navigate(event.item.route);
     };
 
+    /**
+     * Efecto secundario que se ejecuta después de que el componente se ha montado.
+     * Este efecto agrega la clase 'text-xl' a todos los elementos de texto del menú 
+     * que tienen la clase 'k-menu-link-text'. Esto se utiliza para aplicar un 
+     * estilo específico (tamaño de fuente más grande) a los enlaces del menú.
+     * 
+     * La dependencia vacía '[]' significa que este efecto solo se ejecutará una vez
+     * al montar el componente, similar a componentDidMount en componentes de clase.
+     */
     useEffect(() => {
         document.querySelectorAll(".k-menu-link-text").forEach((element) => {
             element.classList.add("text-xl");

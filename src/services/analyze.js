@@ -8,7 +8,6 @@ const API_URL = "http://127.0.0.1:5000";
 
 /**
  * Realiza un análisis de una lista de URLs, procesando cada una para extraer su dominio y otros datos.
- * @async la función es 
  * @function analyzeUrl
  * @param {Array<String>} urls - Una lista de URLs a analizar.
  * @returns {Promise<Object>} Una promesa que resuelve en un objeto que contiene el estado de la operación (`status`), 
@@ -53,7 +52,6 @@ export const analyzeUrl = async (urls) => {
 
 /**
  * Realiza una solicitud POST a un endpoint específico enviando una lista de URLs en el cuerpo de la petición.
- * @async la función es asíncrona
  * @function Fetchdata el nombre de la función es FetchData
  * @param {String} endpoint - El endpoint que se concatenará a la URL base para formar la URL de la solicitud.
  * @param {Array<String>} urls - Una lista de URLs que se enviarán en el cuerpo de la solicitud.

@@ -2,6 +2,7 @@ import Hero from "../components/team/hero";
 import Investigation from "../components/team/investigation";
 import Developer from "../components/team/developer";
 import Designer from "../components/team/designer";
+import Formuler from "../components/team/formuler";
 
 /**
  * Componente que muestra la sección del equipo.
@@ -21,6 +22,9 @@ export default function Team() {
         <main>
             {/* Sección hero */}
             <Hero />
+
+            {/*Carrousel equipo formulador*/}
+            <Formuler/>
 
             {/* Carrousel equipo de investigación */}
             <Investigation />

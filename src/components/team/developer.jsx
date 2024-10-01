@@ -35,6 +35,7 @@ export default function Developer() {
                                 name={item.name}
                                 role={item.role}
                                 description={item.description}
+                                email={item.email}
                             />
                         );
                     })}

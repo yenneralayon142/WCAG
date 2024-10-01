@@ -19,6 +19,26 @@ import Operable from "./components/docsWcag/operable/operable";
 import Comprensible from "./components/docsWcag/comprensible/comprensible";
 import Robusto from "./components/docsWcag/robusto/robusto";
 
+/**
+ * Componente principal de la aplicación que configura 
+ * las rutas utilizando React Router.
+ *
+ * Este componente utiliza el `BrowserRouter` para manejar 
+ * la navegación entre las diferentes páginas de la aplicación.
+ * También incluye un hook personalizado `UseDocumentTitleUpdater` 
+ * para actualizar el título del documento según la ruta actual.
+ *
+ * Las rutas incluyen:
+ * - Rutas principales: Inicio, WCAG, búsqueda de URL y equipo.
+ * - Rutas de documentación: Introducción, perceptible, operable, 
+ *   comprensible y robusto.
+ * - Una ruta de error que se muestra para cualquier ruta no 
+ *   encontrada.
+ *
+ * @returns {JSX.Element} Un elemento JSX que representa la 
+ * estructura de rutas de la aplicación.
+ */
+
 export default function App() {
     return (
         <BrowserRouter>

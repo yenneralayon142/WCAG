@@ -34,6 +34,7 @@ export default function Designer() {
                                 name={item.name}
                                 role={item.role}
                                 description={item.description}
+                                email={item.email}
                             />
                         );
                     })}

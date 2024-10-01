@@ -14,6 +14,7 @@ export const fullTeam = [
         name: "Vladirmir Cortés Arevalo",
         role: "Lider de semilleros",
         description: `pendiente.`,
+        email:`vcortes@sena.edu.co`
 
     },
     {
@@ -29,13 +30,19 @@ export const fullTeam = [
         Liderar la creación de los productos de divulgación.
         Gestionar la infraestructura necesaria para la puesta en marcha de los aplicativos realizados.
         Apoyar en el diseño de arquitecturas de software, asegurando la viabilidad técnica y la innovación en los proyectos.`,
+        email:`wnavarro@sena.edu.co`
     },
     {
         id: 3,
-        url: "/team/alexander-vanegas.jpg",
-        name: "Alexander Vanegas",
+        url: "/team/alexander-venegas.jpg",
+        name: "Alexander Venegas",
         role: "Instructor",
-        description: `pendiente`,
+        description: `Alexander Venegas pineda, ingeniero electricista, instructor SENA, especialista en Gerencia de proyectos educativos Institucionales,
+        especialista en Educación en tecnología, especialista en Gestión educativa; desde que perdí la visión en un accidente hace aproximadamente 20 años, 
+        tuve que reorientar mi profesión hacia el área educativa y en ese proceso encontré que las personas invidentes pueden acceder al escenario digital gracias
+        a la tecnología, pero infortunadamente en general no podemos interactuar con las TIC de forma totalmente autónoma, ya que no se ha sabido implementar
+        de manera adecuada los estándares de accesibilidad web  (WCAG).`,
+        email:`avenegasp@sena.edu.co`
     },
     {
         id: 4,
@@ -47,6 +54,7 @@ export const fullTeam = [
         Colaborar en la gestión de proyectos de investigación, incluyendo la coordinación de actividades y la comunicación con otros miembros del equipo.
         Contribuir a la difusión de los resultados de la investigación a través de la publicación de artículos en revistas científicas.
         Desarrollo de software para productos propuestos.`,
+        email:`jsanabriam@sena.edu.co`
     },
     {
         id: 5,
@@ -57,17 +65,19 @@ export const fullTeam = [
         Generación de informes técnicos, estados del arte, artículos científicos y ponencias.
         Desarrollo de software ara productos propuestos.
         Diseño de arquitecturas de software, asegurando la viabilidad técnica y la inovación en los proyectos.`,
+        email:`klopezm@sena.edu.co`
     },
     {
         id: 6,
         url: "/team/yenner-alayon.jpg",
         name: "Yenner Snyder Alayon Benavides",
         role: "Investigador Junior",
-        description: `Participar en el diseño y planificacion de experimentos o estuidos.
+        description: `Participar en el diseño y planificacion de experimentos o estudios.
         Ayudar en la redacción de propuestas de investigación y solicitudes de financiamiento.
         Colaborar en la gestión de proyectos de investigación, incluyendo la coordinación de actividades y la comunicación con otros miembros del equipo.
         Contribuir a la difusión de los resultados de la investigación a través de la publicación de artículos en revistas científicas.
         Desarrollo de software para productos propuestos.`,
+        email:`yalayon@sena.edu.co`
     },
     {
         id: 7,
@@ -75,6 +85,7 @@ export const fullTeam = [
         name: "Andrés Gutiérrez Hurtado",
         role: "Monitor",
         description: `Ayudar con el levantamiento de información, desarrollo de las herramientas de accesibilidad, desarrollo front-end y control de versiones de la página web.`,
+        email:`andres52885241@gmail.com`
     },
     {
         id: 8,
@@ -84,6 +95,7 @@ export const fullTeam = [
         description: `Soy aprendiz del SENA en el tecnólogo de Producción Multimedia, apasionada por la creación de contenido 
         audiovisual y el desarrollo de proyectos innovadores. Me enfoqué en crear una experiencia visual atractiva y funcional 
         que permita a los usuarios navegar de manera fluida e intuitiva, haciendo de la accesibilidad una prioridad en cada decisión de diseño.`,
+        email:`lunasofiapinzonbejarano@gmail.com`
     },
     {
         id: 9,
@@ -93,6 +105,7 @@ export const fullTeam = [
         description: `Soy aprendiz del SENA en el tecnólogo de Producción Multimedia, he aplicado los conocimientos adquiridos 
         para contribuir de manera significativa al diseño de la página web. Me enfoqué en encontrar soluciones que no solo se 
         ajustaran a las sugerencias del equipo, sino que también respondieran a las necesidades de los usuarios, buscando la accesibilidad.`,
+        email:`angiedagomez1505@gmail.com`
     },
     {
         id: 10,
@@ -103,6 +116,7 @@ export const fullTeam = [
         aplicar mis conocimiento y habilidades en diseño de forma satisfactoria en este proyecto. Mi rol consiste en plantear 
         ideas de diseño accesibles, proponiendo estructuras minimalistas y combinaciones de colores que contrasten para asegurar 
         una mayor visibilidad, siempre con un enfoque en la inclusión.`,
+        email:`linamercedesmunoz2@gmail.com`
     },
     {
         id: 11,
@@ -112,6 +126,7 @@ export const fullTeam = [
         description: `Soy aprendiz del SENA en el tecnólogo de Producción Multimedia, apasionado por el diseño web accesible. He 
         aplicado mis conocimientos para desarrollar soluciones que respondan a las necesidades de todos los usuarios, asegurando 
         una navegación inclusiva y amigable, de manera sencilla y cómoda.`,
+        email:`sierraevelin77@gmail.com`
     },
 ];
 
@@ -122,14 +137,6 @@ export const fullTeam = [
  * @type {Array<{position: number, id: number, url: string, name: string, role: string, description: string}>}
  */
 export const investigationTeam = [
-    {
-        position: 1,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 1)], // Vladimir Cortés Arevalo
-    },
-    {
-        position: 2,
-        ...fullTeam[fullTeam.findIndex((member) => member.id === 3)], // Alexader Vanegas
-    },
     {
         position: 3,
         ...fullTeam[fullTeam.findIndex((member) => member.id === 2)], // William Navarro
@@ -198,3 +205,20 @@ export const designerTeam = [
         ...fullTeam[fullTeam.findIndex((member) => member.id === 11)], // Evelin Pacheco
     },
 ];
+
+/**
+ * Array que contiene los miembros del equipo de formuladores del proyecto.
+ * Cada objeto incluye la posición del miembro y sus datos extraídos del array fullTeam.
+ *
+ * @type {Array<{position: number, id: number, url: string, name: string, role: string, description: string}>}
+ */
+export const formulerTeam = [
+    {
+        position: 1,
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 1)], // Vladimir Cortés Arevalo
+    },
+    {
+        position: 2,
+        ...fullTeam[fullTeam.findIndex((member) => member.id === 3)], // Alexander Venegas
+    },
+]
