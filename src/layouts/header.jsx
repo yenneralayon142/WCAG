@@ -38,12 +38,10 @@ export default function Header() {
         {
             text: "WCAG",
             route: "/wcag",
-            items: [
-                {
-                    text: "Quienes somos",
-                    route: "/team",
-                },
-            ],
+        },
+        {
+            text: "Quienes somos",
+            route: "/team",
         },
         {
             text: "Busqueda Url",
