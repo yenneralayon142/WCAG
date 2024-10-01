@@ -29,8 +29,8 @@ export default function AppLayout() {
                 <BreadCrumb />
                 <Outlet />
                 <Footer />
+                <AccessibilityWidget />
             </div>
-            <AccessibilityWidget />
         </>
     );
 }
