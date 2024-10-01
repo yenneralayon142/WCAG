@@ -1,5 +1,17 @@
 import { Link } from "react-router-dom";
 
+/**
+ * Componente de barra lateral que proporciona navegación 
+ * a diferentes secciones de la documentación.
+ *
+ * Este componente renderiza un menú con enlaces a varias 
+ * páginas de documentación, permitiendo a los usuarios 
+ * navegar fácilmente entre las secciones de contenido.
+ *
+ * @returns {JSX.Element} Un elemento JSX que representa 
+ * la barra lateral de navegación.
+ */
+
 export default function Sidebar() {
     return (
         <div className="docs__sidebar">
