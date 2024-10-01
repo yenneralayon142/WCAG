@@ -42,8 +42,6 @@ WCAG/
 ├── public/
 │ └── (Archivos estáticos: imágenes, fuentes, etc.)
 ├── src/
-│   ├── assets/
-│   │   └── (Archivos de imágenes, estilos, etc.)
 │   ├── components/
 │   │   └── (Componentes reutilizables)
 │   ├── hooks/
@@ -52,8 +50,12 @@ WCAG/
 │   │   └── (Plantillas reutilizables, header, footer.)
 │   ├── pages/
 │   │   └── (Vistas/páginas)
+│   ├── services/
+│   │   └── (Servicios encargados de la interacción con la base de datos)
 │   ├── App.jsx
-│   └── main.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   └── styles.css
 ├── package.json (manejar dependencias)
 ```
 
@@ -62,4 +64,5 @@ El sistema de información tendrá las siguientes páginas:
 
 - **Inicio:** Página principal del sistema que ofrece una visión general y una introducción a los estándares WCAG.
 - **Enfermedades y WCAG:** Página dedicada a listar y describir diversas enfermedades, proporcionando información accesible y relevante en el contexto de las pautas WCAG.
+- **¿Quiénes somos?:** Página en la cual se muestra los equipos involucrados con la planeación/desarrollo del proyecto. 
 - **Documentación:** Página que incluye documentación detallada para ayudar a los desarrolladores a crear páginas accesibles conforme a los estándares WCAG.
