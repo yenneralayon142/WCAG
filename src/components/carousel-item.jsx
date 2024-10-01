@@ -12,7 +12,7 @@
  */
 
 export default function CarouselItem(props) {
-    const { position, url, name, role, description } = props;
+    const { position, url, name, role, description,email} = props;
 
     return (    
         <div className="carousel__item text-center">
@@ -25,7 +25,9 @@ export default function CarouselItem(props) {
             </div>
             <div className="carousel__card text--black">
                 <p>{description}</p>
-                <button>Más informacion</button>
+                <a href={`mailto:${email}`}>
+                    <button>Contacto</button>
+                </a>
             </div>
         </div>
     );

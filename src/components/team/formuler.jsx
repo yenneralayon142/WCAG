@@ -1,22 +1,23 @@
 import { ScrollView } from "@progress/kendo-react-scrollview";
 import CarouselItem from "../carousel-item";
-import { designerTeam } from "./team";
+import { developerTeam, formulerTeam } from "./team";
 
 /**
- * Componente que representa el equipo de diseño.
+ * Componente que representa el equipo de formuladores.
  *
  * Este componente muestra un título y un carrusel que despliega información
- * sobre los miembros del equipo de diseño. Utiliza el componente `ScrollView`
+ * sobre los miembros del equipo de desarrollo. Utiliza el componente `ScrollView`
  * para permitir una visualización deslizante de los elementos del equipo.
  *
- * @component Designer
- * @returns {JSX.Element} Elemento JSX que representa la sección del equipo de diseño.
+ * @component Developer
+ * @returns {JSX.Element} Elemento JSX que representa la sección del equipo de desarrollo de software.
  */
-export default function Designer() {
+export default function Formuler() {
+    
     return (
         <section>
-            <div className="container carousel carousel--blue">
-                <h2 className="text-2xl text--green text-center">Equipo de diseño</h2>
+            <div className="container carousel">
+                <h2 className="text-2xl text--blue text-center">Formuladores del Proyecto</h2>
                 <ScrollView
                     style={{
                         width: '100%',
@@ -25,7 +26,7 @@ export default function Designer() {
                     pageable={false}
                     endless={true}
                 >
-                    {designerTeam.map((item, index) => {
+                    {formulerTeam.map((item, index) => {
                         return (
                             <CarouselItem
                                 key={item.position}
