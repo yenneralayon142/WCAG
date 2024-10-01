@@ -1,3 +1,10 @@
+/**
+ * Un array de objetos que contiene los enlaces y descripciones para la documentación.
+ * Cada objeto en el array representa un enlace con su texto visible y su URL asociada.
+ * 
+ * @type {Array<{ text: string, url: string }>}
+ */
+
 export const links = [
     {
         text: "Introduccion",
