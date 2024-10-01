@@ -8,7 +8,6 @@ const API_URL = "http://127.0.0.1:5000";
 
 /**
  * Realiza un análisis de una lista de URLs, procesando cada una para extraer su dominio y otros datos.
- * @async la función es 
  * @function analyzeUrl
  * @param {Array<String>} urls - Una lista de URLs a analizar.
  * @returns {Promise<Object>} Una promesa que resuelve en un objeto que contiene el estado de la operación (`status`), 

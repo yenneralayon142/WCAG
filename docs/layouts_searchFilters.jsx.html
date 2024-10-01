@@ -1,4 +1,32 @@
-import { useEffect, useState } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: layouts/searchFilters.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: layouts/searchFilters.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useEffect, useState } from "react";
 import { DropDownList, AutoComplete } from "@progress/kendo-react-dropdowns";
 import { filterBy } from "@progress/kendo-data-query";
 import { useNavigate } from "react-router-dom";
@@ -118,7 +146,7 @@ const [state, setState] = useState({
      * de accesibilidad según las directrices WCAG (Web Content Accessibility Guidelines).
      * Cada filtro contiene un texto descriptivo, un identificador único y un valor asociado.
      *
-     * @constant {Array<Object>} leverFilter
+     * @constant {Array&lt;Object>} leverFilter
      * @property {string} text - El texto que se muestra al usuario para el filtro.
      * @property {string} id - Un identificador único para el filtro.
      * @property {string} value - El valor asociado al filtro, utilizado en la lógica de filtrado.
@@ -236,16 +264,16 @@ const [state, setState] = useState({
     };
 
     return (
-        <div className="docs__search-filters">
-            <input type="checkbox" className="hidden filter-check" id="c-a" />
-            <input type="checkbox" className="hidden filter-check" id="c-aa" />
-            <input type="checkbox" className="hidden filter-check" id="c-aaa" />
+        &lt;div className="docs__search-filters">
+            &lt;input type="checkbox" className="hidden filter-check" id="c-a" />
+            &lt;input type="checkbox" className="hidden filter-check" id="c-aa" />
+            &lt;input type="checkbox" className="hidden filter-check" id="c-aaa" />
 
-            <h2 className="font-bold text-3xl text--blue text--truncate">
+            &lt;h2 className="font-bold text-3xl text--blue text--truncate">
                 Documentacion
-            </h2>
+            &lt;/h2>
 
-            <AutoComplete
+            &lt;AutoComplete
                 data={links}
                 value={state.value}
                 suggest={true}
@@ -254,11 +282,11 @@ const [state, setState] = useState({
                 textField="text"
                 placeholder="Buscar tema..."
             />
-            <div className="docs__filters">
-                <h4 className="font-bold text-xl text--blue">
+            &lt;div className="docs__filters">
+                &lt;h4 className="font-bold text-xl text--blue">
                     Filtros de búsqueda
-                </h4>
-                <DropDownList
+                &lt;/h4>
+                &lt;DropDownList
                     data={leverFilter}
                     textField="text"
                     dataItemKey="id"
@@ -266,7 +294,30 @@ const [state, setState] = useState({
                     defaultItem={defaultItem}
                     id="level-filter"
                 />
-            </div>
-        </div>
+            &lt;/div>
+        &lt;/div>
     );
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#API_URL">API_URL</a></li><li><a href="global.html#Errorelnombredelafunci%25C3%25B3nesError">Error el nombre de la función es Error</a></li><li><a href="global.html#FetchdataElnombredelafunci%25C3%25B3nesFetchData">Fetchdata El nombre de la función es FetchData</a></li><li><a href="global.html#Fetchdataelnombredelafunci%25C3%25B3nesFetchData">Fetchdata el nombre de la función es FetchData</a></li><li><a href="global.html#Homeelnombredelafunci%25C3%25B3nesHome">Home el nombre de la función es Home</a></li><li><a href="global.html#SearchUrlelnombredelafunci%25C3%25B3nesSearchUrl">SearchUrl el nombre de la función es SearchUrl</a></li><li><a href="global.html#Teamelnombredelafunci%25C3%25B3nesTeam">Team el nombre de la función es Team</a></li><li><a href="global.html#Wcagelnombredelafunci%25C3%25B3nesWcag">Wcag el nombre de la función es Wcag</a></li><li><a href="global.html#analyzeUrl">analyzeUrl</a></li><li><a href="global.html#defaultItem">defaultItem</a></li><li><a href="global.html#leverFilter">leverFilter</a></li><li><a href="global.html#links">links</a></li><li><a href="global.html#searchDomainElnombredelafunci%25C3%25B3nessearchDomain">searchDomain El nombre de la función es searchDomain</a></li><li><a href="global.html#searchHistoricalelnombredelafunci%25C3%25B3nessearchHistorical">searchHistorical el nombre de la función es searchHistorical</a></li><li><a href="global.html#searchHistoricalDomainElnombredelafunci%25C3%25B3nessearchHistoricalDomain">searchHistoricalDomain El nombre de la función es searchHistoricalDomain</a></li><li><a href="global.html#useEffect">useEffect</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Tue Oct 01 2024 12:16:09 GMT-0500 (hora estándar de Colombia)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

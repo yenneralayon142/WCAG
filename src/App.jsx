@@ -38,6 +38,7 @@ import Robusto from "./components/docsWcag/robusto/robusto";
  * @returns {JSX.Element} Un elemento JSX que representa la 
  * estructura de rutas de la aplicación.
  */
+
 export default function App() {
     return (
         <BrowserRouter>
