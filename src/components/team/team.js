@@ -9,11 +9,10 @@
 export const fullTeam = [
     {
         id: 1,
-        url: "",
         url: "/team/vladimir-cortes.jpg",
         name: "Vladirmir Cortés Arevalo",
         role: "Lider de semilleros",
-        description: `pendiente.`,
+        description: `Vladimir Cortés Arévalo, Ingeniero de Sistemas con Maestría en Ingeniería y Analítica de Datos, especializado en soluciones TI para el sector financiero. Arquitecto de Software con amplia experiencia en diseño, desarrollo e implementación de bases de datos y sistemas. Instructor experimentado en tecnologías de la información y actual Investigador Junior en el ecosistema SENNOVA del SENA.`,
         email:`vcortes@sena.edu.co`
 
     },
@@ -109,7 +108,7 @@ export const fullTeam = [
     },
     {
         id: 10,
-        url: "/team/lina-muñoz.jpg",
+        url: "/team/lina-munoz.jpg",
         name: "Lina Mercedes Muñoz González ",
         role: "Diseñadora",
         description: `Soy aprendiz del SENA en el programa de Tecnólogo en Producción Multimedia, he tenido la aportunidad de 
