@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TextBox } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
+import Swal from 'sweetalert2'
 
 // Hooks
 import { analyzeUrl } from "../../services/analyze";
@@ -108,8 +109,20 @@ export default function Analyze() {
     const handleRemoveDomain = () => {
         if (domains.length > 1) {
             setDomains(domains.slice(0, -1));
-        } else {
-            alert("No se puede eliminar el último dominio");
+        } else if (domains.length === 1){
+            Swal.fire({
+                title: 'No se puede eliminar el campo Dominio',
+                text: 'El campo de ingresar dominio no se eliminará',
+                icon: 'error',
+                confirmButtonText: 'Volver'
+              })
+        }else{
+            Swal.fire({
+                title: 'Ha ocurrido un error eliminando el campo',
+                text: 'Ha ocurrido un error',
+                icon: 'error',
+                confirmButtonText: 'Volver'
+              })
         }
     };
 
@@ -125,25 +138,56 @@ export default function Analyze() {
      * @returns {Promise<void>} No devuelve ningún valor, pero realiza operaciones 
      * asíncronas para el análisis de dominios.
      */
+
     const handleAnalyze = async () => {
         if (domains[0] === "") {
-            alert("Por favor ingrese al menos un dominio");
+            Swal.fire({
+                title: 'No ha ingresado ningún dominio',
+                text: 'Ingrese un dominio para analizar',
+                icon: 'warning',
+                confirmButtonText: 'Volver'
+            });
             return;
         }
-
+    
         setIsAnalyzing(true);
-
+    
         setTimeout(async () => {
-            await analyzeUrl(domains)
-                .then((response) => {
-                    setAnalyzeResponse(response);
-                    alert("Analisis completado");
-                })
-                .finally(() => {
-                    setIsAnalyzing(false);
+            try {
+                const response = await analyzeUrl(domains);
+                setAnalyzeResponse(response);
+                
+                // Manejar la respuesta según el estado
+                if (response.status === "success") {
+                    Swal.fire({
+                        title: 'Proceso completado',
+                        text: 'Análisis realizado con éxito',
+                        icon: 'success',
+                        confirmButtonText: 'Continuar'
+                    });
+                } else {
+                    // Si hay un error en la respuesta, muéstralo
+                    Swal.fire({
+                        title: 'Error en el análisis',
+                        text: response.message || 'Error desconocido.',
+                        icon: 'error',
+                        confirmButtonText: 'Aceptar'
+                    });
+                }
+            } catch (error) {
+                console.error("Error al analizar la URL:", error); // Para depuración
+                Swal.fire({
+                    title: 'Error en el análisis',
+                    text: error.message || 'Ocurrió un error inesperado. Por favor, inténtelo de nuevo.',
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
                 });
+            } finally {
+                setIsAnalyzing(false);
+            }
         }, 450);
     };
+    
 
     return (
         <section>
@@ -175,13 +219,12 @@ export default function Analyze() {
                     </fieldset>
 
                     <span>
-                        <Button
-                            onClick={() => handleAnalyze()}
+                       <Button
+                            onClick={handleAnalyze} // Aquí pasas la referencia a la función directamente
                             type="button"
                             themeColor="primary"
                             disabled={isAnalyzing}
-                            className={isAnalyzing ? "button--loading" : ""}
-                        >
+                            className={isAnalyzing ? "button--loading" : ""}>
                             {isAnalyzing ? "Analizando..." : "Analizar dominio"}
                         </Button>
                         <Button type="button" onClick={handleAddDomain}>
