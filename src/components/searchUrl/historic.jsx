@@ -85,8 +85,13 @@ export default function Historic() {
      */
     const handleSubmitHistoricDomain = async () => {
         if (historicalDomain === "") {
-            alert("Por favor ingrese un dominio");
-            return;
+            Swal.fire({
+                title: 'No ha ingresado ningún dominio',
+                text: 'Ingrese un dominio para buscar',
+                icon: 'warning',
+                confirmButtonText: 'Volver'
+              })
+            return
         }
         setIsAnalyzing(true);
 
@@ -102,10 +107,10 @@ export default function Historic() {
                       })
                 })
                 .finally(() => {
-                    setIsAnalyzing(false);
+                    setIsAnalyzing(false)
                 });
         }, 500);
-    };
+    }
 
     return (
         <section>
@@ -141,9 +146,30 @@ export default function Historic() {
                         >
                             {isAnalyzing ? "Analizando..." : "Ver detalle de la búsqueda de dominio"}                            
                         </Button>
-                        <Button onClick={ async () => setHistorical( await searchHistorical())} type="button">
-                            Ver histórico
-                        </Button>
+                        <Button 
+                            onClick={async () => {
+                            try {
+                                setIsAnalyzing(true); // Inicia el proceso de análisis
+                                const historicalData = await searchHistorical();
+                                setHistorical(historicalData); // Asigna los datos al estado
+                            } catch (error) {
+                                console.error("Error capturado:", error);
+                                
+                                // Mostrar un mensaje de error en caso de que falle
+                                Swal.fire({
+                                    title: 'Error en la búsqueda',
+                                    text: 'Hubo un problema al obtener el histórico. Intenta nuevamente.',
+                                    icon: 'error',
+                                    confirmButtonText: 'Cerrar'
+                                });
+                            } finally {
+                                setIsAnalyzing(false); // Asegúrate de deshabilitar el estado de "análisis"
+                            }
+                        }} 
+                        type="button">
+                        Ver histórico
+                    </Button>
+
                     </span>
                 </form>
 

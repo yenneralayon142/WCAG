@@ -14,23 +14,30 @@ const API_URL = "http://127.0.0.1:5000"
  */
 
 export const searchHistorical = async () => {
-    const data = await Fetchdata("/history")
+    try {
+        const data = await Fetchdata("/history"); // Hacer la solicitud
 
-    // const data = historical;
+        // Si la solicitud es exitosa y el status es "success"
+        if (data.status === "success") {
+            const response = data.data.map((url) => ({
+                id: url._id,
+                domain: url.domain,
+                url: url.url,
+                date: url.date,
+            }));
 
-    if (data.status === "success") {
-        const response = data.data.map((url) => ({
-            id: url._id,
-            domain: url.domain,
-            url: url.url,
-            date: url.date,
-        }));
-
-        return response;
-    } else {
-        return []
+            return response;
+        } else {
+            // Si el estado no es "success", lanzar un error
+            throw new Error('Error en la respuesta: estado no exitoso');
+        }
+    } catch (error) {
+        // Captura cualquier error durante el fetch
+        console.error('Error al buscar el historial:', error);
+        throw error; // Vuelve a lanzar el error para manejarlo en otro lugar
     }
 };
+
 
 /**
  * Busca el historial de un dominio específico eliminando prefijos "http://" o "https://", y consultando un endpoint de historial.
