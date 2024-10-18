@@ -16,39 +16,47 @@ const API_URL = "http://127.0.0.1:5000";
  */
 
 export const analyzeUrl = async (urls) => {
-    const data = await Fetchdata("/analyze", urls)
+    try {
+        const data = await Fetchdata("/analyze", urls);
 
-    // const data = analyze;
+        // Verificar la respuesta de la API
+        if (data.status === "success") {
+            const response = data.data.map((result) => {
+                let domain = result.url;
 
-    if (data.status === "success") {
-        const response = data.data.map((result) => {
-            let domain = result.url;
+                // Eliminar el prefijo "http://" o "https://" del dominio
+                if (domain.startsWith("http://")) {
+                    domain = domain.slice(7);
+                } else if (domain.startsWith("https://")) {
+                    domain = domain.slice(8);
+                }
 
-            if (domain.startsWith("http://")) {
-                domain = domain.slice(7);
-            } else if (domain.startsWith("https://")) {
-                domain = domain.slice(8);
-            }
+                domain = domain.split("/")[0];
 
-            domain = domain.split("/")[0];
+                return {
+                    id: result.unique_id,
+                    url: result.url,
+                    domain: domain,
+                    date: result.date,
+                };
+            });
 
             return {
-                id: result.unique_id,
-                url: result.url,
-                domain: domain,
-                date: result.date,
+                status: "success",
+                message: "Análisis completado",
+                data: response,
             };
-        });
-
-        return {
-            status: "success",
-            message: "Análisis completado",
-            data: response,
-        };
-    } else {
-        return { status: "error", message: data.message, data: [] }
+        } else {
+            // Manejo de error cuando la respuesta no es exitosa
+            return { status: "error", message: data.message || "Error en la respuesta del servidor", data: [] };
+        }
+    } catch (error) {
+        // Manejo de errores de red o de ejecución
+        console.error("Error al analizar la URL:", error); // Para depuración
+        return { status: "error", message: error.message || "Ocurrió un error inesperado", data: [] };
     }
-}
+};
+
 
 /**
  * Realiza una solicitud POST a un endpoint específico enviando una lista de URLs en el cuerpo de la petición.

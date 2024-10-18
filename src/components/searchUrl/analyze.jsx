@@ -139,26 +139,6 @@ export default function Analyze() {
      * asíncronas para el análisis de dominios.
      */
 
-    const handleDomainSearch = async (searchFunction, setData) => {
-        try {
-            setIsAnalyzing(true); // Inicia el proceso de análisis
-            const data = await searchFunction(); // Ejecuta la función de búsqueda
-            setData(data); // Asigna los datos al estado correspondiente
-        } catch (error) {
-            console.error("Error capturado:", error);
-    
-            // Mostrar un mensaje de error en caso de fallo
-            Swal.fire({
-                title: 'Error en la búsqueda',
-                text: 'Hubo un problema al realizar la búsqueda. Intenta nuevamente.',
-                icon: 'error',
-                confirmButtonText: 'Cerrar'
-            });
-        } finally {
-            setIsAnalyzing(false); // Asegúrate de deshabilitar el estado de "análisis"
-        }
-    }
-    
     const handleAnalyze = async () => {
         if (domains[0] === "") {
             Swal.fire({
@@ -166,28 +146,48 @@ export default function Analyze() {
                 text: 'Ingrese un dominio para analizar',
                 icon: 'warning',
                 confirmButtonText: 'Volver'
-              })
-            return
+            });
+            return;
         }
-
+    
         setIsAnalyzing(true);
-
+    
         setTimeout(async () => {
-            await analyzeUrl(domains)
-                .then((response) => {
-                    setAnalyzeResponse(response);
+            try {
+                const response = await analyzeUrl(domains);
+                setAnalyzeResponse(response);
+                
+                // Manejar la respuesta según el estado
+                if (response.status === "success") {
                     Swal.fire({
                         title: 'Proceso completado',
-                        text: 'Analisís realizado con exito',
+                        text: 'Análisis realizado con éxito',
                         icon: 'success',
                         confirmButtonText: 'Continuar'
-                      })
-                })
-                .finally(() => {
-                    setIsAnalyzing(false);
+                    });
+                } else {
+                    // Si hay un error en la respuesta, muéstralo
+                    Swal.fire({
+                        title: 'Error en el análisis',
+                        text: response.message || 'Error desconocido.',
+                        icon: 'error',
+                        confirmButtonText: 'Aceptar'
+                    });
+                }
+            } catch (error) {
+                console.error("Error al analizar la URL:", error); // Para depuración
+                Swal.fire({
+                    title: 'Error en el análisis',
+                    text: error.message || 'Ocurrió un error inesperado. Por favor, inténtelo de nuevo.',
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
                 });
+            } finally {
+                setIsAnalyzing(false);
+            }
         }, 450);
     };
+    
 
     return (
         <section>
@@ -219,13 +219,12 @@ export default function Analyze() {
                     </fieldset>
 
                     <span>
-                        <Button
-                            onClick={() => handleAnalyze()}
+                       <Button
+                            onClick={handleAnalyze} // Aquí pasas la referencia a la función directamente
                             type="button"
                             themeColor="primary"
                             disabled={isAnalyzing}
-                            className={isAnalyzing ? "button--loading" : ""}
-                        >
+                            className={isAnalyzing ? "button--loading" : ""}>
                             {isAnalyzing ? "Analizando..." : "Analizar dominio"}
                         </Button>
                         <Button type="button" onClick={handleAddDomain}>
