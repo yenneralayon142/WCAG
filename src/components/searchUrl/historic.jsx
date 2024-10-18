@@ -83,6 +83,27 @@ export default function Historic() {
      * @function
      * @returns {Promise<void>} 
      */
+
+    const handleDomainSearch = async (searchFunction, setData) => {
+        try {
+            setIsAnalyzing(true); // Inicia el proceso de análisis
+            const data = await searchFunction(); // Ejecuta la función de búsqueda
+            setData(data); // Asigna los datos al estado correspondiente
+        } catch (error) {
+            console.error("Error capturado:", error);
+    
+            // Mostrar un mensaje de error en caso de fallo
+            Swal.fire({
+                title: 'Error en la búsqueda',
+                text: 'Hubo un problema al realizar la búsqueda. Intenta nuevamente.',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
+            });
+        } finally {
+            setIsAnalyzing(false); // Asegúrate de deshabilitar el estado de "análisis"
+        }
+    }
+    
     const handleSubmitHistoricDomain = async () => {
         if (historicalDomain === "") {
             Swal.fire({
@@ -90,26 +111,11 @@ export default function Historic() {
                 text: 'Ingrese un dominio para buscar',
                 icon: 'warning',
                 confirmButtonText: 'Volver'
-              })
-            return
+            });
+            return;
         }
-        setIsAnalyzing(true);
-
-        setTimeout(async () => {
-            await searchHistoricalDomain(historicalDomain)
-                .then((response) => {
-                    setDomainHistorical(response);
-                    Swal.fire({
-                        title: 'Proceso completado',
-                        text: 'Busquéda del detalle realizada con éxito',
-                        icon: 'success',
-                        confirmButtonText: 'Continuar'
-                      })
-                })
-                .finally(() => {
-                    setIsAnalyzing(false)
-                });
-        }, 500);
+        // Reutiliza la función handleDomainSearch
+        await handleDomainSearch(() => searchHistoricalDomain(historicalDomain), setDomainHistorical);
     }
 
     return (
@@ -148,26 +154,10 @@ export default function Historic() {
                         </Button>
                         <Button 
                             onClick={async () => {
-                            try {
-                                setIsAnalyzing(true); // Inicia el proceso de análisis
-                                const historicalData = await searchHistorical();
-                                setHistorical(historicalData); // Asigna los datos al estado
-                            } catch (error) {
-                                console.error("Error capturado:", error);
-                                
-                                // Mostrar un mensaje de error en caso de que falle
-                                Swal.fire({
-                                    title: 'Error en la búsqueda',
-                                    text: 'Hubo un problema al obtener el histórico. Intenta nuevamente.',
-                                    icon: 'error',
-                                    confirmButtonText: 'Cerrar'
-                                });
-                            } finally {
-                                setIsAnalyzing(false); // Asegúrate de deshabilitar el estado de "análisis"
-                            }
-                        }} 
-                        type="button">
-                        Ver histórico
+                                await handleDomainSearch(searchHistorical, setHistorical);
+                            }} 
+                            type="button">
+                            Ver histórico
                     </Button>
 
                     </span>

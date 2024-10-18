@@ -138,6 +138,27 @@ export default function Analyze() {
      * @returns {Promise<void>} No devuelve ningún valor, pero realiza operaciones 
      * asíncronas para el análisis de dominios.
      */
+
+    const handleDomainSearch = async (searchFunction, setData) => {
+        try {
+            setIsAnalyzing(true); // Inicia el proceso de análisis
+            const data = await searchFunction(); // Ejecuta la función de búsqueda
+            setData(data); // Asigna los datos al estado correspondiente
+        } catch (error) {
+            console.error("Error capturado:", error);
+    
+            // Mostrar un mensaje de error en caso de fallo
+            Swal.fire({
+                title: 'Error en la búsqueda',
+                text: 'Hubo un problema al realizar la búsqueda. Intenta nuevamente.',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
+            });
+        } finally {
+            setIsAnalyzing(false); // Asegúrate de deshabilitar el estado de "análisis"
+        }
+    }
+    
     const handleAnalyze = async () => {
         if (domains[0] === "") {
             Swal.fire({
