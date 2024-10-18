@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TextBox } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
+import Swal from 'sweetalert2'
 
 // Hooks
 import { analyzeUrl } from "../../services/analyze";
@@ -108,8 +109,20 @@ export default function Analyze() {
     const handleRemoveDomain = () => {
         if (domains.length > 1) {
             setDomains(domains.slice(0, -1));
-        } else {
-            alert("No se puede eliminar el último dominio");
+        } else if (domains.length === 1){
+            Swal.fire({
+                title: 'No se puede eliminar el campo Dominio',
+                text: 'El campo de ingresar dominio no se eliminará',
+                icon: 'error',
+                confirmButtonText: 'Volver'
+              })
+        }else{
+            Swal.fire({
+                title: 'Ha ocurrido un error eliminando el campo',
+                text: 'Ha ocurrido un error',
+                icon: 'error',
+                confirmButtonText: 'Volver'
+              })
         }
     };
 
@@ -127,8 +140,13 @@ export default function Analyze() {
      */
     const handleAnalyze = async () => {
         if (domains[0] === "") {
-            alert("Por favor ingrese al menos un dominio");
-            return;
+            Swal.fire({
+                title: 'No ha ingresado ningún dominio',
+                text: 'Ingrese un dominio para analizar',
+                icon: 'warning',
+                confirmButtonText: 'Volver'
+              })
+            return
         }
 
         setIsAnalyzing(true);
@@ -137,7 +155,12 @@ export default function Analyze() {
             await analyzeUrl(domains)
                 .then((response) => {
                     setAnalyzeResponse(response);
-                    alert("Analisis completado");
+                    Swal.fire({
+                        title: 'Proceso completado',
+                        text: 'Analisís realizado con exito',
+                        icon: 'success',
+                        confirmButtonText: 'Continuar'
+                      })
                 })
                 .finally(() => {
                     setIsAnalyzing(false);

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TextBox } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
+import Swal from 'sweetalert2'
 
 // Hooks
 import { searchHistorical, searchHistoricalDomain } from "../../services/historical";
@@ -93,7 +94,12 @@ export default function Historic() {
             await searchHistoricalDomain(historicalDomain)
                 .then((response) => {
                     setDomainHistorical(response);
-                    alert("Historial de dominio extraido");
+                    Swal.fire({
+                        title: 'Proceso completado',
+                        text: 'Busquéda del detalle realizada con éxito',
+                        icon: 'success',
+                        confirmButtonText: 'Continuar'
+                      })
                 })
                 .finally(() => {
                     setIsAnalyzing(false);
