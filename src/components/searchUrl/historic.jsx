@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TextBox } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
+import Swal from 'sweetalert2'
 
 // Hooks
 import { searchHistorical, searchHistoricalDomain } from "../../services/historical";
@@ -82,24 +83,40 @@ export default function Historic() {
      * @function
      * @returns {Promise<void>} 
      */
+
+    const handleDomainSearch = async (searchFunction, setData) => {
+        try {
+            setIsAnalyzing(true); // Inicia el proceso de análisis
+            const data = await searchFunction(); // Ejecuta la función de búsqueda
+            setData(data); // Asigna los datos al estado correspondiente
+        } catch (error) {
+            console.error("Error capturado:", error);
+    
+            // Mostrar un mensaje de error en caso de fallo
+            Swal.fire({
+                title: 'Error en la búsqueda',
+                text: 'Hubo un problema al realizar la búsqueda. Intenta nuevamente.',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
+            });
+        } finally {
+            setIsAnalyzing(false); // Asegúrate de deshabilitar el estado de "análisis"
+        }
+    }
+    
     const handleSubmitHistoricDomain = async () => {
         if (historicalDomain === "") {
-            alert("Por favor ingrese un dominio");
+            Swal.fire({
+                title: 'No ha ingresado ningún dominio',
+                text: 'Ingrese un dominio para buscar',
+                icon: 'warning',
+                confirmButtonText: 'Volver'
+            });
             return;
         }
-        setIsAnalyzing(true);
-
-        setTimeout(async () => {
-            await searchHistoricalDomain(historicalDomain)
-                .then((response) => {
-                    setDomainHistorical(response);
-                    alert("Historial de dominio extraido");
-                })
-                .finally(() => {
-                    setIsAnalyzing(false);
-                });
-        }, 500);
-    };
+        // Reutiliza la función handleDomainSearch
+        await handleDomainSearch(() => searchHistoricalDomain(historicalDomain), setDomainHistorical);
+    }
 
     return (
         <section>
@@ -135,9 +152,14 @@ export default function Historic() {
                         >
                             {isAnalyzing ? "Analizando..." : "Ver detalle de la búsqueda de dominio"}                            
                         </Button>
-                        <Button onClick={ async () => setHistorical( await searchHistorical())} type="button">
+                        <Button 
+                            onClick={async () => {
+                                await handleDomainSearch(searchHistorical, setHistorical);
+                            }} 
+                            type="button">
                             Ver histórico
-                        </Button>
+                    </Button>
+
                     </span>
                 </form>
 

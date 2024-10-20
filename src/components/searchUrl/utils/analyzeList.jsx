@@ -31,14 +31,14 @@ import { Button } from "@progress/kendo-react-buttons";
  */
 
 export default function AnalyzeList({ data }) {
-    const dataList = data.data ? (
-        data.data.map((item, index) => (
+    const dataList = data && data.data && data.data.length > 0 ? (
+        data.data.map((item) => (
             <li key={item.id}>
                 <div>
                     <p className="text--blue font-bold text-lg">
                         {item.domain}{" "}
                         <span>
-                                - {new Date(item.date).toLocaleDateString("es-CO") + " " + new Date(item.date).toTimeString().split(" ")[0]}
+                            - {new Date(item.date).toLocaleDateString("es-CO") + " " + new Date(item.date).toTimeString().split(" ")[0]}
                         </span>
                     </p>
                     <p>
@@ -60,5 +60,6 @@ export default function AnalyzeList({ data }) {
     ) : (
         <p>No hay resultados</p>
     );
+
     return <ul className="url__list">{dataList}</ul>;
 }
